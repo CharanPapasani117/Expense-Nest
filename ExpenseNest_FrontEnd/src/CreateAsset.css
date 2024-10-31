@@ -1,0 +1,27 @@
+/* form {
+    text-align:center;
+    background-color: black;
+    padding: 10px;
+}
+    */
+.button1 {
+    background-color: #7ac270;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button1:hover {
+    transform: scale(1.1);
+}
+/* 
+label {
+    color: white;
+}
+
+input {
+    width: 100%;
+}  */

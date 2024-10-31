@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f7; /* Light background */
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Container */
+  .calculator {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  /* Input Fields */
+  .calculator input[type="number"],
+  .calculator input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  .calculator input[type="number"]:focus,
+  .calculator input[type="text"]:focus {
+    border-color: #6c63ff;
+    outline: none;
+  }
+  
+  /* Button */
+  .calculator button {
+    background-color: #6c63ff; /* Custom button color */
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 80%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calculator button:hover {
+    background-color: #4a47a3;
+  }
+  
+  /* Result Styles */
+  .result {
+    margin-top: 20px;
+    background-color: #e7f0fe;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Result Text */
+  .result p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Home Page Buttons */
+  .home-container {
+    max-width: 500px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .home-container .option-btn {
+    background-color: #6c63ff;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-container .option-btn:hover {
+    background-color: #4a47a3;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .calculator {
+        padding: 20px;
+        width: 90%;
+    }
+  
+    .calculator input[type="number"],
+    .calculator input[type="text"],
+    .calculator button {
+        width: 90%;
+    }
+    .payment-frequency-select {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+  }
+  
+  }
