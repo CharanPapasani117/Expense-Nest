@@ -85,9 +85,13 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           style={inputStyle}
         >
           <option value="">Select Member</option>
-          <option value="Prava">Prava</option>
-          <option value="Nani">Nani</option>
-          <option value="Mahesh">Mahesh</option>
+          <option value="Yash">Yash</option>
+          <option value="Mallika">Mallika</option>
+          <option value="Karthik">Karthik</option>
+          <option value="Charan">Charan</option>
+          <option value="Varun">Varun</option>
+          <option value="Pravalika">Pravalika</option>
+          <option value="Praneeth">Praneeth</option>
           <option value="Family">Family</option>
         </Form.Control>
       </Form.Group>

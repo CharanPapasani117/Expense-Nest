@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
 import { FaTrash, FaUser, FaInfoCircle, FaBriefcase, FaMoneyBillWave, FaChartLine, FaHome, FaGift, FaFileInvoiceDollar, FaEdit, FaTag } from 'react-icons/fa';
 
@@ -17,26 +17,9 @@ const getCategoryIcon = (category) => {
 };
 
 const IncomeList = ({ incomes, handleDelete, handleEdit }) => {
-
-const [incomeData, setIncomes] = useState([]);
-
-  useEffect(() => {
-    // Fetch incomes from the backend API
-    fetch('http://localhost:8080/api/income/get')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => setIncomes(data))
-      .catch((error) => console.error('Error fetching incomes:', error));
-  }, []);
-
-
   return (
     <ListGroup style={{ height: '65vh', overflowY: 'auto' }}>
-      {incomeData.map((income) => (
+      {incomes.map((income) => (
         <ListGroup.Item key={income.id} className="d-flex justify-content-between align-items-start mb-2 py-2" style={{backgroundColor: '#FFFFFF', border: 'none', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)'}}>
           <div className="ms-2 me-auto w-100">
             <div className="d-flex justify-content-between align-items-center w-100">
@@ -45,7 +28,7 @@ const [incomeData, setIncomes] = useState([]);
                 <span>{income.title}</span>
               </div>
               <div className="ms-3" style={{color: '#4A8895', fontWeight: 'bold', fontSize: '0.9rem'}}>
-                ${income.amount}
+                ${income.amount.toFixed(2)}
               </div>
             </div>
             <div className="text-muted mt-1" style={{fontSize: '0.8rem'}}>

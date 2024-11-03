@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CalCss.css'; 
+import Sidebar from '../Sidebar.js'; // Import the Sidebar component
+import './loancalculator.css'; 
 
 function FinancialGoalsCalculator() {
     const [reason, setReason] = useState('');
     const [targetAmount, setTargetAmount] = useState('');
     const [currentSavings, setCurrentSavings] = useState('');
-    const [timeframe, setTimeframe] = useState(''); // Timeframe input will be in months
+    const [timeframe, setTimeframe] = useState('');
     const [result, setResult] = useState(null);
     const [message, setMessage] = useState('');
 
     const validateReason = (value) => {
         const regex = /^[A-Za-z\s]+$/;
-    
-        // If the input is empty, clear the reason (handles backspace effectively)
         if (value === '') {
             setReason('');
         } else if (regex.test(value)) {
@@ -22,9 +21,7 @@ function FinancialGoalsCalculator() {
             alert('Reason can only contain alphabetic characters and spaces.');
         }
     };
-    
 
-    // Ensure targetAmount, currentSavings, and timeframe cannot go below zero
     const handleTargetAmountChange = (e) => {
         let value = parseFloat(e.target.value);
         setTargetAmount(value >=  0 ? value : '');
@@ -46,13 +43,12 @@ function FinancialGoalsCalculator() {
             return;
         }
 
-        // Check if current savings are enough
         if (parseFloat(currentSavings) >= parseFloat(targetAmount)) {
-            setMessage('Congratulations! You have enough money for your ${reason}.');
-            setResult(null); // Clear any previous result
+            setMessage(`Congratulations! You have enough money for your ${reason}.`);
+            setResult(null);
             return;
         } else {
-            setMessage(''); // Clear message if savings are not enough
+            setMessage('');
         }
 
         try {
@@ -60,7 +56,7 @@ function FinancialGoalsCalculator() {
                 reason,
                 targetAmount: parseFloat(targetAmount),
                 currentSavings: parseFloat(currentSavings),
-                timeframe: parseInt(timeframe) // Input in months
+                timeframe: parseInt(timeframe) 
             });
             setResult(response.data);
         } catch (error) {
@@ -69,53 +65,63 @@ function FinancialGoalsCalculator() {
     };
 
     return (
-        <div className="calculator">
-            <h2>Financial Goals Calculator</h2>
-            <input 
-                type="text" 
-                placeholder="Reason" 
-                value={reason} 
-                onChange={(e) => validateReason(e.target.value)}  
-                required
-            />
-            <input 
-                type="number" 
-                placeholder="Target Amount" 
-                value={targetAmount} 
-                onChange={handleTargetAmountChange} 
-                required
-                min={0} // Ensure it can't go below 0 via browser constraints
-            />
-            <input 
-                type="number" 
-                placeholder="Current Savings" 
-                value={currentSavings} 
-                onChange={handleCurrentSavingsChange} 
-                required
-                min={0} // Ensure it can't go below 0 via browser constraints
-            />
-            <input 
-                type="number" 
-                placeholder="Timeframe (months)" 
-                value={timeframe} 
-                onChange={handleTimeframeChange} 
-                required
-                min={0} // Ensure it can't go below 0 via browser constraints
-            />
-            <button onClick={calculateGoals}>Calculate</button>
+        <div className="calculator-container">
+            <Sidebar />
+            <div className="calculator-content">
+            <h2 style={{
+                    textAlign: 'center', // Center the text horizontally
+                    fontSize: '2rem', // Adjust the font size
+                }}>FINANCIAL GOALS CALCULATOR</h2>
+                <input 
+                    type="text" 
+                    placeholder="Reason" 
+                    value={reason} 
+                    onChange={(e) => validateReason(e.target.value)}  
+                    className="input-field"
+                    required
+                />
+                <input 
+                    type="number" 
+                    placeholder="Target Amount" 
+                    value={targetAmount} 
+                    onChange={handleTargetAmountChange} 
+                    className="input-field"
+                    required
+                    min={0}
+                />
+                <input 
+                    type="number" 
+                    placeholder="Current Savings" 
+                    value={currentSavings} 
+                    onChange={handleCurrentSavingsChange} 
+                    className="input-field"
+                    required
+                    min={0}
+                />
+                <input 
+                    type="number" 
+                    placeholder="Timeframe (months)" 
+                    value={timeframe} 
+                    onChange={handleTimeframeChange} 
+                    className="input-field"
+                    required
+                    min={0}
+                />
+                <button onClick={calculateGoals}>Calculate</button>
 
-            {message && (
-                <div className="message">
-                    <p>{message}</p>
-                </div>
-            )}
+                {message && (
+                    <div className="message">
+                        <p>{message}</p>
+                    </div>
+                )}
 
-            {result && (
-                <div className="result">
-                    <p>Amount to Save Monthly: {result.monthlySavings}</p>
-                    <p>Total Amount to Save: {result.totalamount}</p>
-                </div>
-            )}
+                {result && (
+                    <div className="result">
+                        <p>Amount to Save Monthly: {result.monthlySavings}</p>
+                        <p>Total Amount to Save: {result.totalamount}</p>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

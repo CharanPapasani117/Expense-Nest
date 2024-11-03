@@ -1,74 +1,55 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import IncomeForm from './IncomeForm';
 import IncomeList from './IncomeList';
 import IncomeChart from './IncomeChart';
 import { Modal, Button, Card, Container, Row, Col } from 'react-bootstrap';
+import { FaBars, FaPlusCircle } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import { FaHome, FaExchangeAlt, FaListAlt, FaCreditCard, FaChartLine, FaSignOutAlt, FaPlusCircle, FaBars } from 'react-icons/fa';
+
+const API_URL = 'http://localhost:8080/api/incomes';
 
 const Sidebar = ({ isMobile, isOpen, onToggle }) => (
-    <div className="sidebar" style={{
-      width: '120px',
-      height: '100vh', 
-      position: 'fixed', 
-      left: 0, 
-      top: 0, 
-      bottom: 0, 
-      backgroundColor: '#1A2B4A',
-      backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
-      zIndex: 1000,
-      boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      paddingTop: '2rem',
-      transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
-      transition: 'transform 0.3s ease-in-out'
-    }}>
-      <nav className="nav flex-column align-items-center" style={{ flex: 1, width: '100%' }}>
-        {[
-          { name: 'Income', path: '/income' },
-          { name: 'Expenses', path: '/expense' },
-          { name: 'Assets', path: '/asset' },
-          { name: 'Debts', path: '/debtTracker' },
-          { name: 'Goals', path: '/goals' },
-          { name: 'Budget', path: '/budget' },
-          { name: 'Calculator', path: '/financialCal' },
-          { name: 'Advising', path: '/schedulingAppt' },
-        ].map((item) => (
-          <NavLink 
-            key={item.name}
-            to={item.path}
-            className="nav-link mb-4" 
-            style={{ 
-              color: 'white',
-              opacity: 0.75,
-              transition: 'opacity 0.2s',
-              padding: '8px',
-              borderRadius: '8px',
-              textAlign: 'center',
-              width: '100%',
-              fontSize: '0.9rem',
-              textDecoration: 'none'
-            }}
-            activeStyle={{
-              opacity: 1,
-              backgroundColor: '#4A8895'
-            }}
-          >
-            {item.name}
-          </NavLink>
-        ))}
-      </nav>
-      <div style={{ 
-        marginBottom: '1.5rem',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center'
-      }}>
+  <div className="sidebar" style={{
+    width: '120px',
+    height: '100vh', 
+    position: 'fixed', 
+    left: 0, 
+    top: 0, 
+    bottom: 0, 
+    backgroundColor: '#1A2B4A',
+    backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
+    zIndex: 1000,
+    boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: '2rem',
+    transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
+    transition: 'transform 0.3s ease-in-out'
+  }}>
+    <Button
+      variant="link"
+      onClick={onToggle}
+      style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
+    >
+      <FaBars />
+    </Button>
+    <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
+      {[
+        { name: 'Income', path: '/income' },
+        { name: 'Expenses', path: '/expense' },
+        { name: 'Assets', path: '/asset' },
+        { name: 'Debts', path: '/debtTracker' },
+        { name: 'Goals', path: '/goals' },
+        { name: 'Budget', path: '/budget' },
+        { name: 'Calculator', path: '/financialCal' },
+        { name: 'Advising', path: '/schedulingAppt' },
+      ].map((item) => (
         <NavLink 
-          to="/logout"
-          className="nav-link" 
+          key={item.name}
+          to={item.path}
+          className="nav-link mb-4" 
           style={{ 
             color: 'white',
             opacity: 0.75,
@@ -80,35 +61,42 @@ const Sidebar = ({ isMobile, isOpen, onToggle }) => (
             fontSize: '0.9rem',
             textDecoration: 'none'
           }}
-          activeStyle={{
-            opacity: 1,
-            backgroundColor: '#4A8895'
-          }}
         >
-          Logout
+          {item.name}
         </NavLink>
-      </div>
+      ))}
+    </nav>
+    <div style={{ 
+      marginBottom: '1.5rem',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center'
+    }}>
+      <a 
+        className="nav-link" 
+        href="#" 
+        style={{ 
+          color: 'white',
+          opacity: 0.75,
+          transition: 'opacity 0.2s',
+          padding: '8px',
+          borderRadius: '8px',
+          textAlign: 'center',
+          width: '100%',
+          fontSize: '0.9rem',
+          textDecoration: 'none'
+        }}
+      >
+        Logout
+      </a>
     </div>
-  );
+  </div>
+);
 
 const IncomeDashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [incomes, setIncomes] = useState([
-    // { id: 1, title: 'Salary', amount: 5000, date: '2024-01-01', category: 'Employment', member: 'Prava', description: 'Monthly salary' },
-    // { id: 2, title: 'Freelance Work', amount: 1000, date: '2024-01-15', category: 'Self-employment', member: 'Nani', description: 'Website development project' },
-    // { id: 3, title: 'Dividend', amount: 200, date: '2024-01-20', category: 'Investments', member: 'Mahesh', description: 'Quarterly dividend payment' },
-  ]);
-
-  // Add resize listener
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
+  const [incomes, setIncomes] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [editingIncome, setEditingIncome] = useState(null);
   const [newIncome, setNewIncome] = useState({
@@ -119,6 +107,21 @@ const IncomeDashboard = () => {
     member: '',
     description: '',
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Fetch incomes from backend
+    axios.get(API_URL)
+      .then(response => setIncomes(response.data))
+      .catch(error => console.error("Error fetching incomes:", error));
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -132,67 +135,29 @@ const IncomeDashboard = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editingIncome) {
-      setIncomes(incomes.map(income => 
-        income.id === editingIncome.id ? { ...editingIncome, amount: parseFloat(editingIncome.amount) } : income
-      ));
-      setEditingIncome(null);
-    } else if (newIncome.title && newIncome.amount && newIncome.date && newIncome.category && newIncome.member ) {
-      setIncomes([
-        ...incomes,
-        { ...newIncome, id: incomes.length + 1, amount: parseFloat(newIncome.amount) }
-      ]);
+      // Update existing income
+      axios.put(`${API_URL}/${editingIncome.id}`, editingIncome)
+        .then(response => {
+          setIncomes(incomes.map(inc => inc.id === response.data.id ? response.data : inc));
+          setEditingIncome(null);
+        })
+        .catch(error => console.error("Error updating income:", error));
+    } else if (newIncome.title && newIncome.amount && newIncome.date && newIncome.category && newIncome.member) {
+      // Add new income
+      axios.post(API_URL, newIncome)
+        .then(response => setIncomes([...incomes, response.data]))
+        .catch(error => console.error("Error adding income:", error));
     }
-    const incomeToAdd={ title: newIncome.title, amount: newIncome.amount, date: newIncome.date, category: newIncome.category , member: newIncome.member, description: newIncome?.description  }
-    setNewIncome(incomeToAdd);
-    addIncome(incomeToAdd);
+    setNewIncome({ title: '', amount: '', date: '', category: '', member: '', description: '' });
     setShowModal(false);
   };
-  const addIncome = async (incomeData) => {
-    try {
-      const response = await fetch("http://localhost:8080/api/income/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(incomeData)
-      });
-  
-      // Check if the response is successful
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log("Income added successfully:", responseData);
-      } else {
-        console.log("Error adding income:");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
-  };
-  
 
-
-//   const handleDelete = (id) => {
-//     setIncomes(incomes.filter(income => income.id !== id));
-//   };
-const handleDelete = async (id) => {
-    
-    try {
-      const response = await fetch(`http://localhost:8080/api/income/delete/${id}`, {
-        method: "DELETE",
-      });
-      
-      if (response.ok) {
-        // If deletion is successful, update the frontend state
-        setIncomes(incomes.filter(income => income.id !== id));
-        console.log("Income deleted successfully");
-      } else {
-        console.log("Failed to delete income");
-      }
-    } catch (error) {
-      console.error("An error occurred:", error);
-    }
+  const handleDelete = (id) => {
+    axios.delete(`${API_URL}/${id}`)
+      .then(() => setIncomes(incomes.filter(income => income.id !== id)))
+      .catch(error => console.error("Error deleting income:", error));
   };
-  
+
   const handleEdit = (income) => {
     setEditingIncome(income);
     setNewIncome(income);
@@ -206,7 +171,7 @@ const handleDelete = async (id) => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#F0F8FF' }}>
+    <div style={{ display: 'flex', minHeight: '100vh',minWidth:'1550px', maxWidth: '1800px', backgroundColor: '#F0F8FF' }}>
       <Sidebar 
         isMobile={isMobile} 
         isOpen={sidebarOpen} 
@@ -220,7 +185,7 @@ const handleDelete = async (id) => {
         height: '100vh',
         overflow: 'auto'
       }}>
-        <Container fluid style={{ maxWidth: '1800px', minWidth: '1400px' }}>
+        <Container fluid style={{ maxWidth: '1600px' }}>
           <Row className="mb-3 align-items-center">
             <Col xs="auto" className="d-md-none">
               <Button
@@ -232,12 +197,9 @@ const handleDelete = async (id) => {
               </Button>
             </Col>
             <Col>
-              <h2 style={{ 
-                color: '#1A2B4A', 
-                fontSize: isMobile ? '1.2rem' : '1.4rem', 
-                fontWeight: 'bold',
-                margin: 0 
-              }}>Income Dashboard</h2>
+              <h2 style={{ color: '#1A2B4A', fontSize: isMobile ? '1.2rem' : '1.4rem', fontWeight: 'bold', margin: 0 }}>
+                Income Dashboard
+              </h2>
             </Col>
             <Col xs="auto">
               <Button 
@@ -266,11 +228,7 @@ const handleDelete = async (id) => {
                 minHeight: isMobile ? '400px' : 'calc(100vh - 120px)'
               }}>
                 <Card.Body>
-                  <div style={{ height: isMobile ? '350px' : 'calc(100% - 50px)' }}>
-                    <IncomeChart 
-                      incomes={incomes}
-                    />
-                  </div>
+                  <IncomeChart incomes={incomes} />
                 </Card.Body>
               </Card>
             </Col>
@@ -282,21 +240,10 @@ const handleDelete = async (id) => {
                 minHeight: isMobile ? '300px' : 'calc(100vh - 120px)'
               }}>
                 <Card.Body className="p-2">
-                  <h6 className="mb-3 px-2" style={{ 
-                    color: '#1A2B4A', 
-                    fontWeight: 'bold',
-                    fontSize: isMobile ? '0.9rem' : '1rem' 
-                  }}>Income List</h6>
-                  <div style={{ 
-                    height: isMobile ? '250px' : 'calc(100% - 40px)', 
-                    overflowY: 'auto' 
-                  }}>
-                    <IncomeList 
-                      incomes={incomes} 
-                      handleDelete={handleDelete}
-                      handleEdit={handleEdit}
-                    />
-                  </div>
+                  <h6 className="mb-3 px-2" style={{ color: '#1A2B4A', fontWeight: 'bold', fontSize: isMobile ? '0.9rem' : '1rem' }}>
+                    Income List
+                  </h6>
+                  <IncomeList incomes={incomes} handleDelete={handleDelete} handleEdit={handleEdit} />
                 </Card.Body>
               </Card>
             </Col>
@@ -304,18 +251,9 @@ const handleDelete = async (id) => {
         </Container>
       </div>
 
-      <Modal 
-        show={showModal} 
-        onHide={() => setShowModal(false)} 
-        centered
-        size={isMobile ? "sm" : "md"}
-      >
+      <Modal show={showModal} onHide={() => setShowModal(false)} centered size={isMobile ? "sm" : "md"}>
         <Modal.Header closeButton style={{ backgroundColor: '#F0F8FF', border: 'none' }}>
-          <Modal.Title style={{ 
-            color: '#1A2B4A', 
-            fontWeight: 'bold', 
-            fontSize: isMobile ? '1rem' : '1.1rem' 
-          }}>
+          <Modal.Title style={{ color: '#1A2B4A', fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.1rem' }}>
             {editingIncome ? 'Edit Income' : 'Add New Income'}
           </Modal.Title>
         </Modal.Header>

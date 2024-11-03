@@ -1,36 +1,10 @@
-import React, { useState, useMemo, useEffect } from 'react';
-
-
+import React, { useState, useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { Form, Row, Col } from 'react-bootstrap';
 
-// const IncomeChart = ({ incomes = [] }) => {
-  const IncomeChart = () => {
-    const [incomes, setIncomes] = useState([]);
-  
-    useEffect(() => {
-      fetch(`http://localhost:8080/api/income/get`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then((data) => setIncomes(data))
-        .catch((error) => console.error('Fetch error:', error));
-    }, []);
-    
-  // const [incomes, setIncomes] = useState([]);
-  const currentDate = new Date();
-  // fetch(http://localhost:8081/api/income/get:).
-  // then((response) => {
-  //   if (!response.ok) {
-  //     throw new Error('Network response was not ok');
-  //   }
-  //   return response.json();
-  // })
-  // .then((data) => setIncomes(data))
 
+const IncomeChart = ({ incomes = [] }) => {
+  const currentDate = new Date();
   const [selectedDate, setSelectedDate] = useState({
     month: currentDate.getMonth(),
     year: currentDate.getFullYear(),
@@ -119,7 +93,6 @@ import { Form, Row, Col } from 'react-bootstrap';
   };
 
   return (
-    
     <div>
       {/* Total Income Display */}
       <div className="text-center mb-4">
@@ -167,7 +140,6 @@ import { Form, Row, Col } from 'react-bootstrap';
           </Form.Select>
         </Col>
       </Row>
-      
 
       {categoryData.length > 0 ? (
         <Row>

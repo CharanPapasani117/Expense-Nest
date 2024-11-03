@@ -6,7 +6,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000") // Enable CORS for your frontend
 public class LoanCalculatorController {
 
     @PostMapping("/loan-calculator")
@@ -14,20 +14,46 @@ public class LoanCalculatorController {
         double loanAmount = request.getLoanAmount();
         double interestRate = request.getInterestRate();
         int loanTerm = request.getLoanTerm();
+        String interestType = request.getInterestType(); // "simple", "standard_compound", "amortized_compound"
 
-        // Variables for the result
         double monthlyPayment = 0;
         double totalRepaymentAmount = 0;
         double totalInterestPaid = 0;
 
-        // Monthly calculation
-        double monthlyRate = (interestRate / 100) / 12; // Monthly interest rate
-        int numberOfPayments = loanTerm * 12; // Total number of monthly payments
+        // Monthly rate for compound interest
+        double annualRate = interestRate / 100;
+        int compoundingPeriodsPerYear = 12;
+        double timeInYears = loanTerm / 12.0;
+        double monthlyRate = annualRate / 12;
+        int numberOfPayments = loanTerm; // Loan term in months
 
-        // Monthly payment formula (standard loan amortization)
-        monthlyPayment = (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
-        totalRepaymentAmount = monthlyPayment * numberOfPayments;
-        totalInterestPaid = totalRepaymentAmount - loanAmount;
+        // Calculate based on interest type
+        switch (interestType.toLowerCase()) {
+            case "simple":
+                // Simple Interest Calculation
+                totalInterestPaid = loanAmount * (interestRate / 100) * (loanTerm / 12.0);
+                totalRepaymentAmount = loanAmount + totalInterestPaid;
+                monthlyPayment = totalRepaymentAmount / loanTerm;
+                break;
+
+            case "standard_compound":
+                // Standard Compound Interest Calculation
+                totalRepaymentAmount = loanAmount * Math.pow(1 + (annualRate / compoundingPeriodsPerYear), compoundingPeriodsPerYear * timeInYears);
+                totalInterestPaid = totalRepaymentAmount - loanAmount;
+                monthlyPayment = totalRepaymentAmount / loanTerm;
+                break;
+
+            case "amortized_compound":
+                // Compound Interest with Amortization
+                double compoundFactor = Math.pow(1 + monthlyRate, numberOfPayments);
+                monthlyPayment = (loanAmount * monthlyRate * compoundFactor) / (compoundFactor - 1);
+                totalRepaymentAmount = monthlyPayment * numberOfPayments;
+                totalInterestPaid = totalRepaymentAmount - loanAmount;
+                break;
+
+            default:
+                throw new IllegalArgumentException("Invalid interest type provided.");
+        }
 
         // Return the results in a map
         Map<String, Double> result = new HashMap<>();
@@ -37,19 +63,4 @@ public class LoanCalculatorController {
 
         return result;
     }
-}
-
-class LoanRequest {
-    private double loanAmount;
-    private double interestRate;
-    private int loanTerm;
-
-    public double getLoanAmount() { return loanAmount; }
-    public void setLoanAmount(double loanAmount) { this.loanAmount = loanAmount; }
-
-    public double getInterestRate() { return interestRate; }
-    public void setInterestRate(double interestRate) { this.interestRate = interestRate; }
-
-    public int getLoanTerm() { return loanTerm; }
-    public void setLoanTerm(int loanTerm) { this.loanTerm = loanTerm; }
 }

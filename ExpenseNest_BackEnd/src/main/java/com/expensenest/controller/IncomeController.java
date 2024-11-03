@@ -1,49 +1,38 @@
 package com.expensenest.controller;
 
-import java.util.List;
-
+import com.expensenest.service.IncomeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.expensenest.model.Income;
-import com.expensenest.service.IncomeService;
+
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/income")
-@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/incomes")
+@CrossOrigin(origins = "http://localhost:3000")  // Adjust the origin as per your frontend's URL
 public class IncomeController {
 
-	private final IncomeService incomeService;
+    @Autowired
+    private IncomeService incomeService;
 
-	@Autowired
-	public IncomeController(IncomeService incomeService) {
-		this.incomeService = incomeService;
-	}
+    @GetMapping
+    public List<Income> getAllIncomes() {
+        return incomeService.getAllIncomes();
+    }
 
-	@PostMapping("/add")
-	public ResponseEntity<Income> addIncome(@RequestBody Income income) {
-		Income savedIncome = incomeService.addIncome(income);
-		return new ResponseEntity<>(savedIncome, HttpStatus.CREATED);
-	}
+    @PostMapping
+    public Income addIncome(@RequestBody Income income) {
+        return incomeService.addIncome(income);
+    }
 
-	@GetMapping("/get")
-	public ResponseEntity<List<Income>> getIncomes() {
-		List<Income> incomes = incomeService.getIncomes();
-		return new ResponseEntity(incomes, HttpStatus.ACCEPTED);
-	}
-	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<Void> deleteIncome(@PathVariable Long id) {
-	    incomeService.deleteIncome(id);
-	    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-	}
+    @PutMapping("/{id}")
+    public Income updateIncome(@PathVariable Long id, @RequestBody Income incomeDetails) {
+        return incomeService.updateIncome(id, incomeDetails);
+    }
 
+    @DeleteMapping("/{id}")
+    public void deleteIncome(@PathVariable Long id) {
+        incomeService.deleteIncome(id);
+    }
 }
