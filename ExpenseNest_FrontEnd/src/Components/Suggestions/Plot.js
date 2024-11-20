@@ -7,7 +7,7 @@ function Plot({ category }) {
             <h3>{category} Forecast</h3>
             <img
                 className="forecast-plot"
-                src={`http://127.0.0.1:6000/plot/${category}_forecast.png`}
+                src={`http://127.0.0.1:5000/plot/${category}_forecast.png`}
                 alt={`${category}Forecast`}
             />
         </div>

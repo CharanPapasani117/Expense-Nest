@@ -1,26 +1,42 @@
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, send_from_directory, request
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 import os
+import joblib
+import numpy as np
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-if __name__ == '__main__':
-    app.run(debug=True, port=6000) 
+
 # Set up directories
 STATIC_FOLDER = "static"
 os.makedirs(STATIC_FOLDER, exist_ok=True)
 
-# Process the dataset on startup
-data_file = "./smart_budgeting_dataset (1).csv"
+# Load the trained model and scaler
+try:
+    model = joblib.load("overspending_model_gbm.pkl")
+    scaler = joblib.load("scaler.pkl")
+except FileNotFoundError as e:
+    print(f"Error loading model or scaler: {e}")
+    exit(1)
+
+# Initialize global variables for suggestions and plots
 cost_cutting_suggestions = []
 plots = []
 
 def process_data():
+    """Process the dataset and generate cost-cutting suggestions and plots."""
     global cost_cutting_suggestions, plots
-    df = pd.read_csv(data_file)
+    data_file = "./smart_budgeting_dataset (1).csv"
+    
+    try:
+        df = pd.read_csv(data_file)
+    except Exception as e:
+        print(f"Error reading data file: {e}")
+        return
+
     df['Date'] = pd.to_datetime(df['Date'])
 
     # Aggregate monthly expenses
@@ -35,11 +51,7 @@ def process_data():
     cost_cutting_suggestions = []
 
     for category in monthly_expenses.columns:
-        model = ExponentialSmoothing(
-            monthly_expenses[category],
-            trend='add',
-            seasonal=None
-        ).fit()
+        model = ExponentialSmoothing(monthly_expenses[category], trend='add', seasonal=None).fit()
 
         # Forecast the next 3 months
         forecast = model.forecast(forecast_steps)
@@ -77,6 +89,7 @@ def process_data():
         # Keep track of plots
         plots.append(f"{category}_forecast.png")
 
+# Call the data processing function at startup
 process_data()
 
 @app.route('/suggestions', methods=['GET'])
@@ -88,6 +101,78 @@ def get_suggestions():
 def serve_plot(filename):
     """Serve a forecast plot."""
     return send_from_directory(STATIC_FOLDER, filename)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    """Make predictions based on input data."""
+    try:
+        # Parse input JSON
+        data = request.json
+
+        # Validate input data
+        required_fields = ['amount', 'cumulativeMonthlySpend', 'historicalSpend', 'dayOfWeek', 'categoryEncoded', 'dayOfMonth', 'month']
+        for field in required_fields:
+            if field not in data:
+                raise ValueError(f"Missing required field: {field}")
+
+        # Preprocess input
+        standardized_data = {
+            'Amount': float(data['amount']),
+            'Cumulative Monthly Spend': float(data['cumulativeMonthlySpend']),
+            'Historical Spend': float(data['historicalSpend']),
+            'Day of Week': int(data['dayOfWeek']),
+            'Category_Encoded': int(data['categoryEncoded']),
+            'Day of Month': int(data['dayOfMonth']),
+            'Month': int(data['month']),
+            'Spending Trend': float(data['cumulativeMonthlySpend']) - float(data['historicalSpend'])
+        }
+        df = pd.DataFrame([standardized_data])
+        X_scaled = scaler.transform(df)
+
+        # Make prediction
+        prediction = model.predict(X_scaled)[0]
+        overspending = bool(prediction)
+
+        # Insights
+        forecasted_spend = standardized_data['Cumulative Monthly Spend'] + (
+            30 - standardized_data['Day of Month']
+        ) * (standardized_data['Amount'] / standardized_data['Day of Month'])
+
+        percentage_change = (
+            (standardized_data['Amount'] - standardized_data['Historical Spend']) /
+            standardized_data['Historical Spend'] * 100
+        )
+
+        # Recommendations
+        recommendations = {
+            0: [
+                "Consider buying in bulk to reduce grocery costs.",
+                "Use loyalty cards to maximize discounts."
+            ],
+            1: [
+                "Set a spending cap for entertainment activities.",
+                "Switch to bundled streaming services to save money."
+            ]
+        }
+        category_recommendations = recommendations.get(
+            standardized_data['Category_Encoded'], ["Monitor your expenses closely."]
+        )
+
+        response = {
+            'prediction': "Overspending Detected" if overspending else "Within Budget",
+            'insights': {
+                'current_week': standardized_data['Amount'],
+                'historical_week': standardized_data['Historical Spend'],
+                'percentage_change': round(percentage_change, 2),
+                'forecasted_monthly_spend': round(forecasted_spend, 2),
+            },
+            'recommendations': category_recommendations
+        }
+        return jsonify(response)
+    except ValueError as ve:
+        return jsonify({'error': str(ve)})
+    except Exception as e:
+        return jsonify({'error': f"An unexpected error occurred: {str(e)}"})
 
 if __name__ == '__main__':
     app.run(debug=True)

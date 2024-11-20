@@ -213,7 +213,7 @@ const BudgetPredictor = () => {
                         <div className="mb-3">
                             <label htmlFor="categoryEncoded" className="form-label fw-bold" style={{ fontSize: "1.2rem" }}>
                                 <p>Category </p>
-                                (0-Groceries, 1-Food, 2-Travel, 4-Entertainment)
+                                (0-Groceries, 1-Food, 2-Travel, 3-Entertainment)
                             </label>
                             <input
                                 type="number"

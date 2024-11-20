@@ -8,7 +8,8 @@ function Suggestions() {
     useEffect(() => {
         async function fetchSuggestions() {
             try {
-                const response = await axios.get('http://127.0.0.1:6000/suggestions');
+                const response = await axios.get('http://127.0.0.1:5000/suggestions'); // Updated port
+                console.log('Response data:', response.data); // Debugging line
                 setSuggestions(response.data);
             } catch (error) {
                 console.error('Error fetching suggestions:', error);
