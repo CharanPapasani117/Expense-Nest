@@ -8,24 +8,22 @@ import Chartt from './Chart.tsx';
 import DoughnutChart from './Chart.jsx';
 import UpdateAsset from './updateAsset.tsx';
 import loginform  from './Components/LogIn/loginform.jsx';
-import DashBoard from './Components/LogIn/dashboard.jsx';
+import Prediction  from './Components/Prediction/Prediction.js';
 import Home from './Components/Financial Calculator/Home.js';
 import LoanCalculator from './Components/Financial Calculator/LoanCalculator.js';
 import FinancialGoalsCalculator from './Components/Financial Calculator/FinancialGoalsCalculator.js';
 import ExpenseDashboard from './Components/Expense Tracker/Expense.js';
 import DebtTracker from './Components/Debt Tracker/DebtTracker.js';
 import Advisingf from './Components/SchedulingAppointment/Advisingf.js';
-
+import DashBoard from './Components/Dashboard.js';
 
 import PrivateRoute from './PrivateRoute.js';
 import IncomeDashboard from './Components/Income/Income.js';
+import Main from './Components/Suggestions/main';
+//import IntegratedDashboard from './Components/Budgeting/Expense.js';
+import FinancialDashboard from './Components/Dashboard/Dash';
 function App() {
-  const [user, setUser] = useState(null);
-  const handleFormSubmit = (formData) => {
-    setUser(formData); // Store the user data (e.g., token, username)
-    console.log("User logged in:", formData);
-    console.log('Form Submitted:', formData); // Log the submitted data to the console
-  };
+
   return (
     <div>
     {/* { (
@@ -34,7 +32,8 @@ function App() {
   
     <Router>
       <Routes>
-        <Route path="/" Component={loginform}></Route>
+        <Route path="/login" Component={loginform}></Route>
+        <Route path="/" Component={DashBoard}></Route>
         <Route path="/createAsset" Component={CreateAsset}></Route>
         <Route path="/assetsList" Component={AssetsList}></Route>
         {/* <Route path="/chart" Component={Chartt}></Route> */}
@@ -43,14 +42,18 @@ function App() {
         <Route path='/financialCal' Component={Home}></Route>
         <Route path='/loan-calculator' Component={LoanCalculator}></Route>
         <Route path='/financial-goals-calculator' Component={FinancialGoalsCalculator}></Route>
+        {/* <Route path = '/budget' Component={IntegratedDashboard}></Route> */}
+        <Route path='/dashboard' Component={FinancialDashboard}></Route>
+        <Route path='/Prediction' Component={Prediction}></Route>
 
         <Route path="/expense" Component={ExpenseDashboard}></Route>
-        <Route path="/dashboard" element={
+        {/* <Route path="/dashboard" element={
               <PrivateRoute>
                 <DashBoard />
               </PrivateRoute>
-            } />
+            } /> */}
         <Route path="/debtTracker" Component={DebtTracker}></Route> 
+        <Route path="/suggestions" Component={Main}></Route>
 
         <Route path = "/schedulingAppt" Component={Advisingf}></Route>
         <Route path = "/income" Component={IncomeDashboard}></Route>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './AssetsList.css';
 import { Asset } from './types.ts';
 import { color } from 'chart.js/helpers';
 import { useNavigate } from 'react-router-dom';

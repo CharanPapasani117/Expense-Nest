@@ -1,44 +1,45 @@
 .home-container {
-    margin-left: 120px;
-    padding: 2rem;
-    width: 100%;
-    background-color: #F0F8FF;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .home-container h1 {
-    font-size: 2.5rem;
-    color: #0a0f0d;
-    margin-bottom: 2rem;
-  }
-  
-  .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Adds space between the buttons */
-    flex-wrap: wrap; /* Ensures buttons wrap to the next line if needed */
-  }
-  
-  .option-btn {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: #4A8895;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
-    width: auto;
-    max-width: 300px;
-  }
-  
-  .option-btn:hover {
-    background-color: #3A7885;
-  }
-  
+  padding: 2rem;
+  width: 100%;
+  background-color: #EAF6FA; /* Lighter blue tone for a fresher look */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px; /* Rounded corners for a softer look */
+}
+
+.home-container h1 {
+  font-size: 2.8rem; /* Slightly larger for emphasis */
+  color: #0a0f0d;
+  margin-bottom: 1.5rem; /* Reduced margin for better spacing */
+  font-weight: bold; /* Added boldness for better visual focus */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem; /* Slightly larger gap for a more open feel */
+  flex-wrap: wrap; /* Ensures buttons wrap to the next line if needed */
+}
+
+.option-btn {
+  padding: 12px 28px; /* Slightly reduced padding for a refined look */
+  font-size: 1.1rem; /* Slightly smaller for subtlety */
+  color: #ffffff;
+  background-color: #4A8895;
+  border: none;
+  border-radius: 10px; /* Increased for smoother edges */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for depth */
+  transition: all 0.3s ease; /* Transition includes all properties */
+  width: auto;
+  max-width: 280px; /* Reduced max-width for consistent button sizing */
+}
+
+.option-btn:hover {
+  background-color: #3A7885;
+  transform: translateY(-3px); /* Subtle hover lift effect */
+}

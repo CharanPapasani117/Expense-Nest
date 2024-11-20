@@ -37,10 +37,13 @@ const LoginForm = () => { // Renamed component to 'LoginForm'
           const token = await response.text();
           setMessage("Login successful!");
           localStorage.setItem('authToken', `Bearer ${token}`);
-          navigate('/expense'); // Navigate to '/expense' after login
+          navigate('/dashboard'); // Navigate to '/expense' after login
         } else if (response.status === 401) {
           setMessage("Login failed: Invalid credentials. Please try again.");
-        } else {
+        } 
+        else if (response.status === 403) {
+          setMessage("Login failed: Please verify your email");
+        }else {
           setMessage("Login failed: Unexpected error. Please try again later.");
         }
       } catch (error) {

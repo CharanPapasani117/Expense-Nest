@@ -1,0 +1,16 @@
+.main-container {
+    background-color: #ffffff; /* White background for the entire app */
+    padding: 20px;
+    max-width: 1200px; /* Center the content with a max width */
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.plot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, auto); /* 2 rows */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    margin: 20px auto;
+}

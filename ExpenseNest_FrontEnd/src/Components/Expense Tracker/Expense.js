@@ -5,95 +5,83 @@ import ExpenseList from './ExpenseList';
 import ExpenseChart from './Expensechart';
 import { Modal, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { FaBars, FaPlusCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
-
+import Sidebar from '../Sidebar';
 const API_URL = 'http://localhost:8080/api/expenses';
 
-const Sidebar = ({ isMobile, isOpen, onToggle }) => (
-  <div className="sidebar" style={{
-    width: '120px',
-    height: '100vh', 
-    position: 'fixed', 
-    left: 0, 
-    top: 0, 
-    bottom: 0, 
-    backgroundColor: '#1A2B4A',
-    backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
-    zIndex: 1000,
-    boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingTop: '2rem',
-    transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
-    transition: 'transform 0.3s ease-in-out'
-  }}>
-    <nav className="nav flex-column align-items-center" style={{ flex: 1, width: '100%' }}>
-      {[
-        { name: 'Income', path: '/income' },
-        { name: 'Expenses', path: '/expense' },
-        { name: 'Assets', path: '/asset' },
-        { name: 'Debts', path: '/debtTracker' },
-        { name: 'Goals', path: '/goals' },
-        { name: 'Budget', path: '/budget' },
-        { name: 'Calculator', path: '/financialCal' },
-        { name: 'Advising', path: '/schedulingAppt' },
-      ].map((item) => (
-        <NavLink 
-          key={item.name}
-          to={item.path}
-          className="nav-link mb-4" 
-          style={{ 
-            color: 'white',
-            opacity: 0.75,
-            transition: 'opacity 0.2s',
-            padding: '8px',
-            borderRadius: '8px',
-            textAlign: 'center',
-            width: '100%',
-            fontSize: '0.9rem',
-            textDecoration: 'none'
-          }}
-          activeStyle={{
-            opacity: 1,
-            backgroundColor: '#4A8895'
-          }}
-        >
-          {item.name}
-        </NavLink>
-      ))}
-    </nav>
-    <div style={{ 
-      marginBottom: '1.5rem',
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center'
-    }}>
-      <NavLink 
-        to="/logout"
-        className="nav-link" 
-        style={{ 
-          color: 'white',
-          opacity: 0.75,
-          transition: 'opacity 0.2s',
-          padding: '8px',
-          borderRadius: '8px',
-          textAlign: 'center',
-          width: '100%',
-          fontSize: '0.9rem',
-          textDecoration: 'none'
-        }}
-        activeStyle={{
-          opacity: 1,
-          backgroundColor: '#4A8895'
-        }}
-      >
-        Logout
-      </NavLink>
-    </div>
-  </div>
-);
-
+// const Sidebar = ({ isMobile, isOpen, onToggle }) => (
+//   <div className="sidebar" style={{
+//     width: '120px',
+//     height: '100vh', 
+//     position: 'fixed', 
+//     left: 0, 
+//     top: 0, 
+//     bottom: 0, 
+//     backgroundColor: '#1A2B4A',
+//     backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
+//     zIndex: 1000,
+//     boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     paddingTop: '2rem',
+//     transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
+//     transition: 'transform 0.3s ease-in-out'
+//   }}>
+//     <Button
+//       variant="link"
+//       onClick={onToggle}
+//       style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
+//     >
+//       <FaBars />
+//     </Button>
+//     <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
+//       {['Income', 'Expenses', 'Assets', 'Debts', 'Goals', 'Budget', 'Calculator', 'Advising'].map((item, index) => (
+//         <a 
+//           key={index}
+//           className="nav-link mb-4" 
+//           href="#" 
+//           style={{ 
+//             color: 'white',
+//             opacity: 0.75,
+//             transition: 'opacity 0.2s',
+//             padding: '8px',
+//             borderRadius: '8px',
+//             textAlign: 'center',
+//             width: '100%',
+//             fontSize: '0.9rem',
+//             textDecoration: 'none'
+//           }}
+//         >
+//           {item}
+//         </a>
+//       ))}
+//     </nav>
+//     <div style={{ 
+//       marginBottom: '1.5rem',
+//       width: '100%',
+//       display: 'flex',
+//       justifyContent: 'center'
+//     }}>
+//       <a 
+//         className="nav-link" 
+//         href="#" 
+//         style={{ 
+//           color: 'white',
+//           opacity: 0.75,
+//           transition: 'opacity 0.2s',
+//           padding: '8px',
+//           borderRadius: '8px',
+//           textAlign: 'center',
+//           width: '100%',
+//           fontSize: '0.9rem',
+//           textDecoration: 'none'
+//         }}
+//       >
+//         Logout
+//       </a>
+//     </div>
+//   </div>
+// );
 
 const ExpenseDashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -173,13 +161,13 @@ const ExpenseDashboard = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh',minWidth:'1550px', maxWidth: '1800px', backgroundColor: '#F0F8FF' }}>
-      <Sidebar 
+    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#F0F8FF' }}>
+      {/* <Sidebar 
         isMobile={isMobile} 
         isOpen={sidebarOpen} 
         onToggle={() => setSidebarOpen(!sidebarOpen)} 
-      />
-      
+      /> */}
+      <Sidebar />
       <div style={{ 
         flex: 1,
         marginLeft: isMobile ? 0 : '120px',
@@ -187,7 +175,7 @@ const ExpenseDashboard = () => {
         height: '100vh',
         overflow: 'auto'
       }}>
-        <Container fluid style={{ maxWidth: '2000px' }}>
+        <Container fluid style={{ maxWidth: '1600px' }}>
           <Row className="mb-3 align-items-center">
             <Col xs="auto" className="d-md-none">
               <Button
@@ -213,8 +201,7 @@ const ExpenseDashboard = () => {
                   borderColor: '#FF7F6E', 
                   borderRadius: '20px',
                   padding: isMobile ? '0.3rem 0.8rem' : '0.4rem 1rem',
-                  fontSize: isMobile ? '0.8rem' : '0.85rem',
-                  width:'100px'
+                  fontSize: isMobile ? '0.8rem' : '0.85rem'
                 }}
               >
                 <FaPlusCircle className="me-1" /> Add Expense

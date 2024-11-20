@@ -34,10 +34,9 @@ const IncomeList = ({ incomes, handleDelete, handleEdit }) => {
             <div className="text-muted mt-1" style={{fontSize: '0.8rem'}}>
               <small>
                 {income.date} • {income.category} • 
-                <FaUser className="ms-2 me-1" />{income.member}
               </small>
             </div>
-            {income.description && (
+            {income.description && (  
               <div className="mt-1 text-muted" style={{fontSize: '0.8rem'}}>
                 <FaInfoCircle className="me-1" />
                 <small>{income.description}</small>

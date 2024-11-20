@@ -1,6 +1,6 @@
 import React from "react";
 import "./CreateAsset.css";
-import { Asset } from "./types.ts";
+import { Asset } from "./types";
 
 const CreateAsset = () => {
     const [asset, setAsset] = React.useState<Asset>({
@@ -26,8 +26,8 @@ const CreateAsset = () => {
     
     const handleChange = (e) => {
         const value = e.target.value;
-        if(value <= 10000) {
-            setError('Value must be greater than 10,000');
+        if(value <= 1000) {
+            setError('Value must be greater than 1000');
         }
         else {
             setError('');

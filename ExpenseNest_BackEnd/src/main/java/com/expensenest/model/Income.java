@@ -17,7 +17,6 @@ public class Income {
     private double amount;
     private Date date;
     private String category;
-    private String member;
     private String description;
 	public Long getId() {
 		return id;
@@ -48,12 +47,6 @@ public class Income {
 	}
 	public void setCategory(String category) {
 		this.category = category;
-	}
-	public String getMember() {
-		return member;
-	}
-	public void setMember(String member) {
-		this.member = member;
 	}
 	public String getDescription() {
 		return description;

@@ -1,50 +1,58 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart, ArcElement } from 'chart.js';
-// import { cut } from '@testing-library/user-event/dist/cjs/clipboard/cut.js';
 import Labels from './Labels';
 
 Chart.register(ArcElement);
 
-const data = {
-  datasets: [{
-    data: [45, 25, 20, 15],
-    backgroundColor: [
-      '#F04848',
-      '#FDBD28',
-      '#F7E092',
-      '#37AD86',
-    ],
-    hoverOffset: 1,
-    borderRadius: 10,
-    spacing: 10,
-    borderWidth: 0 // Set borderWidth to 0 to remove the border
-  }],
-  options: {
+export default function Graph({ debts = [] }) {
+  // Group debts by type and sum the amounts for each type
+  const loanTypeData = debts.reduce((acc, debt) => {
+    if (acc[debt.type]) {
+      acc[debt.type] += debt.amount;
+    } else {
+      acc[debt.type] = debt.amount;
+    }
+    return acc;
+  }, {});
+
+  // Extract labels and data from the grouped object
+  const chartLabels = Object.keys(loanTypeData);
+  const chartData = Object.values(loanTypeData);
+  const backgroundColors = ['#F04848', '#FDBD28', '#F7E092', '#37AD86', '#73B2E8', '#A29BFE']; // Add more colors if needed
+
+  const data = {
+    labels: chartLabels,
+    datasets: [{
+      data: chartData,
+      backgroundColor: backgroundColors.slice(0, chartData.length),
+      hoverOffset: 4,
+      borderRadius: 10,
+      spacing: 10,
+      borderWidth: 0
+    }],
+  };
+
+  const options = {
     responsive: true,
     maintainAspectRatio: false,
-  },
-};
+    cutout: '75%', // Adjust this for the inner cutout size
+  };
 
-const options = {
-  cutout: '75%', // Adjust cutout for the doughnut (percentage or value)
-};
-
-export default function Graph() {
-  const total = data.datasets[0].data.reduce((a, b) => a + b, 0);
+  const total = chartData.reduce((a, b) => a + b, 0);
 
   return (
-    <div className="flex justify-content max-w-xs mx-auto">
+    <div style={{ width: '400px', height: '400px', margin: '0 auto' }}>
       <div className="item">
         <div className="chart relative">
-          <Doughnut data={data} options={options} />
+          <Doughnut data={data} options={options} width={400} height={400} />
           <h3 className="mb-4 font-bold title text-black">Total:
-            <span className="block text-3xl text-red-400">${total}</span>
+            <span className="block text-3xl text-red-400">${total.toFixed(2)}</span>
           </h3>
         </div>
         <div className="flex flex-col py-10 gap-4">
-          {/*Labels*/}
-          <Labels></Labels>
+          {/* Labels */}
+          <Labels debts={debts} />
         </div>
       </div>
     </div>

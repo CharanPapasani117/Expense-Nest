@@ -165,7 +165,7 @@ const IncomeChart = ({ incomes = [] }) => {
               </PieChart>
             </ResponsiveContainer>
           </Col>
-          <Col md={6}>
+          {/* <Col md={6}>
             <h5 className="text-center mb-4" style={{color: '#1A2B4A', fontWeight: 'bold'}}>Income by Family Member</h5>
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
@@ -186,7 +186,7 @@ const IncomeChart = ({ incomes = [] }) => {
                 <Legend />
               </PieChart>
             </ResponsiveContainer>
-          </Col>
+          </Col> */}
         </Row>
       ) : (
         <div className="text-center mt-3" style={{color: '#1A2B4A'}}>

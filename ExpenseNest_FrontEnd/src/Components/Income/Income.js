@@ -6,92 +6,93 @@ import IncomeChart from './IncomeChart';
 import { Modal, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { FaBars, FaPlusCircle } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import Sidebar from '../Sidebar';
 
 const API_URL = 'http://localhost:8080/api/incomes';
 
-const Sidebar = ({ isMobile, isOpen, onToggle }) => (
-  <div className="sidebar" style={{
-    width: '120px',
-    height: '100vh', 
-    position: 'fixed', 
-    left: 0, 
-    top: 0, 
-    bottom: 0, 
-    backgroundColor: '#1A2B4A',
-    backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
-    zIndex: 1000,
-    boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    paddingTop: '2rem',
-    transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
-    transition: 'transform 0.3s ease-in-out'
-  }}>
-    <Button
-      variant="link"
-      onClick={onToggle}
-      style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
-    >
-      <FaBars />
-    </Button>
-    <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
-      {[
-        { name: 'Income', path: '/income' },
-        { name: 'Expenses', path: '/expense' },
-        { name: 'Assets', path: '/asset' },
-        { name: 'Debts', path: '/debtTracker' },
-        { name: 'Goals', path: '/goals' },
-        { name: 'Budget', path: '/budget' },
-        { name: 'Calculator', path: '/financialCal' },
-        { name: 'Advising', path: '/schedulingAppt' },
-      ].map((item) => (
-        <NavLink 
-          key={item.name}
-          to={item.path}
-          className="nav-link mb-4" 
-          style={{ 
-            color: 'white',
-            opacity: 0.75,
-            transition: 'opacity 0.2s',
-            padding: '8px',
-            borderRadius: '8px',
-            textAlign: 'center',
-            width: '100%',
-            fontSize: '0.9rem',
-            textDecoration: 'none'
-          }}
-        >
-          {item.name}
-        </NavLink>
-      ))}
-    </nav>
-    <div style={{ 
-      marginBottom: '1.5rem',
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center'
-    }}>
-      <a 
-        className="nav-link" 
-        href="#" 
-        style={{ 
-          color: 'white',
-          opacity: 0.75,
-          transition: 'opacity 0.2s',
-          padding: '8px',
-          borderRadius: '8px',
-          textAlign: 'center',
-          width: '100%',
-          fontSize: '0.9rem',
-          textDecoration: 'none'
-        }}
-      >
-        Logout
-      </a>
-    </div>
-  </div>
-);
+// const Sidebar = ({ isMobile, isOpen, onToggle }) => (
+//   <div className="sidebar" style={{
+//     width: '120px',
+//     height: '100vh', 
+//     position: 'fixed', 
+//     left: 0, 
+//     top: 0, 
+//     bottom: 0, 
+//     backgroundColor: '#1A2B4A',
+//     backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
+//     zIndex: 1000,
+//     boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     paddingTop: '2rem',
+//     transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
+//     transition: 'transform 0.3s ease-in-out'
+//   }}>
+//     <Button
+//       variant="link"
+//       onClick={onToggle}
+//       style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
+//     >
+//       <FaBars />
+//     </Button>
+//     <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
+//       {[
+//         { name: 'Income', path: '/income' },
+//         { name: 'Expenses', path: '/expense' },
+//         { name: 'Assets', path: '/asset' },
+//         { name: 'Debts', path: '/debtTracker' },
+//         { name: 'Goals', path: '/goals' },
+//         { name: 'Budget', path: '/budget' },
+//         { name: 'Calculator', path: '/financialCal' },
+//         { name: 'Advising', path: '/schedulingAppt' },
+//       ].map((item) => (
+//         <NavLink 
+//           key={item.name}
+//           to={item.path}
+//           className="nav-link mb-4" 
+//           style={{ 
+//             color: 'white',
+//             opacity: 0.75,
+//             transition: 'opacity 0.2s',
+//             padding: '8px',
+//             borderRadius: '8px',
+//             textAlign: 'center',
+//             width: '100%',
+//             fontSize: '0.9rem',
+//             textDecoration: 'none'
+//           }}
+//         >
+//           {item.name}
+//         </NavLink>
+//       ))}
+//     </nav>
+//     <div style={{ 
+//       marginBottom: '1.5rem',
+//       width: '100%',
+//       display: 'flex',
+//       justifyContent: 'center'
+//     }}>
+//       <a 
+//         className="nav-link" 
+//         href="#" 
+//         style={{ 
+//           color: 'white',
+//           opacity: 0.75,
+//           transition: 'opacity 0.2s',
+//           padding: '8px',
+//           borderRadius: '8px',
+//           textAlign: 'center',
+//           width: '100%',
+//           fontSize: '0.9rem',
+//           textDecoration: 'none'
+//         }}
+//       >
+//         Logout
+//       </a>
+//     </div>
+//   </div>
+// );
 
 const IncomeDashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -104,7 +105,6 @@ const IncomeDashboard = () => {
     amount: '',
     date: '',
     category: '',
-    member: '',
     description: '',
   });
 
@@ -142,13 +142,13 @@ const IncomeDashboard = () => {
           setEditingIncome(null);
         })
         .catch(error => console.error("Error updating income:", error));
-    } else if (newIncome.title && newIncome.amount && newIncome.date && newIncome.category && newIncome.member) {
+    } else if (newIncome.title && newIncome.amount && newIncome.date && newIncome.category && newIncome.description) {
       // Add new income
       axios.post(API_URL, newIncome)
         .then(response => setIncomes([...incomes, response.data]))
         .catch(error => console.error("Error adding income:", error));
     }
-    setNewIncome({ title: '', amount: '', date: '', category: '', member: '', description: '' });
+    setNewIncome({ title: '', amount: '', date: '', category: '', description: '' });
     setShowModal(false);
   };
 
@@ -166,17 +166,18 @@ const IncomeDashboard = () => {
 
   const handleAddNewIncome = () => {
     setEditingIncome(null);
-    setNewIncome({ title: '', amount: '', date: '', category: '', member: '', description: '' });
+    setNewIncome({ title: '', amount: '', date: '', category: '', description: '' });
     setShowModal(true);
   };
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh',minWidth:'1550px', maxWidth: '1800px', backgroundColor: '#F0F8FF' }}>
-      <Sidebar 
+      {/* <Sidebar 
         isMobile={isMobile} 
         isOpen={sidebarOpen} 
         onToggle={() => setSidebarOpen(!sidebarOpen)} 
-      />
+      /> */}
+      <Sidebar></Sidebar>
       
       <div style={{ 
         flex: 1,

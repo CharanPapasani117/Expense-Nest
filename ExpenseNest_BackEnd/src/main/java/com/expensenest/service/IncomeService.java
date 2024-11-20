@@ -28,7 +28,6 @@ public class IncomeService {
         income.setAmount(incomeDetails.getAmount());
         income.setDate(incomeDetails.getDate());
         income.setCategory(incomeDetails.getCategory());
-        income.setMember(incomeDetails.getMember());
         income.setDescription(incomeDetails.getDescription());
         return incomeRepository.save(income);
     }

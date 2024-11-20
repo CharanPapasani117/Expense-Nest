@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Sidebar from '../Sidebar.js'; // Import the Sidebar component
-import './loancalculator.css'; 
 
 function FinancialGoalsCalculator() {
     const [reason, setReason] = useState('');
@@ -24,7 +23,7 @@ function FinancialGoalsCalculator() {
 
     const handleTargetAmountChange = (e) => {
         let value = parseFloat(e.target.value);
-        setTargetAmount(value >=  0 ? value : '');
+        setTargetAmount(value >= 0 ? value : '');
     };
 
     const handleCurrentSavingsChange = (e) => {
@@ -56,7 +55,7 @@ function FinancialGoalsCalculator() {
                 reason,
                 targetAmount: parseFloat(targetAmount),
                 currentSavings: parseFloat(currentSavings),
-                timeframe: parseInt(timeframe) 
+                timeframe: parseInt(timeframe)
             });
             setResult(response.data);
         } catch (error) {
@@ -65,58 +64,55 @@ function FinancialGoalsCalculator() {
     };
 
     return (
-        <div className="calculator-container">
+        <div style={styles.calculatorContainer}>
             <Sidebar />
-            <div className="calculator-content">
-            <h2 style={{
-                    textAlign: 'center', // Center the text horizontally
-                    fontSize: '2rem', // Adjust the font size
-                }}>FINANCIAL GOALS CALCULATOR</h2>
-                <input 
-                    type="text" 
-                    placeholder="Reason" 
-                    value={reason} 
-                    onChange={(e) => validateReason(e.target.value)}  
-                    className="input-field"
+            <div style={styles.calculatorContent}>
+                <h2 style={styles.header}>FINANCIAL GOALS CALCULATOR</h2>
+                <input
+                    type="text"
+                    placeholder="Reason"
+                    value={reason}
+                    onChange={(e) => validateReason(e.target.value)}
+                    style={styles.inputField}
                     required
                 />
-                <input 
-                    type="number" 
-                    placeholder="Target Amount" 
-                    value={targetAmount} 
-                    onChange={handleTargetAmountChange} 
-                    className="input-field"
+                <input
+                    type="number"
+                    placeholder="Target Amount"
+                    value={targetAmount}
+                    onChange={handleTargetAmountChange}
+                    style={styles.inputField}
                     required
                     min={0}
                 />
-                <input 
-                    type="number" 
-                    placeholder="Current Savings" 
-                    value={currentSavings} 
-                    onChange={handleCurrentSavingsChange} 
-                    className="input-field"
+                <input
+                    type="number"
+                    placeholder="Current Savings"
+                    value={currentSavings}
+                    onChange={handleCurrentSavingsChange}
+                    style={styles.inputField}
                     required
                     min={0}
                 />
-                <input 
-                    type="number" 
-                    placeholder="Timeframe (months)" 
-                    value={timeframe} 
-                    onChange={handleTimeframeChange} 
-                    className="input-field"
+                <input
+                    type="number"
+                    placeholder="Timeframe (months)"
+                    value={timeframe}
+                    onChange={handleTimeframeChange}
+                    style={styles.inputField}
                     required
                     min={0}
                 />
-                <button onClick={calculateGoals}>Calculate</button>
+                <button onClick={calculateGoals} style={styles.button}>Calculate</button>
 
                 {message && (
-                    <div className="message">
+                    <div style={styles.result}>
                         <p>{message}</p>
                     </div>
                 )}
 
                 {result && (
-                    <div className="result">
+                    <div style={styles.result}>
                         <p>Amount to Save Monthly: {result.monthlySavings}</p>
                         <p>Total Amount to Save: {result.totalamount}</p>
                     </div>
@@ -125,5 +121,59 @@ function FinancialGoalsCalculator() {
         </div>
     );
 }
+
+const styles = {
+    calculatorContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100vh',
+        backgroundColor: '#F0F8FF',
+    },
+    calculatorContent: {
+        backgroundColor: '#ffffff',
+        padding: '2rem',
+        borderRadius: '10px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        maxWidth: '500px',
+        width: '90%',
+        textAlign: 'center',
+    },
+    header: {
+        fontSize: '1.8rem',
+        color: '#1A2B4A',
+        marginBottom: '1.5rem',
+    },
+    inputField: {
+        width: '100%',
+        padding: '12px',
+        fontSize: '1rem',
+        border: '1px solid #cccccc',
+        borderRadius: '5px',
+        marginBottom: '1rem',
+        boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1)',
+        transition: 'border-color 0.3s ease',
+    },
+    button: {
+        padding: '12px 30px',
+        fontSize: '1rem',
+        color: '#ffffff',
+        backgroundColor: '#4A8895',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        transition: 'background-color 0.3s ease',
+        width: '100%',
+    },
+    result: {
+        marginTop: '2rem',
+        padding: '1rem',
+        backgroundColor: '#F4F7FC',
+        borderRadius: '5px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    }
+};
 
 export default FinancialGoalsCalculator;

@@ -74,7 +74,7 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           ))}
         </Form.Control>
       </Form.Group>
-      <Form.Group className="mb-3">
+      {/* <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Family Member</Form.Label>
         <Form.Control
           as="select"
@@ -94,7 +94,8 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           <option value="Praneeth">Praneeth</option>
           <option value="Family">Family</option>
         </Form.Control>
-      </Form.Group>
+      </Form.Group> */}
+      
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Description</Form.Label>
         <Form.Control

@@ -1,5 +1,4 @@
 import React from "react";
-import "./AssetPage.css";
 import { useNavigate } from "react-router-dom";
 
 const AssetPage = () => {
