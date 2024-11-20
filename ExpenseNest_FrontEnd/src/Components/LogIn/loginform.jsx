@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import './loginform.css';
 import { FaRegUser, FaUserAlt, FaPhone, FaLock } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 
-const LoginForm = () => { // Renamed component to 'LoginForm'
-  const [user, setUser] = useState(null);
+const LoginForm = () => {
   const [oldUser, setOldUser] = useState(true);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -23,58 +21,33 @@ const LoginForm = () => { // Renamed component to 'LoginForm'
     const formData = { firstName, lastName, phoneNumber, email, password };
     const loginData = { email, password };
 
-    if (oldUser) {
-      try {
-        const response = await fetch("http://localhost:8080/api/users/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(loginData),
-        });
+    try {
+      const response = await fetch(`http://localhost:8080/api/users/${oldUser ? 'login' : 'register'}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(oldUser ? loginData : formData),
+      });
 
-        if (response.status === 200) {
-          const token = await response.text();
-          setMessage("Login successful!");
-          localStorage.setItem('authToken', `Bearer ${token}`);
-          navigate('/dashboard'); // Navigate to '/expense' after login
-        } else if (response.status === 401) {
-          setMessage("Login failed: Invalid credentials. Please try again.");
-        } 
-        else if (response.status === 403) {
-          setMessage("Login failed: Please verify your email");
-        }else {
-          setMessage("Login failed: Unexpected error. Please try again later.");
-        }
-      } catch (error) {
-        console.error("Error during login:", error);
-        setMessage("An error occurred during login. Please try again.");
+      if (response.status === 200) {
+        const token = await response.text();
+        setMessage(oldUser ? "Login successful!" : "Registration successful!");
+        localStorage.setItem('authToken', `Bearer ${token}`);
+        if (oldUser) navigate('/dashboard');
+      } else if (response.status === 401) {
+        setMessage("Login failed: Invalid credentials. Please try again.");
+      } else if (response.status === 403) {
+        setMessage("Login failed: Please verify your email");
+      } else if (response.status === 409) {
+        const errorMessage = await response.text();
+        setMessage(`Registration failed: ${errorMessage}`);
+      } else {
+        setMessage(`${oldUser ? "Login" : "Registration"} failed: Unexpected error. Please try again later.`);
       }
-    } else {
-      try {
-        const response = await fetch("http://localhost:8080/api/users/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        if (response.status === 200) {
-          const token = await response.text();
-          setMessage("Registration successful!");
-          localStorage.setItem('authToken', `Bearer ${token}`);
-          usageChanged();
-        } else if (response.status === 409) {
-          const errorMessage = await response.text();
-          setMessage(`Registration failed: ${errorMessage}`);
-        } else {
-          setMessage("Registration failed: Unexpected error. Please try again later.");
-        }
-      } catch (error) {
-        console.error("Error during registration:", error);
-        setMessage("An error occurred during registration. Please try again.");
-      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage(`An error occurred during ${oldUser ? "login" : "registration"}. Please try again.`);
     }
 
     setLoading(false);
@@ -90,87 +63,153 @@ const LoginForm = () => { // Renamed component to 'LoginForm'
     setPassword('');
   };
 
-  return (
-    <div className='wrapper' style={{ color: 'black' }}>
-      <form onSubmit={handleSubmit} style={{ color: 'black' }}>
+  const styles = {
+    wrapper: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100vh',
+      backgroundColor: '#F0F8FF',
+      padding: '20px',
+    },
+    form: {
+      backgroundColor: '#ffffff',
+      padding: '2rem',
+      borderRadius: '10px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      width: '100%',
+      maxWidth: '400px',
+    },
+    formHeader: {
+      textAlign: 'center',
+      marginBottom: '1.5rem',
+      fontSize: '2rem',
+      color: '#0a2f5e',
+    },
+    inputBox: {
+      position: 'relative',
+      marginBottom: '1.5rem',
+    },
+    input: {
+      width: '100%',
+      padding: '0.75rem 2.5rem 0.75rem 1rem',
+      border: '1px solid #d1d5db',
+      borderRadius: '5px',
+      fontSize: '1rem',
+      outline: 'none',
+      transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+    },
+    icon: {
+      position: 'absolute',
+      right: '10px',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      color: '#9ca3af',
+      fontSize: '1.25rem',
+    },
+    button: {
+      width: '100%',
+      padding: '0.75rem',
+      backgroundColor: '#FF7F6E',
+      border: 'none',
+      borderRadius: '5px',
+      color: '#ffffff',
+      fontSize: '1.1rem',
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      transition: 'background-color 0.3s ease, transform 0.2s ease',
+    },
+    registerLink: {
+      textAlign: 'center',
+      marginTop: '1rem',
+      fontSize: '0.9rem',
+      color: '#6b7280',
+    },
+    message: {
+      textAlign: 'center',
+      marginBottom: '1rem',
+    },
+  };
 
-        <h1 style={{ color: 'black' }}>{oldUser ? "Login" : "Register"}</h1>
+  return (
+    <div style={styles.wrapper}>
+      <form onSubmit={handleSubmit} style={styles.form}>
+        <h1 style={styles.formHeader}>{oldUser ? "Login" : "Register"}</h1>
         {message && (
-          <p style={{ color: message.includes('failed') ? 'red' : 'green' }}>
+          <p style={{ ...styles.message, color: message.includes('failed') ? 'red' : 'green' }}>
             {message}
           </p>
         )}
-
         {!oldUser && (
           <>
-            <div className='input-box'>
+            <div style={styles.inputBox}>
               <input
-                type='text'
-                placeholder='First Name'
+                style={styles.input}
+                type="text"
+                placeholder="First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
               />
-              <FaRegUser className='icon' />
+              <FaRegUser style={styles.icon} />
             </div>
-            <div className='input-box'>
+            <div style={styles.inputBox}>
               <input
-                type='text'
-                placeholder='Last Name'
+                style={styles.input}
+                type="text"
+                placeholder="Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 required
               />
-              <FaUserAlt className='icon' />
+              <FaUserAlt style={styles.icon} />
             </div>
-            <div className='input-box'>
+            <div style={styles.inputBox}>
               <input
-                type='text'
-                placeholder='Phone Number'
+                style={styles.input}
+                type="text"
+                placeholder="Phone Number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
               />
-              <FaPhone className='icon' />
+              <FaPhone style={styles.icon} />
             </div>
           </>
         )}
-
-        <div className='input-box'>
+        <div style={styles.inputBox}>
           <input
-            type='email'
-            placeholder='Email'
+            style={styles.input}
+            type="email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <IoMdMail className='icon' />
+          <IoMdMail style={styles.icon} />
         </div>
-
-        <div className='input-box'>
+        <div style={styles.inputBox}>
           <input
-            type='password'
-            placeholder='Password'
+            style={styles.input}
+            type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <FaLock className='icon' />
+          <FaLock style={styles.icon} />
         </div>
-
-        <button type='submit' disabled={loading}>
-          {loading ? "Loading..." : (oldUser ? "Login" : "Register")}
+        <button style={styles.button} type="submit" disabled={loading}>
+          {loading ? "Loading..." : oldUser ? "Login" : "Register"}
         </button>
-
-        {oldUser ? (
-          <div className='register-link'>
-            <p>Don't have an account? <a href='#' onClick={usageChanged}> Register</a></p>
-          </div>
-        ) : (
-          <div className='register-link'>
-            <p>Already have an account? <a href='#' onClick={usageChanged}> Login</a></p>
-          </div>
-        )}
+        <div style={styles.registerLink}>
+          <p>
+            {oldUser ? "Don't have an account?" : "Already have an account?"}{" "}
+            <span style={{ cursor: 'pointer', color: '#0a2f5e', fontWeight: 'bold' }} onClick={usageChanged}>
+              {oldUser ? "Register" : "Login"}
+            </span>
+          </p>
+        </div>
       </form>
     </div>
   );

@@ -1,0 +1,1105 @@
+Date,Category,Amount,Payment Method,Vendor/Location,Month,Day of Week,Transaction Count,Cumulative Monthly Spend,Transaction Type,Seasonality Indicator,Historical Spend
+2023-11-13 11:53:01.755563,Groceries,110.25,Debit Card,Store D,11,Monday,1,110.25,Groceries,Regular,0.0
+2023-11-13 11:53:01.755563,Entertainment,18.32,Credit Card,Store A,11,Monday,1,18.32,Entertainment,Regular,0.0
+2023-11-14 11:53:01.755563,Entertainment,159.79,Debit Card,Store C,11,Tuesday,4,178.10999999999999,Entertainment,Regular,18.32
+2023-11-14 11:53:01.755563,Entertainment,194.27,Mobile Payment,Store B,11,Tuesday,4,372.38,Entertainment,Regular,159.79
+2023-11-14 11:53:01.755563,Entertainment,192.67,Cash,Store D,11,Tuesday,4,565.05,Entertainment,Regular,194.27
+2023-11-14 11:53:01.755563,Entertainment,108.36,Credit Card,Store E,11,Tuesday,4,673.41,Entertainment,Regular,192.67
+2023-11-15 11:53:01.755563,Groceries,28.23,Credit Card,Store E,11,Wednesday,1,138.48,Groceries,Regular,110.25
+2023-11-15 11:53:01.755563,Utilities,35.43,Credit Card,Store C,11,Wednesday,1,35.43,Utilities,Regular,0.0
+2023-11-16 11:53:01.755563,Groceries,108.61,Debit Card,Store D,11,Thursday,1,247.09,Groceries,Regular,28.23
+2023-11-17 11:53:01.755563,Transportation,78.64,Mobile Payment,Store D,11,Friday,1,78.64,Transportation,Regular,0.0
+2023-11-17 11:53:01.755563,Dining,149.89,Debit Card,Store B,11,Friday,2,149.89,Takeout,Regular,0.0
+2023-11-17 11:53:01.755563,Dining,5.9,Debit Card,Store D,11,Friday,2,155.79,Takeout,Regular,149.89
+2023-11-18 11:53:01.755563,Groceries,177.63,Mobile Payment,Store A,11,Saturday,1,424.72,Groceries,Regular,108.61
+2023-11-18 11:53:01.755563,Dining,60.46,Cash,Store E,11,Saturday,2,216.25,Takeout,Regular,5.9
+2023-11-18 11:53:01.755563,Transportation,30.81,Mobile Payment,Store C,11,Saturday,1,109.45,Transportation,Regular,78.64
+2023-11-18 11:53:01.755563,Dining,157.35,Cash,Store A,11,Saturday,2,373.59999999999997,Takeout,Regular,60.46
+2023-11-19 11:53:01.755563,Groceries,66.61,Debit Card,Store E,11,Sunday,2,491.33,Groceries,Regular,177.63
+2023-11-19 11:53:01.755563,Miscellaneous,50.39,Mobile Payment,Store E,11,Sunday,1,50.39,Miscellaneous,Regular,0.0
+2023-11-19 11:53:01.755563,Utilities,92.54,Mobile Payment,Store B,11,Sunday,1,127.97,Utilities,Regular,35.43
+2023-11-19 11:53:01.755563,Groceries,195.26,Credit Card,Store D,11,Sunday,2,686.5899999999999,Groceries,Regular,66.61
+2023-11-19 11:53:01.755563,Dining,182.1,Cash,Store D,11,Sunday,1,555.6999999999999,Takeout,Regular,157.35
+2023-11-20 11:53:01.755563,Utilities,101.36,Mobile Payment,Store D,11,Monday,2,229.33,Utilities,Regular,92.54
+2023-11-20 11:53:01.755563,Entertainment,136.05,Debit Card,Store C,11,Monday,1,809.46,Entertainment,Regular,108.36
+2023-11-20 11:53:01.755563,Utilities,76.85,Credit Card,Store A,11,Monday,2,306.18,Utilities,Regular,101.36
+2023-11-21 11:53:01.755563,Utilities,83.73,Credit Card,Store B,11,Tuesday,2,389.91,Utilities,Regular,76.85
+2023-11-21 11:53:01.755563,Utilities,48.75,Credit Card,Store D,11,Tuesday,2,438.66,Utilities,Regular,83.73
+2023-11-21 11:53:01.755563,Transportation,16.36,Cash,Store C,11,Tuesday,1,125.81,Transportation,Regular,30.81
+2023-11-21 11:53:01.755563,Miscellaneous,44.88,Mobile Payment,Store E,11,Tuesday,2,95.27000000000001,Miscellaneous,Regular,50.39
+2023-11-21 11:53:01.755563,Miscellaneous,84.79,Cash,Store A,11,Tuesday,2,180.06,Miscellaneous,Regular,44.88
+2023-11-22 11:53:01.755563,Entertainment,152.76,Mobile Payment,Store A,11,Wednesday,1,962.22,Entertainment,Regular,136.05
+2023-11-22 11:53:01.755563,Miscellaneous,11.96,Mobile Payment,Store B,11,Wednesday,1,192.02,Miscellaneous,Regular,84.79
+2023-11-23 11:53:01.755563,Miscellaneous,78.81,Debit Card,Store B,11,Thursday,1,270.83000000000004,Miscellaneous,Regular,11.96
+2023-11-24 11:53:01.755563,Entertainment,95.12,Credit Card,Store D,11,Friday,1,1057.34,Entertainment,Regular,152.76
+2023-11-24 11:53:01.755563,Utilities,70.08,Mobile Payment,Store A,11,Friday,1,508.74,Utilities,Regular,48.75
+2023-11-24 11:53:01.755563,Miscellaneous,17.25,Debit Card,Store B,11,Friday,1,288.08000000000004,Miscellaneous,Regular,78.81
+2023-11-24 11:53:01.755563,Dining,90.49,Debit Card,Store C,11,Friday,1,646.1899999999999,Takeout,Regular,182.1
+2023-11-24 11:53:01.755563,Transportation,22.59,Mobile Payment,Store B,11,Friday,1,148.4,Transportation,Regular,16.36
+2023-11-25 11:53:01.755563,Dining,85.6,Debit Card,Store A,11,Saturday,1,731.79,Takeout,Regular,90.49
+2023-11-26 11:53:01.755563,Utilities,198.48,Debit Card,Store C,11,Sunday,1,707.22,Utilities,Regular,70.08
+2023-11-26 11:53:01.755563,Groceries,143.75,Cash,Store D,11,Sunday,1,830.3399999999999,Groceries,Regular,195.26
+2023-11-27 11:53:01.755563,Dining,116.18,Mobile Payment,Store A,11,Monday,2,847.9699999999999,Takeout,Regular,85.6
+2023-11-27 11:53:01.755563,Entertainment,160.72,Cash,Store C,11,Monday,2,1218.06,Entertainment,Regular,95.12
+2023-11-27 11:53:01.755563,Entertainment,190.66,Mobile Payment,Store C,11,Monday,2,1408.72,Entertainment,Regular,160.72
+2023-11-27 11:53:01.755563,Dining,86.41,Mobile Payment,Store B,11,Monday,2,934.38,Takeout,Regular,116.18
+2023-11-27 11:53:01.755563,Groceries,98.89,Mobile Payment,Store B,11,Monday,1,929.23,Groceries,Regular,143.75
+2023-11-28 11:53:01.755563,Miscellaneous,13.05,Debit Card,Store A,11,Tuesday,2,301.13,Miscellaneous,Regular,17.25
+2023-11-28 11:53:01.755563,Utilities,16.14,Credit Card,Store A,11,Tuesday,1,723.36,Utilities,Regular,198.48
+2023-11-28 11:53:01.755563,Miscellaneous,174.87,Credit Card,Store A,11,Tuesday,2,476.0,Miscellaneous,Regular,13.05
+2023-11-28 11:53:01.755563,Entertainment,136.83,Credit Card,Store C,11,Tuesday,1,1545.55,Entertainment,Regular,190.66
+2023-11-28 11:53:01.755563,Dining,165.43,Mobile Payment,Store C,11,Tuesday,1,1099.81,Takeout,Regular,86.41
+2023-11-29 11:53:01.755563,Entertainment,72.88,Mobile Payment,Store B,11,Wednesday,1,1618.43,Entertainment,Regular,136.83
+2023-11-29 11:53:01.755563,Dining,156.25,Debit Card,Store E,11,Wednesday,2,1256.06,Takeout,Regular,165.43
+2023-11-29 11:53:01.755563,Dining,160.9,Mobile Payment,Store B,11,Wednesday,2,1416.96,Takeout,Regular,156.25
+2023-11-30 11:53:01.755563,Miscellaneous,155.33,Mobile Payment,Store E,11,Thursday,3,631.33,Miscellaneous,Regular,174.87
+2023-11-30 11:53:01.755563,Groceries,135.86,Credit Card,Store E,11,Thursday,2,1065.09,Groceries,Regular,98.89
+2023-11-30 11:53:01.755563,Miscellaneous,10.46,Credit Card,Store D,11,Thursday,3,641.7900000000001,Miscellaneous,Regular,155.33
+2023-11-30 11:53:01.755563,Groceries,32.45,Debit Card,Store D,11,Thursday,2,1097.54,Groceries,Regular,135.86
+2023-11-30 11:53:01.755563,Miscellaneous,29.37,Mobile Payment,Store C,11,Thursday,3,671.1600000000001,Miscellaneous,Regular,10.46
+2023-12-01 11:53:01.755563,Entertainment,162.51,Cash,Store E,12,Friday,2,162.51,Entertainment,Holiday,72.88
+2023-12-01 11:53:01.755563,Entertainment,156.0,Debit Card,Store B,12,Friday,2,318.51,Entertainment,Holiday,162.51
+2023-12-01 11:53:01.755563,Transportation,28.18,Mobile Payment,Store D,12,Friday,1,28.18,Transportation,Holiday,22.59
+2023-12-02 11:53:01.755563,Utilities,188.23,Debit Card,Store E,12,Saturday,1,188.23,Utilities,Holiday,16.14
+2023-12-02 11:53:01.755563,Groceries,25.77,Mobile Payment,Store A,12,Saturday,1,25.77,Groceries,Holiday,32.45
+2023-12-03 11:53:01.755563,Transportation,69.84,Debit Card,Store E,12,Sunday,1,98.02000000000001,Transportation,Holiday,28.18
+2023-12-04 11:53:01.755563,Groceries,103.6,Cash,Store C,12,Monday,1,129.37,Groceries,Holiday,25.77
+2023-12-04 11:53:01.755563,Utilities,99.7,Mobile Payment,Store B,12,Monday,1,287.93,Utilities,Holiday,188.23
+2023-12-04 11:53:01.755563,Dining,46.73,Cash,Store A,12,Monday,1,46.73,Takeout,Holiday,160.9
+2023-12-05 11:53:01.755563,Utilities,136.16,Mobile Payment,Store B,12,Tuesday,1,424.09,Utilities,Holiday,99.7
+2023-12-05 11:53:01.755563,Groceries,12.75,Debit Card,Store A,12,Tuesday,1,142.12,Groceries,Holiday,103.6
+2023-12-05 11:53:01.755563,Entertainment,185.9,Cash,Store B,12,Tuesday,1,504.40999999999997,Entertainment,Holiday,156.0
+2023-12-06 11:53:01.755563,Utilities,135.92,Cash,Store E,12,Wednesday,1,560.01,Utilities,Holiday,136.16
+2023-12-07 11:53:01.755563,Entertainment,102.95,Debit Card,Store A,12,Thursday,1,607.36,Entertainment,Holiday,185.9
+2023-12-07 11:53:01.755563,Dining,18.41,Credit Card,Store B,12,Thursday,3,65.14,Takeout,Holiday,46.73
+2023-12-07 11:53:01.755563,Dining,8.41,Cash,Store C,12,Thursday,3,73.55,Takeout,Holiday,18.41
+2023-12-07 11:53:01.755563,Dining,68.39,Debit Card,Store E,12,Thursday,3,141.94,Takeout,Holiday,8.41
+2023-12-08 11:53:01.755563,Dining,62.07,Cash,Store D,12,Friday,3,204.01,Takeout,Holiday,68.39
+2023-12-08 11:53:01.755563,Entertainment,140.77,Mobile Payment,Store C,12,Friday,1,748.13,Entertainment,Holiday,102.95
+2023-12-08 11:53:01.755563,Dining,175.42,Credit Card,Store E,12,Friday,3,379.42999999999995,Takeout,Holiday,62.07
+2023-12-08 11:53:01.755563,Transportation,22.78,Cash,Store D,12,Friday,1,120.80000000000001,Transportation,Holiday,69.84
+2023-12-08 11:53:01.755563,Dining,8.97,Credit Card,Store E,12,Friday,3,388.4,Takeout,Holiday,175.42
+2023-12-09 11:53:01.755563,Groceries,151.53,Credit Card,Store D,12,Saturday,1,293.65,Groceries,Holiday,12.75
+2023-12-10 11:53:01.755563,Dining,147.85,Mobile Payment,Store C,12,Sunday,1,536.25,Takeout,Holiday,8.97
+2023-12-10 11:53:01.755563,Miscellaneous,106.15,Mobile Payment,Store C,12,Sunday,1,106.15,Miscellaneous,Holiday,29.37
+2023-12-11 11:53:01.755563,Transportation,67.97,Cash,Store A,12,Monday,2,188.77,Transportation,Holiday,22.78
+2023-12-11 11:53:01.755563,Miscellaneous,181.23,Credit Card,Store D,12,Monday,1,287.38,Miscellaneous,Holiday,106.15
+2023-12-11 11:53:01.755563,Transportation,147.11,Debit Card,Store C,12,Monday,2,335.88,Transportation,Holiday,67.97
+2023-12-11 11:53:01.755563,Utilities,65.54,Credit Card,Store B,12,Monday,1,625.55,Utilities,Holiday,135.92
+2023-12-12 11:53:01.755563,Entertainment,169.72,Debit Card,Store D,12,Tuesday,2,917.85,Entertainment,Holiday,140.77
+2023-12-12 11:53:01.755563,Entertainment,138.47,Cash,Store E,12,Tuesday,2,1056.32,Entertainment,Holiday,169.72
+2023-12-12 11:53:01.755563,Dining,65.68,Cash,Store D,12,Tuesday,1,601.93,Takeout,Holiday,147.85
+2023-12-13 11:53:01.755563,Miscellaneous,32.22,Mobile Payment,Store C,12,Wednesday,1,319.6,Miscellaneous,Holiday,181.23
+2023-12-14 11:53:01.755563,Transportation,145.94,Debit Card,Store D,12,Thursday,1,481.82000000000005,Transportation,Holiday,147.11
+2023-12-14 11:53:01.755563,Dining,64.59,Cash,Store C,12,Thursday,1,666.52,Takeout,Holiday,65.68
+2023-12-14 11:53:01.755563,Utilities,118.68,Mobile Payment,Store A,12,Thursday,1,744.23,Utilities,Holiday,65.54
+2023-12-15 11:53:01.755563,Entertainment,79.61,Mobile Payment,Store A,12,Friday,1,1135.93,Entertainment,Holiday,138.47
+2023-12-16 11:53:01.755563,Transportation,82.61,Mobile Payment,Store D,12,Saturday,2,564.4300000000001,Transportation,Holiday,145.94
+2023-12-16 11:53:01.755563,Transportation,199.19,Mobile Payment,Store E,12,Saturday,2,763.62,Transportation,Holiday,82.61
+2023-12-16 11:53:01.755563,Utilities,11.63,Cash,Store D,12,Saturday,1,755.86,Utilities,Holiday,118.68
+2023-12-17 11:53:01.755563,Utilities,170.91,Cash,Store A,12,Sunday,2,926.77,Utilities,Holiday,11.63
+2023-12-17 11:53:01.755563,Dining,31.88,Mobile Payment,Store E,12,Sunday,3,698.4,Takeout,Holiday,64.59
+2023-12-17 11:53:01.755563,Dining,120.45,Debit Card,Store D,12,Sunday,3,818.85,Takeout,Holiday,31.88
+2023-12-17 11:53:01.755563,Utilities,159.18,Mobile Payment,Store B,12,Sunday,2,1085.95,Utilities,Holiday,170.91
+2023-12-17 11:53:01.755563,Dining,35.79,Credit Card,Store E,12,Sunday,3,854.64,Takeout,Holiday,120.45
+2023-12-18 11:53:01.755563,Utilities,38.58,Cash,Store E,12,Monday,2,1124.53,Utilities,Holiday,159.18
+2023-12-18 11:53:01.755563,Transportation,16.96,Mobile Payment,Store E,12,Monday,1,780.58,Transportation,Holiday,199.19
+2023-12-18 11:53:01.755563,Entertainment,8.71,Mobile Payment,Store B,12,Monday,1,1144.64,Entertainment,Holiday,79.61
+2023-12-18 11:53:01.755563,Utilities,71.55,Debit Card,Store A,12,Monday,2,1196.08,Utilities,Holiday,38.58
+2023-12-19 11:53:01.755563,Miscellaneous,27.44,Debit Card,Store B,12,Tuesday,2,347.04,Miscellaneous,Holiday,32.22
+2023-12-19 11:53:01.755563,Entertainment,32.64,Debit Card,Store C,12,Tuesday,1,1177.28,Entertainment,Holiday,8.71
+2023-12-19 11:53:01.755563,Miscellaneous,33.37,Credit Card,Store B,12,Tuesday,2,380.40999999999997,Miscellaneous,Holiday,27.44
+2023-12-19 11:53:01.755563,Utilities,23.37,Debit Card,Store B,12,Tuesday,1,1219.45,Utilities,Holiday,71.55
+2023-12-20 11:53:01.755563,Utilities,136.17,Mobile Payment,Store D,12,Wednesday,1,1355.62,Utilities,Holiday,23.37
+2023-12-20 11:53:01.755563,Entertainment,164.5,Mobile Payment,Store B,12,Wednesday,2,1341.78,Entertainment,Holiday,32.64
+2023-12-20 11:53:01.755563,Entertainment,175.03,Debit Card,Store A,12,Wednesday,2,1516.81,Entertainment,Holiday,164.5
+2023-12-20 11:53:01.755563,Dining,105.93,Cash,Store C,12,Wednesday,1,960.5699999999999,Takeout,Holiday,35.79
+2023-12-20 11:53:01.755563,Miscellaneous,174.03,Credit Card,Store E,12,Wednesday,1,554.44,Miscellaneous,Holiday,33.37
+2023-12-21 11:53:01.755563,Groceries,36.13,Credit Card,Store B,12,Thursday,1,329.78,Groceries,Holiday,151.53
+2023-12-22 11:53:01.755563,Transportation,51.88,Cash,Store C,12,Friday,1,832.46,Transportation,Holiday,16.96
+2023-12-23 11:53:01.755563,Dining,188.79,Debit Card,Store E,12,Saturday,2,1149.36,Takeout,Holiday,105.93
+2023-12-23 11:53:01.755563,Transportation,199.59,Cash,Store D,12,Saturday,1,1032.05,Transportation,Holiday,51.88
+2023-12-23 11:53:01.755563,Miscellaneous,125.38,Debit Card,Store C,12,Saturday,1,679.8199999999999,Miscellaneous,Holiday,174.03
+2023-12-23 11:53:01.755563,Dining,193.6,Debit Card,Store E,12,Saturday,2,1342.96,Takeout,Holiday,188.79
+2023-12-24 11:53:01.755563,Groceries,138.18,Mobile Payment,Store E,12,Sunday,1,467.96,Groceries,Holiday,36.13
+2023-12-24 11:53:01.755563,Entertainment,85.94,Credit Card,Store A,12,Sunday,1,1602.75,Entertainment,Holiday,175.03
+2023-12-25 11:53:01.755563,Miscellaneous,159.26,Cash,Store D,12,Monday,2,839.0799999999999,Miscellaneous,Holiday,125.38
+2023-12-25 11:53:01.755563,Miscellaneous,11.78,Mobile Payment,Store C,12,Monday,2,850.86,Miscellaneous,Holiday,159.26
+2023-12-25 11:53:01.755563,Entertainment,107.52,Cash,Store A,12,Monday,1,1710.27,Entertainment,Holiday,85.94
+2023-12-25 11:53:01.755563,Transportation,177.24,Debit Card,Store E,12,Monday,1,1209.29,Transportation,Holiday,199.59
+2023-12-25 11:53:01.755563,Groceries,148.3,Cash,Store D,12,Monday,1,616.26,Groceries,Holiday,138.18
+2023-12-26 11:53:01.755563,Dining,76.22,Debit Card,Store D,12,Tuesday,3,1419.18,Takeout,Holiday,193.6
+2023-12-26 11:53:01.755563,Groceries,112.67,Cash,Store A,12,Tuesday,1,728.93,Groceries,Holiday,148.3
+2023-12-26 11:53:01.755563,Entertainment,35.93,Cash,Store D,12,Tuesday,1,1746.2,Entertainment,Holiday,107.52
+2023-12-26 11:53:01.755563,Dining,198.92,Mobile Payment,Store D,12,Tuesday,3,1618.1,Takeout,Holiday,76.22
+2023-12-26 11:53:01.755563,Dining,48.3,Debit Card,Store C,12,Tuesday,3,1666.3999999999999,Takeout,Holiday,198.92
+2023-12-27 11:53:01.755563,Groceries,31.81,Credit Card,Store D,12,Wednesday,2,760.74,Groceries,Holiday,112.67
+2023-12-27 11:53:01.755563,Dining,132.31,Credit Card,Store A,12,Wednesday,1,1798.71,Takeout,Holiday,48.3
+2023-12-27 11:53:01.755563,Utilities,168.45,Credit Card,Store B,12,Wednesday,2,1524.07,Utilities,Holiday,136.17
+2023-12-27 11:53:01.755563,Groceries,91.6,Debit Card,Store A,12,Wednesday,2,852.34,Groceries,Holiday,31.81
+2023-12-27 11:53:01.755563,Utilities,105.01,Mobile Payment,Store C,12,Wednesday,2,1629.08,Utilities,Holiday,168.45
+2023-12-28 11:53:01.755563,Groceries,172.89,Mobile Payment,Store A,12,Thursday,1,1025.23,Groceries,Holiday,91.6
+2023-12-29 11:53:01.755563,Miscellaneous,142.36,Credit Card,Store A,12,Friday,1,993.22,Miscellaneous,Holiday,11.78
+2023-12-30 11:53:01.755563,Dining,139.68,Mobile Payment,Store D,12,Saturday,2,1938.3899999999999,Takeout,Holiday,132.31
+2023-12-30 11:53:01.755563,Dining,154.14,Cash,Store D,12,Saturday,2,2092.5299999999997,Takeout,Holiday,139.68
+2023-12-30 11:53:01.755563,Transportation,46.4,Debit Card,Store B,12,Saturday,1,1255.69,Transportation,Holiday,177.24
+2023-12-30 11:53:01.755563,Utilities,154.32,Mobile Payment,Store D,12,Saturday,1,1783.4,Utilities,Holiday,105.01
+2023-12-30 11:53:01.755563,Groceries,113.32,Debit Card,Store C,12,Saturday,1,1138.55,Groceries,Holiday,172.89
+2023-12-31 11:53:01.755563,Entertainment,174.45,Debit Card,Store B,12,Sunday,2,1920.65,Entertainment,Holiday,35.93
+2023-12-31 11:53:01.755563,Entertainment,34.67,Mobile Payment,Store D,12,Sunday,2,1955.32,Entertainment,Holiday,174.45
+2023-12-31 11:53:01.755563,Dining,150.33,Mobile Payment,Store A,12,Sunday,1,2242.86,Takeout,Holiday,154.14
+2023-12-31 11:53:01.755563,Utilities,72.36,Cash,Store B,12,Sunday,1,1855.76,Utilities,Holiday,154.32
+2024-01-01 11:53:01.755563,Utilities,49.95,Mobile Payment,Store A,1,Monday,1,49.95,Utilities,Regular,72.36
+2024-01-01 11:53:01.755563,Entertainment,135.18,Debit Card,Store D,1,Monday,1,135.18,Entertainment,Regular,34.67
+2024-01-01 11:53:01.755563,Transportation,42.89,Debit Card,Store E,1,Monday,1,42.89,Transportation,Regular,46.4
+2024-01-01 11:53:01.755563,Groceries,21.75,Cash,Store B,1,Monday,1,21.75,Groceries,Regular,113.32
+2024-01-02 11:53:01.755563,Groceries,102.84,Mobile Payment,Store E,1,Tuesday,1,124.59,Groceries,Regular,21.75
+2024-01-02 11:53:01.755563,Miscellaneous,139.48,Credit Card,Store A,1,Tuesday,1,139.48,Miscellaneous,Regular,142.36
+2024-01-02 11:53:01.755563,Utilities,55.8,Mobile Payment,Store C,1,Tuesday,2,105.75,Utilities,Regular,49.95
+2024-01-02 11:53:01.755563,Utilities,22.77,Credit Card,Store B,1,Tuesday,2,128.52,Utilities,Regular,55.8
+2024-01-03 11:53:01.755563,Entertainment,194.43,Credit Card,Store E,1,Wednesday,1,329.61,Entertainment,Regular,135.18
+2024-01-03 11:53:01.755563,Transportation,46.64,Debit Card,Store D,1,Wednesday,1,89.53,Transportation,Regular,42.89
+2024-01-03 11:53:01.755563,Miscellaneous,194.46,Debit Card,Store A,1,Wednesday,1,333.94,Miscellaneous,Regular,139.48
+2024-01-04 11:53:01.755563,Utilities,146.45,Credit Card,Store D,1,Thursday,1,274.97,Utilities,Regular,22.77
+2024-01-04 11:53:01.755563,Miscellaneous,131.88,Cash,Store B,1,Thursday,1,465.82,Miscellaneous,Regular,194.46
+2024-01-04 11:53:01.755563,Groceries,117.72,Credit Card,Store C,1,Thursday,1,242.31,Groceries,Regular,102.84
+2024-01-05 11:53:01.755563,Utilities,105.94,Mobile Payment,Store C,1,Friday,1,380.90999999999997,Utilities,Regular,146.45
+2024-01-05 11:53:01.755563,Transportation,62.71,Cash,Store E,1,Friday,1,152.24,Transportation,Regular,46.64
+2024-01-05 11:53:01.755563,Miscellaneous,119.39,Credit Card,Store A,1,Friday,1,585.21,Miscellaneous,Regular,131.88
+2024-01-05 11:53:01.755563,Dining,107.97,Debit Card,Store D,1,Friday,1,107.97,Takeout,Regular,150.33
+2024-01-06 11:53:01.755563,Dining,52.99,Mobile Payment,Store A,1,Saturday,1,160.96,Takeout,Regular,107.97
+2024-01-06 11:53:01.755563,Transportation,117.76,Mobile Payment,Store A,1,Saturday,1,270.0,Transportation,Regular,62.71
+2024-01-07 11:53:01.755563,Utilities,102.22,Mobile Payment,Store A,1,Sunday,1,483.13,Utilities,Regular,105.94
+2024-01-07 11:53:01.755563,Groceries,154.17,Credit Card,Store A,1,Sunday,1,396.48,Groceries,Regular,117.72
+2024-01-08 11:53:01.755563,Transportation,166.11,Cash,Store B,1,Monday,1,436.11,Transportation,Regular,117.76
+2024-01-08 11:53:01.755563,Dining,124.43,Mobile Payment,Store E,1,Monday,1,285.39,Takeout,Regular,52.99
+2024-01-09 11:53:01.755563,Utilities,149.78,Debit Card,Store E,1,Tuesday,1,632.91,Utilities,Regular,102.22
+2024-01-09 11:53:01.755563,Transportation,168.32,Mobile Payment,Store B,1,Tuesday,1,604.4300000000001,Transportation,Regular,166.11
+2024-01-10 11:53:01.755563,Entertainment,172.04,Debit Card,Store B,1,Wednesday,1,501.65,Entertainment,Regular,194.43
+2024-01-10 11:53:01.755563,Miscellaneous,85.74,Credit Card,Store B,1,Wednesday,1,670.95,Miscellaneous,Regular,119.39
+2024-01-11 11:53:01.755563,Transportation,184.44,Debit Card,Store D,1,Thursday,1,788.87,Transportation,Regular,168.32
+2024-01-11 11:53:01.755563,Miscellaneous,45.42,Cash,Store C,1,Thursday,1,716.37,Miscellaneous,Regular,85.74
+2024-01-11 11:53:01.755563,Entertainment,31.56,Mobile Payment,Store C,1,Thursday,1,533.21,Entertainment,Regular,172.04
+2024-01-12 11:53:01.755563,Miscellaneous,75.03,Cash,Store A,1,Friday,1,791.4,Miscellaneous,Regular,45.42
+2024-01-12 11:53:01.755563,Transportation,142.48,Credit Card,Store A,1,Friday,1,931.35,Transportation,Regular,184.44
+2024-01-12 11:53:01.755563,Utilities,56.39,Credit Card,Store B,1,Friday,2,689.3,Utilities,Regular,149.78
+2024-01-12 11:53:01.755563,Utilities,16.41,Mobile Payment,Store A,1,Friday,2,705.71,Utilities,Regular,56.39
+2024-01-13 11:53:01.755563,Miscellaneous,61.38,Cash,Store C,1,Saturday,1,852.78,Miscellaneous,Regular,75.03
+2024-01-13 11:53:01.755563,Entertainment,163.65,Cash,Store C,1,Saturday,1,696.86,Entertainment,Regular,31.56
+2024-01-14 11:53:01.755563,Entertainment,134.55,Mobile Payment,Store B,1,Sunday,1,831.4100000000001,Entertainment,Regular,163.65
+2024-01-14 11:53:01.755563,Miscellaneous,179.23,Mobile Payment,Store C,1,Sunday,1,1032.01,Miscellaneous,Regular,61.38
+2024-01-15 11:53:01.755563,Transportation,118.99,Credit Card,Store E,1,Monday,1,1050.34,Transportation,Regular,142.48
+2024-01-15 11:53:01.755563,Dining,121.57,Cash,Store C,1,Monday,1,406.96000000000004,Takeout,Regular,124.43
+2024-01-16 11:53:01.755563,Groceries,132.03,Debit Card,Store A,1,Tuesday,3,528.51,Groceries,Regular,154.17
+2024-01-16 11:53:01.755563,Entertainment,179.91,Cash,Store C,1,Tuesday,1,1011.32,Entertainment,Regular,134.55
+2024-01-16 11:53:01.755563,Groceries,184.0,Cash,Store A,1,Tuesday,3,712.51,Groceries,Regular,132.03
+2024-01-16 11:53:01.755563,Groceries,71.08,Debit Card,Store E,1,Tuesday,3,783.59,Groceries,Regular,184.0
+2024-01-17 11:53:01.755563,Utilities,6.13,Cash,Store B,1,Wednesday,1,711.84,Utilities,Regular,16.41
+2024-01-18 11:53:01.755563,Dining,45.67,Debit Card,Store D,1,Thursday,1,452.63,Takeout,Regular,121.57
+2024-01-18 11:53:01.755563,Miscellaneous,64.97,Mobile Payment,Store C,1,Thursday,3,1096.98,Miscellaneous,Regular,179.23
+2024-01-18 11:53:01.755563,Miscellaneous,111.62,Credit Card,Store E,1,Thursday,3,1208.6,Miscellaneous,Regular,64.97
+2024-01-18 11:53:01.755563,Miscellaneous,59.47,Credit Card,Store D,1,Thursday,3,1268.07,Miscellaneous,Regular,111.62
+2024-01-18 11:53:01.755563,Entertainment,149.79,Debit Card,Store D,1,Thursday,1,1161.1100000000001,Entertainment,Regular,179.91
+2024-01-19 11:53:01.755563,Transportation,53.27,Mobile Payment,Store D,1,Friday,1,1103.61,Transportation,Regular,118.99
+2024-01-19 11:53:01.755563,Utilities,126.52,Mobile Payment,Store E,1,Friday,1,838.36,Utilities,Regular,6.13
+2024-01-19 11:53:01.755563,Dining,33.82,Cash,Store C,1,Friday,1,486.45,Takeout,Regular,45.67
+2024-01-20 11:53:01.755563,Groceries,127.47,Credit Card,Store C,1,Saturday,3,911.06,Groceries,Regular,71.08
+2024-01-20 11:53:01.755563,Entertainment,157.06,Mobile Payment,Store A,1,Saturday,1,1318.17,Entertainment,Regular,149.79
+2024-01-20 11:53:01.755563,Groceries,100.63,Mobile Payment,Store D,1,Saturday,3,1011.6899999999999,Groceries,Regular,127.47
+2024-01-20 11:53:01.755563,Groceries,97.58,Cash,Store B,1,Saturday,3,1109.27,Groceries,Regular,100.63
+2024-01-20 11:53:01.755563,Transportation,120.09,Mobile Payment,Store E,1,Saturday,1,1223.7,Transportation,Regular,53.27
+2024-01-21 11:53:01.755563,Miscellaneous,66.4,Mobile Payment,Store D,1,Sunday,1,1334.47,Miscellaneous,Regular,59.47
+2024-01-22 11:53:01.755563,Groceries,139.06,Cash,Store C,1,Monday,1,1248.33,Groceries,Regular,97.58
+2024-01-22 11:53:01.755563,Utilities,157.37,Cash,Store B,1,Monday,2,995.73,Utilities,Regular,126.52
+2024-01-22 11:53:01.755563,Utilities,37.89,Credit Card,Store E,1,Monday,2,1033.6200000000001,Utilities,Regular,157.37
+2024-01-23 11:53:01.755563,Dining,14.38,Cash,Store C,1,Tuesday,1,500.83,Takeout,Regular,33.82
+2024-01-23 11:53:01.755563,Groceries,98.01,Credit Card,Store B,1,Tuesday,1,1346.34,Groceries,Regular,139.06
+2024-01-24 11:53:01.755563,Entertainment,31.65,Debit Card,Store A,1,Wednesday,1,1349.82,Entertainment,Regular,157.06
+2024-01-24 11:53:01.755563,Dining,182.23,Mobile Payment,Store D,1,Wednesday,1,683.06,Takeout,Regular,14.38
+2024-01-24 11:53:01.755563,Miscellaneous,195.37,Mobile Payment,Store B,1,Wednesday,1,1529.84,Miscellaneous,Regular,66.4
+2024-01-24 11:53:01.755563,Utilities,56.21,Debit Card,Store A,1,Wednesday,1,1089.83,Utilities,Regular,37.89
+2024-01-25 11:53:01.755563,Groceries,29.18,Credit Card,Store B,1,Thursday,1,1375.52,Groceries,Regular,98.01
+2024-01-26 11:53:01.755563,Utilities,25.78,Cash,Store B,1,Friday,2,1115.6100000000001,Utilities,Regular,56.21
+2024-01-26 11:53:01.755563,Dining,194.66,Credit Card,Store C,1,Friday,1,877.72,Takeout,Regular,182.23
+2024-01-26 11:53:01.755563,Utilities,190.45,Credit Card,Store C,1,Friday,2,1306.06,Utilities,Regular,25.78
+2024-01-27 11:53:01.755563,Utilities,145.07,Cash,Store D,1,Saturday,1,1451.13,Utilities,Regular,190.45
+2024-01-27 11:53:01.755563,Entertainment,180.18,Cash,Store D,1,Saturday,1,1530.0,Entertainment,Regular,31.65
+2024-01-28 11:53:01.755563,Transportation,6.89,Debit Card,Store E,1,Sunday,1,1230.59,Transportation,Regular,120.09
+2024-01-28 11:53:01.755563,Utilities,92.35,Cash,Store E,1,Sunday,1,1543.48,Utilities,Regular,145.07
+2024-01-28 11:53:01.755563,Miscellaneous,136.07,Credit Card,Store E,1,Sunday,2,1665.91,Miscellaneous,Regular,195.37
+2024-01-28 11:53:01.755563,Entertainment,113.02,Debit Card,Store B,1,Sunday,1,1643.02,Entertainment,Regular,180.18
+2024-01-28 11:53:01.755563,Miscellaneous,40.05,Credit Card,Store D,1,Sunday,2,1705.96,Miscellaneous,Regular,136.07
+2024-01-29 11:53:01.755563,Dining,145.22,Debit Card,Store D,1,Monday,1,1022.94,Takeout,Regular,194.66
+2024-01-29 11:53:01.755563,Entertainment,145.39,Credit Card,Store D,1,Monday,1,1788.41,Entertainment,Regular,113.02
+2024-01-29 11:53:01.755563,Groceries,17.98,Debit Card,Store E,1,Monday,1,1393.5,Groceries,Regular,29.18
+2024-01-30 11:53:01.755563,Groceries,77.69,Cash,Store E,1,Tuesday,1,1471.19,Groceries,Regular,17.98
+2024-01-30 11:53:01.755563,Entertainment,173.22,Mobile Payment,Store C,1,Tuesday,1,1961.63,Entertainment,Regular,145.39
+2024-01-31 11:53:01.755563,Dining,82.57,Debit Card,Store C,1,Wednesday,2,1105.51,Takeout,Regular,145.22
+2024-01-31 11:53:01.755563,Transportation,148.36,Debit Card,Store B,1,Wednesday,1,1378.95,Transportation,Regular,6.89
+2024-01-31 11:53:01.755563,Dining,158.5,Mobile Payment,Store A,1,Wednesday,2,1264.01,Takeout,Regular,82.57
+2024-01-31 11:53:01.755563,Miscellaneous,153.17,Mobile Payment,Store E,1,Wednesday,1,1859.13,Miscellaneous,Regular,40.05
+2024-02-01 11:53:01.755563,Entertainment,186.69,Credit Card,Store A,2,Thursday,1,186.69,Entertainment,Regular,173.22
+2024-02-01 11:53:01.755563,Dining,25.4,Debit Card,Store B,2,Thursday,1,25.4,Takeout,Regular,158.5
+2024-02-01 11:53:01.755563,Miscellaneous,194.59,Debit Card,Store E,2,Thursday,1,194.59,Miscellaneous,Regular,153.17
+2024-02-02 11:53:01.755563,Groceries,94.29,Cash,Store B,2,Friday,1,94.29,Groceries,Regular,77.69
+2024-02-03 11:53:01.755563,Transportation,128.68,Debit Card,Store A,2,Saturday,2,128.68,Transportation,Regular,148.36
+2024-02-03 11:53:01.755563,Transportation,115.5,Debit Card,Store D,2,Saturday,2,244.18,Transportation,Regular,128.68
+2024-02-04 11:53:01.755563,Groceries,198.75,Debit Card,Store D,2,Sunday,1,293.04,Groceries,Regular,94.29
+2024-02-04 11:53:01.755563,Dining,186.54,Mobile Payment,Store B,2,Sunday,2,211.94,Takeout,Regular,25.4
+2024-02-04 11:53:01.755563,Utilities,112.17,Cash,Store C,2,Sunday,1,112.17,Utilities,Regular,92.35
+2024-02-04 11:53:01.755563,Dining,102.51,Debit Card,Store C,2,Sunday,2,314.45,Takeout,Regular,186.54
+2024-02-05 11:53:01.755563,Miscellaneous,6.83,Credit Card,Store A,2,Monday,2,201.42000000000002,Miscellaneous,Regular,194.59
+2024-02-05 11:53:01.755563,Transportation,44.0,Credit Card,Store A,2,Monday,1,288.18,Transportation,Regular,115.5
+2024-02-05 11:53:01.755563,Utilities,96.48,Debit Card,Store A,2,Monday,1,208.65,Utilities,Regular,112.17
+2024-02-05 11:53:01.755563,Groceries,67.38,Mobile Payment,Store A,2,Monday,1,360.42,Groceries,Regular,198.75
+2024-02-05 11:53:01.755563,Miscellaneous,175.47,Cash,Store E,2,Monday,2,376.89,Miscellaneous,Regular,6.83
+2024-02-06 11:53:01.755563,Dining,51.24,Debit Card,Store C,2,Tuesday,2,365.69,Takeout,Regular,102.51
+2024-02-06 11:53:01.755563,Utilities,77.56,Mobile Payment,Store B,2,Tuesday,1,286.21000000000004,Utilities,Regular,96.48
+2024-02-06 11:53:01.755563,Dining,166.66,Mobile Payment,Store A,2,Tuesday,2,532.35,Takeout,Regular,51.24
+2024-02-06 11:53:01.755563,Groceries,196.69,Credit Card,Store A,2,Tuesday,1,557.11,Groceries,Regular,67.38
+2024-02-07 11:53:01.755563,Groceries,118.32,Cash,Store E,2,Wednesday,1,675.4300000000001,Groceries,Regular,196.69
+2024-02-07 11:53:01.755563,Miscellaneous,12.34,Cash,Store A,2,Wednesday,1,389.23,Miscellaneous,Regular,175.47
+2024-02-08 11:53:01.755563,Groceries,95.08,Debit Card,Store B,2,Thursday,1,770.51,Groceries,Regular,118.32
+2024-02-08 11:53:01.755563,Utilities,180.53,Credit Card,Store A,2,Thursday,1,466.74,Utilities,Regular,77.56
+2024-02-08 11:53:01.755563,Transportation,37.15,Mobile Payment,Store E,2,Thursday,2,325.33,Transportation,Regular,44.0
+2024-02-08 11:53:01.755563,Transportation,47.84,Debit Card,Store D,2,Thursday,2,373.17,Transportation,Regular,37.15
+2024-02-08 11:53:01.755563,Entertainment,16.19,Credit Card,Store B,2,Thursday,1,202.88,Entertainment,Regular,186.69
+2024-02-09 11:53:01.755563,Miscellaneous,193.4,Credit Card,Store C,2,Friday,1,582.63,Miscellaneous,Regular,12.34
+2024-02-10 11:53:01.755563,Groceries,30.04,Mobile Payment,Store E,2,Saturday,2,800.55,Groceries,Regular,95.08
+2024-02-10 11:53:01.755563,Dining,36.6,Mobile Payment,Store C,2,Saturday,1,568.95,Takeout,Regular,166.66
+2024-02-10 11:53:01.755563,Groceries,51.44,Debit Card,Store C,2,Saturday,2,851.99,Groceries,Regular,30.04
+2024-02-10 11:53:01.755563,Entertainment,134.16,Credit Card,Store E,2,Saturday,1,337.03999999999996,Entertainment,Regular,16.19
+2024-02-10 11:53:01.755563,Transportation,90.38,Cash,Store D,2,Saturday,1,463.55,Transportation,Regular,47.84
+2024-02-11 11:53:01.755563,Groceries,131.47,Cash,Store E,2,Sunday,1,983.46,Groceries,Regular,51.44
+2024-02-11 11:53:01.755563,Transportation,140.49,Mobile Payment,Store E,2,Sunday,1,604.04,Transportation,Regular,90.38
+2024-02-11 11:53:01.755563,Dining,29.51,Mobile Payment,Store E,2,Sunday,1,598.46,Takeout,Regular,36.6
+2024-02-12 11:53:01.755563,Utilities,198.36,Mobile Payment,Store C,2,Monday,1,665.1,Utilities,Regular,180.53
+2024-02-13 11:53:01.755563,Transportation,105.86,Mobile Payment,Store E,2,Tuesday,1,709.9,Transportation,Regular,140.49
+2024-02-13 11:53:01.755563,Utilities,150.63,Credit Card,Store A,2,Tuesday,1,815.73,Utilities,Regular,198.36
+2024-02-13 11:53:01.755563,Groceries,64.81,Debit Card,Store E,2,Tuesday,1,1048.27,Groceries,Regular,131.47
+2024-02-13 11:53:01.755563,Miscellaneous,61.91,Mobile Payment,Store B,2,Tuesday,2,644.54,Miscellaneous,Regular,193.4
+2024-02-13 11:53:01.755563,Miscellaneous,181.2,Debit Card,Store D,2,Tuesday,2,825.74,Miscellaneous,Regular,61.91
+2024-02-14 11:53:01.755563,Transportation,145.98,Credit Card,Store B,2,Wednesday,1,855.88,Transportation,Regular,105.86
+2024-02-14 11:53:01.755563,Utilities,101.09,Credit Card,Store D,2,Wednesday,2,916.82,Utilities,Regular,150.63
+2024-02-14 11:53:01.755563,Utilities,199.34,Cash,Store E,2,Wednesday,2,1116.16,Utilities,Regular,101.09
+2024-02-15 11:53:01.755563,Miscellaneous,83.61,Credit Card,Store C,2,Thursday,1,909.35,Miscellaneous,Regular,181.2
+2024-02-15 11:53:01.755563,Groceries,36.87,Mobile Payment,Store E,2,Thursday,1,1085.14,Groceries,Regular,64.81
+2024-02-16 11:53:01.755563,Miscellaneous,188.56,Debit Card,Store D,2,Friday,1,1097.91,Miscellaneous,Regular,83.61
+2024-02-16 11:53:01.755563,Utilities,56.7,Mobile Payment,Store A,2,Friday,1,1172.8600000000001,Utilities,Regular,199.34
+2024-02-16 11:53:01.755563,Dining,61.95,Cash,Store D,2,Friday,1,660.41,Takeout,Regular,29.51
+2024-02-17 11:53:01.755563,Groceries,29.57,Mobile Payment,Store C,2,Saturday,1,1114.71,Groceries,Regular,36.87
+2024-02-18 11:53:01.755563,Dining,96.01,Cash,Store C,2,Sunday,1,756.42,Takeout,Regular,61.95
+2024-02-18 11:53:01.755563,Miscellaneous,75.57,Debit Card,Store E,2,Sunday,1,1173.48,Miscellaneous,Regular,188.56
+2024-02-18 11:53:01.755563,Transportation,177.78,Mobile Payment,Store B,2,Sunday,1,1033.66,Transportation,Regular,145.98
+2024-02-19 11:53:01.755563,Entertainment,88.38,Mobile Payment,Store E,2,Monday,1,425.41999999999996,Entertainment,Regular,134.16
+2024-02-19 11:53:01.755563,Groceries,47.17,Mobile Payment,Store B,2,Monday,1,1161.88,Groceries,Regular,29.57
+2024-02-19 11:53:01.755563,Dining,98.48,Mobile Payment,Store D,2,Monday,1,854.9,Takeout,Regular,96.01
+2024-02-20 11:53:01.755563,Entertainment,114.93,Cash,Store A,2,Tuesday,1,540.35,Entertainment,Regular,88.38
+2024-02-20 11:53:01.755563,Utilities,170.56,Mobile Payment,Store C,2,Tuesday,1,1343.42,Utilities,Regular,56.7
+2024-02-20 11:53:01.755563,Miscellaneous,59.93,Debit Card,Store B,2,Tuesday,1,1233.41,Miscellaneous,Regular,75.57
+2024-02-20 11:53:01.755563,Dining,74.36,Debit Card,Store A,2,Tuesday,1,929.26,Takeout,Regular,98.48
+2024-02-21 11:53:01.755563,Transportation,197.83,Cash,Store C,2,Wednesday,1,1231.49,Transportation,Regular,177.78
+2024-02-22 11:53:01.755563,Miscellaneous,9.15,Cash,Store A,2,Thursday,1,1242.56,Miscellaneous,Regular,59.93
+2024-02-22 11:53:01.755563,Dining,141.16,Mobile Payment,Store E,2,Thursday,1,1070.42,Takeout,Regular,74.36
+2024-02-23 11:53:01.755563,Utilities,37.28,Credit Card,Store A,2,Friday,1,1380.7,Utilities,Regular,170.56
+2024-02-24 11:53:01.755563,Dining,123.62,Mobile Payment,Store B,2,Saturday,1,1194.04,Takeout,Regular,141.16
+2024-02-24 11:53:01.755563,Miscellaneous,147.26,Debit Card,Store A,2,Saturday,1,1389.82,Miscellaneous,Regular,9.15
+2024-02-24 11:53:01.755563,Groceries,27.67,Cash,Store B,2,Saturday,1,1189.55,Groceries,Regular,47.17
+2024-02-24 11:53:01.755563,Entertainment,118.61,Mobile Payment,Store D,2,Saturday,1,658.96,Entertainment,Regular,114.93
+2024-02-25 11:53:01.755563,Utilities,11.2,Debit Card,Store B,2,Sunday,1,1391.9,Utilities,Regular,37.28
+2024-02-25 11:53:01.755563,Dining,183.63,Cash,Store A,2,Sunday,1,1377.67,Takeout,Regular,123.62
+2024-02-25 11:53:01.755563,Entertainment,106.82,Debit Card,Store C,2,Sunday,1,765.78,Entertainment,Regular,118.61
+2024-02-25 11:53:01.755563,Groceries,106.65,Debit Card,Store D,2,Sunday,1,1296.2,Groceries,Regular,27.67
+2024-02-26 11:53:01.755563,Utilities,197.12,Debit Card,Store D,2,Monday,1,1589.02,Utilities,Regular,11.2
+2024-02-26 11:53:01.755563,Entertainment,184.04,Credit Card,Store A,2,Monday,1,949.8199999999999,Entertainment,Regular,106.82
+2024-02-26 11:53:01.755563,Miscellaneous,124.96,Cash,Store A,2,Monday,2,1514.78,Miscellaneous,Regular,147.26
+2024-02-26 11:53:01.755563,Transportation,89.73,Debit Card,Store E,2,Monday,1,1321.22,Transportation,Regular,197.83
+2024-02-26 11:53:01.755563,Miscellaneous,49.7,Cash,Store A,2,Monday,2,1564.48,Miscellaneous,Regular,124.96
+2024-02-27 11:53:01.755563,Transportation,128.66,Cash,Store D,2,Tuesday,1,1449.88,Transportation,Regular,89.73
+2024-02-27 11:53:01.755563,Dining,103.6,Cash,Store D,2,Tuesday,1,1481.27,Takeout,Regular,183.63
+2024-02-27 11:53:01.755563,Entertainment,129.57,Cash,Store C,2,Tuesday,1,1079.3899999999999,Entertainment,Regular,184.04
+2024-02-27 11:53:01.755563,Miscellaneous,78.64,Debit Card,Store C,2,Tuesday,1,1643.1200000000001,Miscellaneous,Regular,49.7
+2024-02-28 11:53:01.755563,Utilities,137.92,Cash,Store B,2,Wednesday,1,1726.94,Utilities,Regular,197.12
+2024-02-29 11:53:01.755563,Utilities,187.81,Cash,Store C,2,Thursday,2,1914.75,Utilities,Regular,137.92
+2024-02-29 11:53:01.755563,Utilities,92.9,Cash,Store A,2,Thursday,2,2007.65,Utilities,Regular,187.81
+2024-03-01 11:53:01.755563,Groceries,10.72,Credit Card,Store B,3,Friday,1,10.72,Groceries,Regular,106.65
+2024-03-01 11:53:01.755563,Transportation,22.69,Mobile Payment,Store B,3,Friday,1,22.69,Transportation,Regular,128.66
+2024-03-01 11:53:01.755563,Miscellaneous,186.16,Cash,Store E,3,Friday,1,186.16,Miscellaneous,Regular,78.64
+2024-03-02 11:53:01.755563,Utilities,5.39,Mobile Payment,Store E,3,Saturday,1,5.39,Utilities,Regular,92.9
+2024-03-02 11:53:01.755563,Miscellaneous,190.51,Mobile Payment,Store D,3,Saturday,1,376.66999999999996,Miscellaneous,Regular,186.16
+2024-03-03 11:53:01.755563,Groceries,26.91,Cash,Store A,3,Sunday,1,37.63,Groceries,Regular,10.72
+2024-03-03 11:53:01.755563,Entertainment,21.9,Cash,Store A,3,Sunday,1,21.9,Entertainment,Regular,129.57
+2024-03-03 11:53:01.755563,Miscellaneous,57.24,Credit Card,Store B,3,Sunday,2,433.90999999999997,Miscellaneous,Regular,190.51
+2024-03-03 11:53:01.755563,Transportation,63.95,Cash,Store B,3,Sunday,1,86.64,Transportation,Regular,22.69
+2024-03-03 11:53:01.755563,Miscellaneous,72.78,Cash,Store E,3,Sunday,2,506.69,Miscellaneous,Regular,57.24
+2024-03-04 11:53:01.755563,Miscellaneous,55.73,Cash,Store D,3,Monday,1,562.42,Miscellaneous,Regular,72.78
+2024-03-04 11:53:01.755563,Utilities,20.61,Credit Card,Store A,3,Monday,1,26.0,Utilities,Regular,5.39
+2024-03-05 11:53:01.755563,Transportation,122.76,Credit Card,Store B,3,Tuesday,1,209.4,Transportation,Regular,63.95
+2024-03-06 11:53:01.755563,Entertainment,174.34,Debit Card,Store D,3,Wednesday,2,196.24,Entertainment,Regular,21.9
+2024-03-06 11:53:01.755563,Entertainment,111.15,Debit Card,Store E,3,Wednesday,2,307.39,Entertainment,Regular,174.34
+2024-03-06 11:53:01.755563,Utilities,148.36,Cash,Store C,3,Wednesday,1,174.36,Utilities,Regular,20.61
+2024-03-06 11:53:01.755563,Transportation,175.84,Credit Card,Store E,3,Wednesday,1,385.24,Transportation,Regular,122.76
+2024-03-07 11:53:01.755563,Utilities,85.63,Mobile Payment,Store E,3,Thursday,1,259.99,Utilities,Regular,148.36
+2024-03-07 11:53:01.755563,Entertainment,44.11,Credit Card,Store D,3,Thursday,2,351.5,Entertainment,Regular,111.15
+2024-03-07 11:53:01.755563,Entertainment,169.13,Credit Card,Store E,3,Thursday,2,520.63,Entertainment,Regular,44.11
+2024-03-08 11:53:01.755563,Entertainment,95.81,Mobile Payment,Store D,3,Friday,1,616.44,Entertainment,Regular,169.13
+2024-03-08 11:53:01.755563,Transportation,113.21,Credit Card,Store D,3,Friday,1,498.45,Transportation,Regular,175.84
+2024-03-09 11:53:01.755563,Entertainment,36.67,Mobile Payment,Store C,3,Saturday,1,653.11,Entertainment,Regular,95.81
+2024-03-10 11:53:01.755563,Entertainment,162.61,Mobile Payment,Store E,3,Sunday,1,815.72,Entertainment,Regular,36.67
+2024-03-11 11:53:01.755563,Miscellaneous,99.26,Debit Card,Store D,3,Monday,2,661.6800000000001,Miscellaneous,Regular,55.73
+2024-03-11 11:53:01.755563,Miscellaneous,161.31,Cash,Store A,3,Monday,2,822.99,Miscellaneous,Regular,99.26
+2024-03-11 11:53:01.755563,Entertainment,13.3,Cash,Store D,3,Monday,1,829.02,Entertainment,Regular,162.61
+2024-03-11 11:53:01.755563,Groceries,129.43,Credit Card,Store C,3,Monday,1,167.06,Groceries,Regular,26.91
+2024-03-12 11:53:01.755563,Transportation,141.64,Debit Card,Store D,3,Tuesday,2,640.0899999999999,Transportation,Regular,113.21
+2024-03-12 11:53:01.755563,Transportation,10.68,Debit Card,Store B,3,Tuesday,2,650.77,Transportation,Regular,141.64
+2024-03-12 11:53:01.755563,Miscellaneous,171.59,Credit Card,Store B,3,Tuesday,1,994.58,Miscellaneous,Regular,161.31
+2024-03-12 11:53:01.755563,Dining,23.81,Cash,Store B,3,Tuesday,1,23.81,Takeout,Regular,103.6
+2024-03-13 11:53:01.755563,Transportation,72.05,Debit Card,Store A,3,Wednesday,2,722.8199999999999,Transportation,Regular,10.68
+2024-03-13 11:53:01.755563,Transportation,14.11,Credit Card,Store D,3,Wednesday,2,736.93,Transportation,Regular,72.05
+2024-03-14 11:53:01.755563,Transportation,24.65,Credit Card,Store D,3,Thursday,1,761.5799999999999,Transportation,Regular,14.11
+2024-03-14 11:53:01.755563,Utilities,46.95,Credit Card,Store E,3,Thursday,1,306.94,Utilities,Regular,85.63
+2024-03-14 11:53:01.755563,Miscellaneous,138.53,Mobile Payment,Store E,3,Thursday,1,1133.1100000000001,Miscellaneous,Regular,171.59
+2024-03-15 11:53:01.755563,Transportation,65.4,Mobile Payment,Store A,3,Friday,1,826.98,Transportation,Regular,24.65
+2024-03-16 11:53:01.755563,Utilities,159.06,Credit Card,Store E,3,Saturday,1,466.0,Utilities,Regular,46.95
+2024-03-16 11:53:01.755563,Groceries,142.38,Credit Card,Store C,3,Saturday,1,309.44,Groceries,Regular,129.43
+2024-03-16 11:53:01.755563,Miscellaneous,33.26,Debit Card,Store B,3,Saturday,1,1166.3700000000001,Miscellaneous,Regular,138.53
+2024-03-16 11:53:01.755563,Dining,110.38,Credit Card,Store E,3,Saturday,1,134.19,Takeout,Regular,23.81
+2024-03-17 11:53:01.755563,Miscellaneous,34.89,Debit Card,Store E,3,Sunday,1,1201.26,Miscellaneous,Regular,33.26
+2024-03-17 11:53:01.755563,Entertainment,36.5,Credit Card,Store D,3,Sunday,1,865.52,Entertainment,Regular,13.3
+2024-03-18 11:53:01.755563,Entertainment,81.19,Mobile Payment,Store C,3,Monday,1,946.71,Entertainment,Regular,36.5
+2024-03-18 11:53:01.755563,Groceries,15.07,Debit Card,Store B,3,Monday,1,324.51,Groceries,Regular,142.38
+2024-03-19 11:53:01.755563,Entertainment,112.43,Credit Card,Store A,3,Tuesday,1,1059.14,Entertainment,Regular,81.19
+2024-03-20 11:53:01.755563,Utilities,163.55,Cash,Store E,3,Wednesday,1,629.55,Utilities,Regular,159.06
+2024-03-20 11:53:01.755563,Miscellaneous,8.94,Credit Card,Store D,3,Wednesday,1,1210.2,Miscellaneous,Regular,34.89
+2024-03-20 11:53:01.755563,Dining,81.39,Mobile Payment,Store D,3,Wednesday,2,215.57999999999998,Takeout,Regular,110.38
+2024-03-20 11:53:01.755563,Dining,134.46,Mobile Payment,Store A,3,Wednesday,2,350.04,Takeout,Regular,81.39
+2024-03-20 11:53:01.755563,Groceries,121.46,Cash,Store B,3,Wednesday,1,445.97,Groceries,Regular,15.07
+2024-03-21 11:53:01.755563,Dining,87.52,Debit Card,Store E,3,Thursday,1,437.56,Takeout,Regular,134.46
+2024-03-22 11:53:01.755563,Groceries,170.86,Cash,Store B,3,Friday,1,616.83,Groceries,Regular,121.46
+2024-03-22 11:53:01.755563,Utilities,198.32,Mobile Payment,Store C,3,Friday,2,827.87,Utilities,Regular,163.55
+2024-03-22 11:53:01.755563,Entertainment,30.47,Debit Card,Store D,3,Friday,1,1089.6100000000001,Entertainment,Regular,112.43
+2024-03-22 11:53:01.755563,Utilities,104.15,Credit Card,Store B,3,Friday,2,932.02,Utilities,Regular,198.32
+2024-03-23 11:53:01.755563,Miscellaneous,128.92,Debit Card,Store C,3,Saturday,2,1339.12,Miscellaneous,Regular,8.94
+2024-03-23 11:53:01.755563,Groceries,47.49,Cash,Store B,3,Saturday,2,664.32,Groceries,Regular,170.86
+2024-03-23 11:53:01.755563,Entertainment,50.02,Cash,Store A,3,Saturday,1,1139.63,Entertainment,Regular,30.47
+2024-03-23 11:53:01.755563,Miscellaneous,32.19,Mobile Payment,Store B,3,Saturday,2,1371.31,Miscellaneous,Regular,128.92
+2024-03-23 11:53:01.755563,Groceries,33.92,Cash,Store B,3,Saturday,2,698.24,Groceries,Regular,47.49
+2024-03-24 11:53:01.755563,Transportation,6.34,Debit Card,Store E,3,Sunday,1,833.3199999999999,Transportation,Regular,65.4
+2024-03-24 11:53:01.755563,Utilities,170.84,Cash,Store A,3,Sunday,1,1102.8600000000001,Utilities,Regular,104.15
+2024-03-24 11:53:01.755563,Miscellaneous,115.79,Credit Card,Store E,3,Sunday,1,1487.1,Miscellaneous,Regular,32.19
+2024-03-25 11:53:01.755563,Miscellaneous,41.78,Credit Card,Store B,3,Monday,2,1528.88,Miscellaneous,Regular,115.79
+2024-03-25 11:53:01.755563,Miscellaneous,119.51,Debit Card,Store D,3,Monday,2,1648.39,Miscellaneous,Regular,41.78
+2024-03-26 11:53:01.755563,Groceries,47.36,Credit Card,Store C,3,Tuesday,1,745.6,Groceries,Regular,33.92
+2024-03-26 11:53:01.755563,Entertainment,10.45,Cash,Store C,3,Tuesday,1,1150.08,Entertainment,Regular,50.02
+2024-03-26 11:53:01.755563,Utilities,32.75,Debit Card,Store B,3,Tuesday,1,1135.6100000000001,Utilities,Regular,170.84
+2024-03-27 11:53:01.755563,Groceries,31.01,Cash,Store E,3,Wednesday,2,776.61,Groceries,Regular,47.36
+2024-03-27 11:53:01.755563,Transportation,159.77,Credit Card,Store B,3,Wednesday,2,993.0899999999999,Transportation,Regular,6.34
+2024-03-27 11:53:01.755563,Transportation,158.92,Credit Card,Store D,3,Wednesday,2,1152.01,Transportation,Regular,159.77
+2024-03-27 11:53:01.755563,Groceries,137.18,Credit Card,Store E,3,Wednesday,2,913.79,Groceries,Regular,31.01
+2024-03-28 11:53:01.755563,Dining,91.79,Mobile Payment,Store D,3,Thursday,1,529.35,Takeout,Regular,87.52
+2024-03-28 11:53:01.755563,Transportation,192.0,Cash,Store E,3,Thursday,1,1344.01,Transportation,Regular,158.92
+2024-03-29 11:53:01.755563,Transportation,8.55,Mobile Payment,Store D,3,Friday,2,1352.56,Transportation,Regular,192.0
+2024-03-29 11:53:01.755563,Transportation,96.1,Cash,Store D,3,Friday,2,1448.6599999999999,Transportation,Regular,8.55
+2024-03-29 11:53:01.755563,Entertainment,144.83,Debit Card,Store B,3,Friday,1,1294.91,Entertainment,Regular,10.45
+2024-03-30 11:53:01.755563,Transportation,163.67,Credit Card,Store A,3,Saturday,2,1612.33,Transportation,Regular,96.1
+2024-03-30 11:53:01.755563,Transportation,153.26,Debit Card,Store B,3,Saturday,2,1765.59,Transportation,Regular,163.67
+2024-03-30 11:53:01.755563,Entertainment,59.0,Debit Card,Store D,3,Saturday,1,1353.91,Entertainment,Regular,144.83
+2024-03-31 11:53:01.755563,Transportation,31.53,Credit Card,Store B,3,Sunday,1,1797.12,Transportation,Regular,153.26
+2024-03-31 11:53:01.755563,Dining,75.78,Cash,Store D,3,Sunday,1,605.13,Takeout,Regular,91.79
+2024-04-01 11:53:01.755563,Dining,9.49,Cash,Store E,4,Monday,2,9.49,Takeout,Regular,75.78
+2024-04-01 11:53:01.755563,Groceries,43.69,Credit Card,Store D,4,Monday,1,43.69,Groceries,Regular,137.18
+2024-04-01 11:53:01.755563,Miscellaneous,73.94,Mobile Payment,Store D,4,Monday,1,73.94,Miscellaneous,Regular,119.51
+2024-04-01 11:53:01.755563,Dining,15.8,Credit Card,Store D,4,Monday,2,25.29,Takeout,Regular,9.49
+2024-04-02 11:53:01.755563,Transportation,37.2,Mobile Payment,Store A,4,Tuesday,1,37.2,Transportation,Regular,31.53
+2024-04-02 11:53:01.755563,Utilities,92.66,Cash,Store E,4,Tuesday,2,92.66,Utilities,Regular,32.75
+2024-04-02 11:53:01.755563,Utilities,9.67,Debit Card,Store E,4,Tuesday,2,102.33,Utilities,Regular,92.66
+2024-04-03 11:53:01.755563,Dining,149.57,Credit Card,Store C,4,Wednesday,1,174.85999999999999,Takeout,Regular,15.8
+2024-04-03 11:53:01.755563,Utilities,29.69,Mobile Payment,Store E,4,Wednesday,1,132.01999999999998,Utilities,Regular,9.67
+2024-04-04 11:53:01.755563,Entertainment,135.22,Debit Card,Store B,4,Thursday,1,135.22,Entertainment,Regular,59.0
+2024-04-04 11:53:01.755563,Transportation,182.24,Cash,Store B,4,Thursday,1,219.44,Transportation,Regular,37.2
+2024-04-04 11:53:01.755563,Groceries,111.01,Credit Card,Store B,4,Thursday,1,154.7,Groceries,Regular,43.69
+2024-04-05 11:53:01.755563,Groceries,51.52,Cash,Store D,4,Friday,2,206.22,Groceries,Regular,111.01
+2024-04-05 11:53:01.755563,Groceries,107.71,Mobile Payment,Store B,4,Friday,2,313.93,Groceries,Regular,51.52
+2024-04-05 11:53:01.755563,Transportation,129.24,Cash,Store C,4,Friday,1,348.68,Transportation,Regular,182.24
+2024-04-06 11:53:01.755563,Miscellaneous,82.91,Cash,Store E,4,Saturday,1,156.85,Miscellaneous,Regular,73.94
+2024-04-06 11:53:01.755563,Entertainment,110.58,Mobile Payment,Store E,4,Saturday,1,245.8,Entertainment,Regular,135.22
+2024-04-06 11:53:01.755563,Dining,169.32,Mobile Payment,Store C,4,Saturday,1,344.17999999999995,Takeout,Regular,149.57
+2024-04-07 11:53:01.755563,Miscellaneous,168.75,Debit Card,Store D,4,Sunday,1,325.6,Miscellaneous,Regular,82.91
+2024-04-08 11:53:01.755563,Utilities,21.69,Mobile Payment,Store D,4,Monday,2,153.71,Utilities,Regular,29.69
+2024-04-08 11:53:01.755563,Utilities,197.35,Debit Card,Store B,4,Monday,2,351.06,Utilities,Regular,21.69
+2024-04-08 11:53:01.755563,Groceries,26.4,Debit Card,Store E,4,Monday,1,340.33,Groceries,Regular,107.71
+2024-04-09 11:53:01.755563,Entertainment,159.58,Cash,Store A,4,Tuesday,2,405.38,Entertainment,Regular,110.58
+2024-04-09 11:53:01.755563,Transportation,152.22,Debit Card,Store E,4,Tuesday,1,500.9,Transportation,Regular,129.24
+2024-04-09 11:53:01.755563,Entertainment,139.0,Mobile Payment,Store A,4,Tuesday,2,544.38,Entertainment,Regular,159.58
+2024-04-10 11:53:01.755563,Entertainment,38.18,Credit Card,Store D,4,Wednesday,1,582.56,Entertainment,Regular,139.0
+2024-04-11 11:53:01.755563,Miscellaneous,41.11,Mobile Payment,Store D,4,Thursday,1,366.71,Miscellaneous,Regular,168.75
+2024-04-11 11:53:01.755563,Dining,139.7,Mobile Payment,Store C,4,Thursday,1,483.88,Takeout,Regular,169.32
+2024-04-12 11:53:01.755563,Transportation,79.63,Mobile Payment,Store E,4,Friday,1,580.53,Transportation,Regular,152.22
+2024-04-12 11:53:01.755563,Miscellaneous,151.22,Debit Card,Store C,4,Friday,3,517.9300000000001,Miscellaneous,Regular,41.11
+2024-04-12 11:53:01.755563,Miscellaneous,74.38,Mobile Payment,Store C,4,Friday,3,592.31,Miscellaneous,Regular,151.22
+2024-04-12 11:53:01.755563,Miscellaneous,96.52,Credit Card,Store A,4,Friday,3,688.83,Miscellaneous,Regular,74.38
+2024-04-13 11:53:01.755563,Miscellaneous,48.51,Cash,Store D,4,Saturday,1,737.34,Miscellaneous,Regular,96.52
+2024-04-13 11:53:01.755563,Dining,185.5,Credit Card,Store C,4,Saturday,1,669.38,Takeout,Regular,139.7
+2024-04-14 11:53:01.755563,Miscellaneous,38.37,Mobile Payment,Store E,4,Sunday,2,775.71,Miscellaneous,Regular,48.51
+2024-04-14 11:53:01.755563,Miscellaneous,56.97,Cash,Store C,4,Sunday,2,832.68,Miscellaneous,Regular,38.37
+2024-04-15 11:53:01.755563,Dining,62.1,Cash,Store A,4,Monday,1,731.48,Takeout,Regular,185.5
+2024-04-15 11:53:01.755563,Utilities,42.99,Debit Card,Store D,4,Monday,1,394.05,Utilities,Regular,197.35
+2024-04-15 11:53:01.755563,Entertainment,41.31,Debit Card,Store C,4,Monday,1,623.87,Entertainment,Regular,38.18
+2024-04-16 11:53:01.755563,Transportation,38.33,Credit Card,Store B,4,Tuesday,1,618.86,Transportation,Regular,79.63
+2024-04-16 11:53:01.755563,Entertainment,65.63,Credit Card,Store E,4,Tuesday,2,689.5,Entertainment,Regular,41.31
+2024-04-16 11:53:01.755563,Groceries,42.9,Debit Card,Store A,4,Tuesday,1,383.23,Groceries,Regular,26.4
+2024-04-16 11:53:01.755563,Entertainment,158.48,Mobile Payment,Store B,4,Tuesday,2,847.98,Entertainment,Regular,65.63
+2024-04-16 11:53:01.755563,Utilities,12.27,Cash,Store C,4,Tuesday,1,406.32,Utilities,Regular,42.99
+2024-04-17 11:53:01.755563,Transportation,32.75,Debit Card,Store D,4,Wednesday,2,651.61,Transportation,Regular,38.33
+2024-04-17 11:53:01.755563,Transportation,153.98,Cash,Store A,4,Wednesday,2,805.5899999999999,Transportation,Regular,32.75
+2024-04-18 11:53:01.755563,Miscellaneous,68.04,Mobile Payment,Store E,4,Thursday,1,900.72,Miscellaneous,Regular,56.97
+2024-04-18 11:53:01.755563,Utilities,129.1,Cash,Store B,4,Thursday,1,535.42,Utilities,Regular,12.27
+2024-04-19 11:53:01.755563,Miscellaneous,131.17,Cash,Store A,4,Friday,1,1031.8899999999999,Miscellaneous,Regular,68.04
+2024-04-19 11:53:01.755563,Transportation,128.16,Cash,Store C,4,Friday,1,933.75,Transportation,Regular,153.98
+2024-04-20 11:53:01.755563,Groceries,189.67,Credit Card,Store A,4,Saturday,1,572.9,Groceries,Regular,42.9
+2024-04-21 11:53:01.755563,Dining,72.14,Debit Card,Store C,4,Sunday,1,803.62,Takeout,Regular,62.1
+2024-04-21 11:53:01.755563,Transportation,138.5,Credit Card,Store D,4,Sunday,1,1072.25,Transportation,Regular,128.16
+2024-04-21 11:53:01.755563,Utilities,18.59,Mobile Payment,Store E,4,Sunday,1,554.01,Utilities,Regular,129.1
+2024-04-22 11:53:01.755563,Miscellaneous,79.27,Debit Card,Store C,4,Monday,1,1111.16,Miscellaneous,Regular,131.17
+2024-04-22 11:53:01.755563,Transportation,144.09,Credit Card,Store A,4,Monday,1,1216.34,Transportation,Regular,138.5
+2024-04-22 11:53:01.755563,Utilities,20.51,Debit Card,Store B,4,Monday,1,574.52,Utilities,Regular,18.59
+2024-04-22 11:53:01.755563,Groceries,193.26,Credit Card,Store D,4,Monday,1,766.16,Groceries,Regular,189.67
+2024-04-23 11:53:01.755563,Transportation,72.89,Cash,Store B,4,Tuesday,2,1289.23,Transportation,Regular,144.09
+2024-04-23 11:53:01.755563,Transportation,135.33,Debit Card,Store E,4,Tuesday,2,1424.56,Transportation,Regular,72.89
+2024-04-23 11:53:01.755563,Groceries,67.6,Mobile Payment,Store D,4,Tuesday,1,833.76,Groceries,Regular,193.26
+2024-04-23 11:53:01.755563,Utilities,107.85,Cash,Store D,4,Tuesday,1,682.37,Utilities,Regular,20.51
+2024-04-24 11:53:01.755563,Miscellaneous,87.97,Mobile Payment,Store D,4,Wednesday,1,1199.1299999999999,Miscellaneous,Regular,79.27
+2024-04-24 11:53:01.755563,Dining,126.65,Debit Card,Store D,4,Wednesday,2,930.27,Takeout,Regular,72.14
+2024-04-24 11:53:01.755563,Utilities,44.6,Debit Card,Store E,4,Wednesday,1,726.97,Utilities,Regular,107.85
+2024-04-24 11:53:01.755563,Dining,73.13,Mobile Payment,Store B,4,Wednesday,2,1003.4,Takeout,Regular,126.65
+2024-04-25 11:53:01.755563,Entertainment,143.46,Credit Card,Store E,4,Thursday,1,991.44,Entertainment,Regular,158.48
+2024-04-25 11:53:01.755563,Groceries,37.58,Mobile Payment,Store E,4,Thursday,1,871.3399999999999,Groceries,Regular,67.6
+2024-04-25 11:53:01.755563,Miscellaneous,39.24,Mobile Payment,Store B,4,Thursday,1,1238.37,Miscellaneous,Regular,87.97
+2024-04-25 11:53:01.755563,Dining,108.98,Mobile Payment,Store B,4,Thursday,1,1112.3799999999999,Takeout,Regular,73.13
+2024-04-26 11:53:01.755563,Dining,12.8,Mobile Payment,Store A,4,Friday,1,1125.18,Takeout,Regular,108.98
+2024-04-26 11:53:01.755563,Entertainment,80.85,Mobile Payment,Store C,4,Friday,1,1072.29,Entertainment,Regular,143.46
+2024-04-26 11:53:01.755563,Utilities,27.32,Credit Card,Store A,4,Friday,1,754.29,Utilities,Regular,44.6
+2024-04-27 11:53:01.755563,Groceries,158.62,Credit Card,Store E,4,Saturday,1,1029.96,Groceries,Regular,37.58
+2024-04-28 11:53:01.755563,Miscellaneous,35.07,Debit Card,Store E,4,Sunday,2,1273.44,Miscellaneous,Regular,39.24
+2024-04-28 11:53:01.755563,Transportation,157.64,Credit Card,Store D,4,Sunday,2,1582.2,Transportation,Regular,135.33
+2024-04-28 11:53:01.755563,Miscellaneous,141.09,Cash,Store B,4,Sunday,2,1414.53,Miscellaneous,Regular,35.07
+2024-04-28 11:53:01.755563,Groceries,186.14,Mobile Payment,Store D,4,Sunday,1,1216.1,Groceries,Regular,158.62
+2024-04-28 11:53:01.755563,Transportation,179.71,Debit Card,Store A,4,Sunday,2,1761.91,Transportation,Regular,157.64
+2024-04-29 11:53:01.755563,Utilities,109.95,Credit Card,Store A,4,Monday,4,864.24,Utilities,Regular,27.32
+2024-04-29 11:53:01.755563,Utilities,92.49,Credit Card,Store A,4,Monday,4,956.73,Utilities,Regular,109.95
+2024-04-29 11:53:01.755563,Utilities,48.81,Debit Card,Store C,4,Monday,4,1005.54,Utilities,Regular,92.49
+2024-04-29 11:53:01.755563,Utilities,165.49,Debit Card,Store A,4,Monday,4,1171.03,Utilities,Regular,48.81
+2024-04-30 11:53:01.755563,Miscellaneous,103.87,Mobile Payment,Store A,4,Tuesday,1,1518.4,Miscellaneous,Regular,141.09
+2024-04-30 11:53:01.755563,Utilities,59.49,Cash,Store D,4,Tuesday,1,1230.52,Utilities,Regular,165.49
+2024-05-01 11:53:01.755563,Groceries,99.38,Cash,Store C,5,Wednesday,1,99.38,Groceries,Regular,186.14
+2024-05-02 11:53:01.755563,Groceries,21.41,Credit Card,Store A,5,Thursday,1,120.78999999999999,Groceries,Regular,99.38
+2024-05-02 11:53:01.755563,Transportation,148.3,Debit Card,Store D,5,Thursday,1,148.3,Transportation,Regular,179.71
+2024-05-02 11:53:01.755563,Utilities,195.48,Debit Card,Store E,5,Thursday,1,195.48,Utilities,Regular,59.49
+2024-05-03 11:53:01.755563,Entertainment,121.87,Credit Card,Store B,5,Friday,1,121.87,Entertainment,Regular,80.85
+2024-05-03 11:53:01.755563,Groceries,100.39,Credit Card,Store D,5,Friday,3,221.18,Groceries,Regular,21.41
+2024-05-03 11:53:01.755563,Groceries,79.96,Credit Card,Store C,5,Friday,3,301.14,Groceries,Regular,100.39
+2024-05-03 11:53:01.755563,Dining,181.28,Mobile Payment,Store B,5,Friday,1,181.28,Takeout,Regular,12.8
+2024-05-03 11:53:01.755563,Groceries,162.37,Credit Card,Store D,5,Friday,3,463.51,Groceries,Regular,79.96
+2024-05-04 11:53:01.755563,Transportation,194.71,Credit Card,Store C,5,Saturday,2,343.01,Transportation,Regular,148.3
+2024-05-04 11:53:01.755563,Entertainment,53.22,Mobile Payment,Store D,5,Saturday,1,175.09,Entertainment,Regular,121.87
+2024-05-04 11:53:01.755563,Groceries,52.56,Cash,Store E,5,Saturday,2,516.0699999999999,Groceries,Regular,162.37
+2024-05-04 11:53:01.755563,Groceries,112.56,Cash,Store C,5,Saturday,2,628.63,Groceries,Regular,52.56
+2024-05-04 11:53:01.755563,Transportation,35.76,Debit Card,Store E,5,Saturday,2,378.77000000000004,Transportation,Regular,194.71
+2024-05-05 11:53:01.755563,Entertainment,151.69,Cash,Store A,5,Sunday,1,326.78,Entertainment,Regular,53.22
+2024-05-06 11:53:01.755563,Entertainment,130.34,Debit Card,Store E,5,Monday,1,457.12,Entertainment,Regular,151.69
+2024-05-06 11:53:01.755563,Transportation,173.53,Cash,Store A,5,Monday,1,552.3,Transportation,Regular,35.76
+2024-05-06 11:53:01.755563,Utilities,127.72,Mobile Payment,Store D,5,Monday,2,323.2,Utilities,Regular,195.48
+2024-05-06 11:53:01.755563,Utilities,15.59,Cash,Store B,5,Monday,2,338.78999999999996,Utilities,Regular,127.72
+2024-05-06 11:53:01.755563,Dining,167.87,Mobile Payment,Store A,5,Monday,1,349.15,Takeout,Regular,181.28
+2024-05-07 11:53:01.755563,Transportation,19.69,Debit Card,Store D,5,Tuesday,1,571.99,Transportation,Regular,173.53
+2024-05-07 11:53:01.755563,Entertainment,124.12,Cash,Store A,5,Tuesday,1,581.24,Entertainment,Regular,130.34
+2024-05-08 11:53:01.755563,Dining,70.72,Mobile Payment,Store C,5,Wednesday,2,419.87,Takeout,Regular,167.87
+2024-05-08 11:53:01.755563,Groceries,160.57,Credit Card,Store E,5,Wednesday,1,789.2,Groceries,Regular,112.56
+2024-05-08 11:53:01.755563,Entertainment,64.6,Credit Card,Store A,5,Wednesday,1,645.84,Entertainment,Regular,124.12
+2024-05-08 11:53:01.755563,Utilities,69.41,Credit Card,Store C,5,Wednesday,1,408.2,Utilities,Regular,15.59
+2024-05-08 11:53:01.755563,Dining,165.25,Credit Card,Store B,5,Wednesday,2,585.12,Takeout,Regular,70.72
+2024-05-09 11:53:01.755563,Groceries,179.02,Credit Card,Store A,5,Thursday,2,968.22,Groceries,Regular,160.57
+2024-05-09 11:53:01.755563,Groceries,85.17,Debit Card,Store E,5,Thursday,2,1053.39,Groceries,Regular,179.02
+2024-05-09 11:53:01.755563,Transportation,108.27,Debit Card,Store A,5,Thursday,2,680.26,Transportation,Regular,19.69
+2024-05-09 11:53:01.755563,Transportation,11.65,Mobile Payment,Store D,5,Thursday,2,691.91,Transportation,Regular,108.27
+2024-05-10 11:53:01.755563,Groceries,162.98,Credit Card,Store A,5,Friday,2,1216.37,Groceries,Regular,85.17
+2024-05-10 11:53:01.755563,Dining,57.38,Credit Card,Store D,5,Friday,1,642.5,Takeout,Regular,165.25
+2024-05-10 11:53:01.755563,Utilities,148.82,Mobile Payment,Store A,5,Friday,1,557.02,Utilities,Regular,69.41
+2024-05-10 11:53:01.755563,Groceries,64.79,Debit Card,Store B,5,Friday,2,1281.16,Groceries,Regular,162.98
+2024-05-11 11:53:01.755563,Miscellaneous,145.02,Credit Card,Store C,5,Saturday,1,145.02,Miscellaneous,Regular,103.87
+2024-05-11 11:53:01.755563,Utilities,33.81,Debit Card,Store E,5,Saturday,1,590.8299999999999,Utilities,Regular,148.82
+2024-05-12 11:53:01.755563,Transportation,99.92,Debit Card,Store C,5,Sunday,1,791.83,Transportation,Regular,11.65
+2024-05-12 11:53:01.755563,Dining,102.42,Cash,Store B,5,Sunday,2,744.9200000000001,Takeout,Regular,57.38
+2024-05-12 11:53:01.755563,Dining,50.73,Cash,Store E,5,Sunday,2,795.65,Takeout,Regular,102.42
+2024-05-13 11:53:01.755563,Utilities,30.78,Credit Card,Store D,5,Monday,1,621.61,Utilities,Regular,33.81
+2024-05-14 11:53:01.755563,Miscellaneous,163.3,Mobile Payment,Store C,5,Tuesday,1,308.32000000000005,Miscellaneous,Regular,145.02
+2024-05-14 11:53:01.755563,Entertainment,131.04,Cash,Store B,5,Tuesday,1,776.88,Entertainment,Regular,64.6
+2024-05-14 11:53:01.755563,Utilities,122.36,Cash,Store D,5,Tuesday,1,743.97,Utilities,Regular,30.78
+2024-05-15 11:53:01.755563,Dining,192.15,Cash,Store B,5,Wednesday,3,987.8,Takeout,Regular,50.73
+2024-05-15 11:53:01.755563,Dining,186.89,Cash,Store C,5,Wednesday,3,1174.69,Takeout,Regular,192.15
+2024-05-15 11:53:01.755563,Dining,128.04,Credit Card,Store D,5,Wednesday,3,1302.73,Takeout,Regular,186.89
+2024-05-16 11:53:01.755563,Utilities,25.8,Mobile Payment,Store D,5,Thursday,1,769.77,Utilities,Regular,122.36
+2024-05-16 11:53:01.755563,Miscellaneous,26.04,Mobile Payment,Store B,5,Thursday,2,334.36,Miscellaneous,Regular,163.3
+2024-05-16 11:53:01.755563,Miscellaneous,102.4,Cash,Store C,5,Thursday,2,436.76,Miscellaneous,Regular,26.04
+2024-05-16 11:53:01.755563,Entertainment,14.29,Mobile Payment,Store C,5,Thursday,2,791.17,Entertainment,Regular,131.04
+2024-05-16 11:53:01.755563,Entertainment,189.12,Cash,Store B,5,Thursday,2,980.29,Entertainment,Regular,14.29
+2024-05-17 11:53:01.755563,Groceries,29.8,Mobile Payment,Store D,5,Friday,1,1310.96,Groceries,Regular,64.79
+2024-05-17 11:53:01.755563,Dining,172.63,Mobile Payment,Store D,5,Friday,1,1475.36,Takeout,Regular,128.04
+2024-05-18 11:53:01.755563,Miscellaneous,67.79,Mobile Payment,Store D,5,Saturday,1,504.55,Miscellaneous,Regular,102.4
+2024-05-18 11:53:01.755563,Entertainment,111.51,Cash,Store D,5,Saturday,1,1091.8,Entertainment,Regular,189.12
+2024-05-18 11:53:01.755563,Utilities,78.33,Cash,Store E,5,Saturday,1,848.1,Utilities,Regular,25.8
+2024-05-19 11:53:01.755563,Miscellaneous,51.85,Mobile Payment,Store A,5,Sunday,1,556.4,Miscellaneous,Regular,67.79
+2024-05-19 11:53:01.755563,Entertainment,172.06,Credit Card,Store E,5,Sunday,1,1263.8600000000001,Entertainment,Regular,111.51
+2024-05-19 11:53:01.755563,Dining,132.86,Debit Card,Store D,5,Sunday,1,1608.22,Takeout,Regular,172.63
+2024-05-20 11:53:01.755563,Transportation,18.47,Debit Card,Store E,5,Monday,1,810.3,Transportation,Regular,99.92
+2024-05-21 11:53:01.755563,Entertainment,197.62,Cash,Store B,5,Tuesday,1,1461.48,Entertainment,Regular,172.06
+2024-05-21 11:53:01.755563,Transportation,94.09,Credit Card,Store E,5,Tuesday,1,904.39,Transportation,Regular,18.47
+2024-05-21 11:53:01.755563,Dining,41.07,Credit Card,Store A,5,Tuesday,2,1649.29,Takeout,Regular,132.86
+2024-05-21 11:53:01.755563,Dining,132.0,Cash,Store D,5,Tuesday,2,1781.29,Takeout,Regular,41.07
+2024-05-21 11:53:01.755563,Miscellaneous,17.75,Mobile Payment,Store B,5,Tuesday,1,574.15,Miscellaneous,Regular,51.85
+2024-05-22 11:53:01.755563,Utilities,194.55,Credit Card,Store E,5,Wednesday,2,1042.65,Utilities,Regular,78.33
+2024-05-22 11:53:01.755563,Utilities,128.67,Cash,Store A,5,Wednesday,2,1171.32,Utilities,Regular,194.55
+2024-05-22 11:53:01.755563,Dining,47.99,Mobile Payment,Store A,5,Wednesday,1,1829.28,Takeout,Regular,132.0
+2024-05-23 11:53:01.755563,Transportation,140.86,Debit Card,Store B,5,Thursday,2,1045.25,Transportation,Regular,94.09
+2024-05-23 11:53:01.755563,Entertainment,159.49,Credit Card,Store E,5,Thursday,1,1620.97,Entertainment,Regular,197.62
+2024-05-23 11:53:01.755563,Transportation,195.32,Debit Card,Store E,5,Thursday,2,1240.57,Transportation,Regular,140.86
+2024-05-23 11:53:01.755563,Miscellaneous,193.56,Credit Card,Store B,5,Thursday,1,767.71,Miscellaneous,Regular,17.75
+2024-05-23 11:53:01.755563,Groceries,79.69,Credit Card,Store D,5,Thursday,1,1390.65,Groceries,Regular,29.8
+2024-05-24 11:53:01.755563,Dining,114.9,Cash,Store B,5,Friday,1,1944.18,Takeout,Regular,47.99
+2024-05-24 11:53:01.755563,Groceries,55.01,Mobile Payment,Store A,5,Friday,2,1445.66,Groceries,Regular,79.69
+2024-05-24 11:53:01.755563,Utilities,74.28,Debit Card,Store B,5,Friday,1,1245.6,Utilities,Regular,128.67
+2024-05-24 11:53:01.755563,Entertainment,53.7,Credit Card,Store E,5,Friday,1,1674.67,Entertainment,Regular,159.49
+2024-05-24 11:53:01.755563,Groceries,170.85,Mobile Payment,Store D,5,Friday,2,1616.51,Groceries,Regular,55.01
+2024-05-25 11:53:01.755563,Transportation,91.4,Credit Card,Store A,5,Saturday,1,1331.97,Transportation,Regular,195.32
+2024-05-25 11:53:01.755563,Miscellaneous,74.43,Credit Card,Store B,5,Saturday,1,842.1400000000001,Miscellaneous,Regular,193.56
+2024-05-25 11:53:01.755563,Entertainment,7.35,Cash,Store E,5,Saturday,1,1682.02,Entertainment,Regular,53.7
+2024-05-25 11:53:01.755563,Utilities,146.03,Cash,Store C,5,Saturday,1,1391.6299999999999,Utilities,Regular,74.28
+2024-05-25 11:53:01.755563,Groceries,175.94,Debit Card,Store D,5,Saturday,1,1792.45,Groceries,Regular,170.85
+2024-05-26 11:53:01.755563,Entertainment,181.36,Credit Card,Store B,5,Sunday,1,1863.38,Entertainment,Regular,7.35
+2024-05-26 11:53:01.755563,Utilities,95.27,Mobile Payment,Store A,5,Sunday,2,1486.8999999999999,Utilities,Regular,146.03
+2024-05-26 11:53:01.755563,Utilities,151.2,Credit Card,Store D,5,Sunday,2,1638.1,Utilities,Regular,95.27
+2024-05-26 11:53:01.755563,Groceries,130.7,Cash,Store E,5,Sunday,1,1923.15,Groceries,Regular,175.94
+2024-05-26 11:53:01.755563,Miscellaneous,43.69,Debit Card,Store D,5,Sunday,1,885.83,Miscellaneous,Regular,74.43
+2024-05-27 11:53:01.755563,Utilities,121.78,Mobile Payment,Store C,5,Monday,1,1759.8799999999999,Utilities,Regular,151.2
+2024-05-27 11:53:01.755563,Entertainment,156.29,Debit Card,Store D,5,Monday,1,2019.67,Entertainment,Regular,181.36
+2024-05-27 11:53:01.755563,Groceries,48.53,Credit Card,Store E,5,Monday,1,1971.68,Groceries,Regular,130.7
+2024-05-28 11:53:01.755563,Miscellaneous,190.16,Credit Card,Store D,5,Tuesday,1,1075.99,Miscellaneous,Regular,43.69
+2024-05-28 11:53:01.755563,Dining,181.29,Debit Card,Store A,5,Tuesday,1,2125.47,Takeout,Regular,114.9
+2024-05-28 11:53:01.755563,Utilities,118.32,Debit Card,Store B,5,Tuesday,1,1878.2,Utilities,Regular,121.78
+2024-05-28 11:53:01.755563,Groceries,7.32,Mobile Payment,Store B,5,Tuesday,1,1979.0,Groceries,Regular,48.53
+2024-05-29 11:53:01.755563,Miscellaneous,113.21,Mobile Payment,Store E,5,Wednesday,2,1189.2,Miscellaneous,Regular,190.16
+2024-05-29 11:53:01.755563,Groceries,66.6,Debit Card,Store D,5,Wednesday,2,2045.6,Groceries,Regular,7.32
+2024-05-29 11:53:01.755563,Groceries,198.59,Cash,Store E,5,Wednesday,2,2244.19,Groceries,Regular,66.6
+2024-05-29 11:53:01.755563,Miscellaneous,170.3,Cash,Store B,5,Wednesday,2,1359.5,Miscellaneous,Regular,113.21
+2024-05-29 11:53:01.755563,Entertainment,162.77,Mobile Payment,Store A,5,Wednesday,1,2182.44,Entertainment,Regular,156.29
+2024-05-30 11:53:01.755563,Dining,51.06,Cash,Store C,5,Thursday,1,2176.53,Takeout,Regular,181.29
+2024-05-31 11:53:01.755563,Entertainment,194.02,Mobile Payment,Store A,5,Friday,1,2376.46,Entertainment,Regular,162.77
+2024-05-31 11:53:01.755563,Dining,75.42,Debit Card,Store D,5,Friday,1,2251.95,Takeout,Regular,51.06
+2024-06-01 11:53:01.755563,Entertainment,129.87,Debit Card,Store C,6,Saturday,2,129.87,Entertainment,Regular,194.02
+2024-06-01 11:53:01.755563,Transportation,180.83,Credit Card,Store B,6,Saturday,3,180.83,Transportation,Regular,91.4
+2024-06-01 11:53:01.755563,Transportation,19.37,Credit Card,Store D,6,Saturday,3,200.20000000000002,Transportation,Regular,180.83
+2024-06-01 11:53:01.755563,Transportation,171.3,Mobile Payment,Store C,6,Saturday,3,371.5,Transportation,Regular,19.37
+2024-06-01 11:53:01.755563,Entertainment,77.87,Cash,Store B,6,Saturday,2,207.74,Entertainment,Regular,129.87
+2024-06-02 11:53:01.755563,Utilities,193.13,Credit Card,Store D,6,Sunday,1,193.13,Utilities,Regular,118.32
+2024-06-02 11:53:01.755563,Miscellaneous,168.72,Credit Card,Store C,6,Sunday,1,168.72,Miscellaneous,Regular,170.3
+2024-06-03 11:53:01.755563,Transportation,58.26,Debit Card,Store A,6,Monday,1,429.76000000000005,Transportation,Regular,171.3
+2024-06-03 11:53:01.755563,Miscellaneous,63.06,Mobile Payment,Store D,6,Monday,1,231.78,Miscellaneous,Regular,168.72
+2024-06-03 11:53:01.755563,Groceries,12.37,Mobile Payment,Store E,6,Monday,1,12.37,Groceries,Regular,198.59
+2024-06-03 11:53:01.755563,Utilities,53.22,Cash,Store A,6,Monday,1,246.35,Utilities,Regular,193.13
+2024-06-04 11:53:01.755563,Transportation,39.24,Credit Card,Store B,6,Tuesday,1,469.0,Transportation,Regular,58.26
+2024-06-04 11:53:01.755563,Dining,40.98,Mobile Payment,Store B,6,Tuesday,2,40.98,Takeout,Regular,75.42
+2024-06-04 11:53:01.755563,Dining,55.72,Cash,Store B,6,Tuesday,2,96.69999999999999,Takeout,Regular,40.98
+2024-06-05 11:53:01.755563,Transportation,9.92,Cash,Store C,6,Wednesday,1,478.92,Transportation,Regular,39.24
+2024-06-05 11:53:01.755563,Utilities,106.8,Credit Card,Store B,6,Wednesday,2,353.15,Utilities,Regular,53.22
+2024-06-05 11:53:01.755563,Utilities,70.72,Mobile Payment,Store D,6,Wednesday,2,423.87,Utilities,Regular,106.8
+2024-06-06 11:53:01.755563,Groceries,21.6,Debit Card,Store D,6,Thursday,1,33.97,Groceries,Regular,12.37
+2024-06-06 11:53:01.755563,Entertainment,98.97,Credit Card,Store B,6,Thursday,1,306.71000000000004,Entertainment,Regular,77.87
+2024-06-06 11:53:01.755563,Utilities,66.74,Mobile Payment,Store C,6,Thursday,1,490.61,Utilities,Regular,70.72
+2024-06-07 11:53:01.755563,Groceries,196.26,Debit Card,Store C,6,Friday,1,230.23,Groceries,Regular,21.6
+2024-06-07 11:53:01.755563,Transportation,142.32,Cash,Store B,6,Friday,1,621.24,Transportation,Regular,9.92
+2024-06-07 11:53:01.755563,Dining,148.19,Debit Card,Store C,6,Friday,1,244.89,Takeout,Regular,55.72
+2024-06-07 11:53:01.755563,Utilities,194.55,Mobile Payment,Store E,6,Friday,1,685.16,Utilities,Regular,66.74
+2024-06-08 11:53:01.755563,Entertainment,68.49,Mobile Payment,Store B,6,Saturday,1,375.2,Entertainment,Regular,98.97
+2024-06-09 11:53:01.755563,Transportation,123.98,Credit Card,Store D,6,Sunday,1,745.22,Transportation,Regular,142.32
+2024-06-09 11:53:01.755563,Dining,124.54,Debit Card,Store B,6,Sunday,1,369.43,Takeout,Regular,148.19
+2024-06-09 11:53:01.755563,Groceries,163.35,Mobile Payment,Store E,6,Sunday,2,393.58,Groceries,Regular,196.26
+2024-06-09 11:53:01.755563,Groceries,131.91,Credit Card,Store A,6,Sunday,2,525.49,Groceries,Regular,163.35
+2024-06-10 11:53:01.755563,Entertainment,89.22,Credit Card,Store D,6,Monday,1,464.42,Entertainment,Regular,68.49
+2024-06-10 11:53:01.755563,Utilities,173.45,Debit Card,Store A,6,Monday,3,858.61,Utilities,Regular,194.55
+2024-06-10 11:53:01.755563,Utilities,85.44,Mobile Payment,Store C,6,Monday,3,944.05,Utilities,Regular,173.45
+2024-06-10 11:53:01.755563,Groceries,108.27,Cash,Store D,6,Monday,1,633.76,Groceries,Regular,131.91
+2024-06-10 11:53:01.755563,Utilities,181.37,Credit Card,Store C,6,Monday,3,1125.42,Utilities,Regular,85.44
+2024-06-11 11:53:01.755563,Transportation,106.91,Debit Card,Store E,6,Tuesday,1,852.13,Transportation,Regular,123.98
+2024-06-11 11:53:01.755563,Dining,30.83,Cash,Store B,6,Tuesday,3,400.26,Takeout,Regular,124.54
+2024-06-11 11:53:01.755563,Dining,137.48,Debit Card,Store C,6,Tuesday,3,537.74,Takeout,Regular,30.83
+2024-06-11 11:53:01.755563,Dining,30.15,Debit Card,Store A,6,Tuesday,3,567.89,Takeout,Regular,137.48
+2024-06-12 11:53:01.755563,Transportation,154.96,Debit Card,Store E,6,Wednesday,1,1007.09,Transportation,Regular,106.91
+2024-06-12 11:53:01.755563,Entertainment,115.98,Debit Card,Store D,6,Wednesday,1,580.4,Entertainment,Regular,89.22
+2024-06-12 11:53:01.755563,Utilities,163.35,Cash,Store A,6,Wednesday,1,1288.77,Utilities,Regular,181.37
+2024-06-13 11:53:01.755563,Miscellaneous,128.04,Credit Card,Store C,6,Thursday,2,359.82,Miscellaneous,Regular,63.06
+2024-06-13 11:53:01.755563,Miscellaneous,83.03,Debit Card,Store C,6,Thursday,2,442.85,Miscellaneous,Regular,128.04
+2024-06-13 11:53:01.755563,Dining,5.87,Debit Card,Store C,6,Thursday,2,573.76,Takeout,Regular,30.15
+2024-06-13 11:53:01.755563,Dining,99.17,Mobile Payment,Store C,6,Thursday,2,672.93,Takeout,Regular,5.87
+2024-06-14 11:53:01.755563,Dining,21.53,Mobile Payment,Store B,6,Friday,1,694.46,Takeout,Regular,99.17
+2024-06-14 11:53:01.755563,Entertainment,69.37,Credit Card,Store E,6,Friday,1,649.77,Entertainment,Regular,115.98
+2024-06-15 11:53:01.755563,Miscellaneous,47.74,Mobile Payment,Store C,6,Saturday,1,490.59,Miscellaneous,Regular,83.03
+2024-06-15 11:53:01.755563,Transportation,5.77,Credit Card,Store C,6,Saturday,1,1012.86,Transportation,Regular,154.96
+2024-06-16 11:53:01.755563,Utilities,189.19,Cash,Store A,6,Sunday,1,1477.96,Utilities,Regular,163.35
+2024-06-17 11:53:01.755563,Groceries,42.46,Credit Card,Store B,6,Monday,2,676.22,Groceries,Regular,108.27
+2024-06-17 11:53:01.755563,Groceries,160.06,Credit Card,Store B,6,Monday,2,836.28,Groceries,Regular,42.46
+2024-06-17 11:53:01.755563,Miscellaneous,192.97,Mobile Payment,Store A,6,Monday,1,683.56,Miscellaneous,Regular,47.74
+2024-06-17 11:53:01.755563,Transportation,182.23,Credit Card,Store C,6,Monday,1,1195.0900000000001,Transportation,Regular,5.77
+2024-06-17 11:53:01.755563,Utilities,49.71,Credit Card,Store A,6,Monday,1,1527.67,Utilities,Regular,189.19
+2024-06-18 11:53:01.755563,Entertainment,141.02,Debit Card,Store D,6,Tuesday,1,790.79,Entertainment,Regular,69.37
+2024-06-18 11:53:01.755563,Dining,68.9,Credit Card,Store B,6,Tuesday,1,763.36,Takeout,Regular,21.53
+2024-06-18 11:53:01.755563,Miscellaneous,193.83,Cash,Store E,6,Tuesday,1,877.39,Miscellaneous,Regular,192.97
+2024-06-18 11:53:01.755563,Utilities,28.57,Credit Card,Store B,6,Tuesday,2,1556.24,Utilities,Regular,49.71
+2024-06-18 11:53:01.755563,Utilities,100.34,Cash,Store E,6,Tuesday,2,1656.58,Utilities,Regular,28.57
+2024-06-19 11:53:01.755563,Miscellaneous,124.02,Mobile Payment,Store B,6,Wednesday,2,1001.41,Miscellaneous,Regular,193.83
+2024-06-19 11:53:01.755563,Dining,87.86,Mobile Payment,Store C,6,Wednesday,1,851.22,Takeout,Regular,68.9
+2024-06-19 11:53:01.755563,Miscellaneous,138.31,Debit Card,Store B,6,Wednesday,2,1139.72,Miscellaneous,Regular,124.02
+2024-06-20 11:53:01.755563,Groceries,39.58,Credit Card,Store E,6,Thursday,3,875.86,Groceries,Regular,160.06
+2024-06-20 11:53:01.755563,Groceries,30.88,Cash,Store A,6,Thursday,3,906.74,Groceries,Regular,39.58
+2024-06-20 11:53:01.755563,Groceries,59.07,Debit Card,Store E,6,Thursday,3,965.81,Groceries,Regular,30.88
+2024-06-20 11:53:01.755563,Utilities,27.65,Mobile Payment,Store E,6,Thursday,1,1684.23,Utilities,Regular,100.34
+2024-06-20 11:53:01.755563,Miscellaneous,183.53,Debit Card,Store C,6,Thursday,1,1323.25,Miscellaneous,Regular,138.31
+2024-06-21 11:53:01.755563,Groceries,190.21,Cash,Store E,6,Friday,1,1156.02,Groceries,Regular,59.07
+2024-06-21 11:53:01.755563,Entertainment,77.73,Cash,Store E,6,Friday,1,868.52,Entertainment,Regular,141.02
+2024-06-22 11:53:01.755563,Dining,184.35,Debit Card,Store C,6,Saturday,2,1035.57,Takeout,Regular,87.86
+2024-06-22 11:53:01.755563,Miscellaneous,171.18,Debit Card,Store A,6,Saturday,1,1494.43,Miscellaneous,Regular,183.53
+2024-06-22 11:53:01.755563,Dining,38.98,Mobile Payment,Store D,6,Saturday,2,1074.55,Takeout,Regular,184.35
+2024-06-22 11:53:01.755563,Groceries,128.45,Credit Card,Store B,6,Saturday,1,1284.47,Groceries,Regular,190.21
+2024-06-23 11:53:01.755563,Miscellaneous,70.02,Mobile Payment,Store C,6,Sunday,1,1564.45,Miscellaneous,Regular,171.18
+2024-06-23 11:53:01.755563,Utilities,80.15,Cash,Store D,6,Sunday,1,1764.38,Utilities,Regular,27.65
+2024-06-23 11:53:01.755563,Entertainment,33.07,Cash,Store D,6,Sunday,2,901.59,Entertainment,Regular,77.73
+2024-06-23 11:53:01.755563,Entertainment,76.86,Mobile Payment,Store E,6,Sunday,2,978.45,Entertainment,Regular,33.07
+2024-06-23 11:53:01.755563,Groceries,49.98,Credit Card,Store D,6,Sunday,1,1334.45,Groceries,Regular,128.45
+2024-06-24 11:53:01.755563,Transportation,157.44,Credit Card,Store D,6,Monday,1,1352.53,Transportation,Regular,182.23
+2024-06-24 11:53:01.755563,Entertainment,106.07,Cash,Store C,6,Monday,1,1084.52,Entertainment,Regular,76.86
+2024-06-24 11:53:01.755563,Groceries,97.82,Credit Card,Store E,6,Monday,1,1432.27,Groceries,Regular,49.98
+2024-06-25 11:53:01.755563,Miscellaneous,48.56,Debit Card,Store D,6,Tuesday,1,1613.01,Miscellaneous,Regular,70.02
+2024-06-25 11:53:01.755563,Transportation,18.53,Debit Card,Store D,6,Tuesday,2,1371.06,Transportation,Regular,157.44
+2024-06-25 11:53:01.755563,Dining,76.17,Debit Card,Store A,6,Tuesday,1,1150.72,Takeout,Regular,38.98
+2024-06-25 11:53:01.755563,Utilities,110.01,Cash,Store B,6,Tuesday,1,1874.39,Utilities,Regular,80.15
+2024-06-25 11:53:01.755563,Transportation,103.9,Debit Card,Store B,6,Tuesday,2,1474.96,Transportation,Regular,18.53
+2024-06-26 11:53:01.755563,Utilities,168.16,Credit Card,Store B,6,Wednesday,1,2042.55,Utilities,Regular,110.01
+2024-06-26 11:53:01.755563,Transportation,159.93,Cash,Store C,6,Wednesday,1,1634.89,Transportation,Regular,103.9
+2024-06-26 11:53:01.755563,Entertainment,149.19,Cash,Store E,6,Wednesday,1,1233.71,Entertainment,Regular,106.07
+2024-06-26 11:53:01.755563,Groceries,85.2,Debit Card,Store E,6,Wednesday,2,1517.47,Groceries,Regular,97.82
+2024-06-26 11:53:01.755563,Groceries,46.63,Mobile Payment,Store E,6,Wednesday,2,1564.1,Groceries,Regular,85.2
+2024-06-27 11:53:01.755563,Transportation,90.91,Debit Card,Store D,6,Thursday,2,1725.8,Transportation,Regular,159.93
+2024-06-27 11:53:01.755563,Utilities,112.87,Mobile Payment,Store B,6,Thursday,1,2155.42,Utilities,Regular,168.16
+2024-06-27 11:53:01.755563,Miscellaneous,143.09,Mobile Payment,Store A,6,Thursday,1,1756.1,Miscellaneous,Regular,48.56
+2024-06-27 11:53:01.755563,Transportation,17.47,Debit Card,Store D,6,Thursday,2,1743.27,Transportation,Regular,90.91
+2024-06-28 11:53:01.755563,Entertainment,87.54,Credit Card,Store C,6,Friday,1,1321.25,Entertainment,Regular,149.19
+2024-06-29 11:53:01.755563,Entertainment,156.58,Debit Card,Store C,6,Saturday,1,1477.83,Entertainment,Regular,87.54
+2024-06-29 11:53:01.755563,Groceries,162.42,Debit Card,Store D,6,Saturday,1,1726.52,Groceries,Regular,46.63
+2024-06-29 11:53:01.755563,Miscellaneous,46.06,Debit Card,Store E,6,Saturday,2,1802.16,Miscellaneous,Regular,143.09
+2024-06-29 11:53:01.755563,Miscellaneous,179.43,Debit Card,Store A,6,Saturday,2,1981.5900000000001,Miscellaneous,Regular,46.06
+2024-06-30 11:53:01.755563,Dining,155.97,Cash,Store D,6,Sunday,1,1306.69,Takeout,Regular,76.17
+2024-06-30 11:53:01.755563,Entertainment,31.42,Mobile Payment,Store D,6,Sunday,1,1509.25,Entertainment,Regular,156.58
+2024-06-30 11:53:01.755563,Transportation,69.63,Credit Card,Store B,6,Sunday,1,1812.9,Transportation,Regular,17.47
+2024-06-30 11:53:01.755563,Miscellaneous,196.52,Mobile Payment,Store D,6,Sunday,1,2178.11,Miscellaneous,Regular,179.43
+2024-07-01 11:53:01.755563,Utilities,17.23,Cash,Store A,7,Monday,3,17.23,Utilities,Regular,112.87
+2024-07-01 11:53:01.755563,Utilities,165.61,Cash,Store C,7,Monday,3,182.84,Utilities,Regular,17.23
+2024-07-01 11:53:01.755563,Groceries,175.72,Cash,Store D,7,Monday,1,175.72,Groceries,Regular,162.42
+2024-07-01 11:53:01.755563,Utilities,197.83,Mobile Payment,Store A,7,Monday,3,380.67,Utilities,Regular,165.61
+2024-07-02 11:53:01.755563,Groceries,126.66,Debit Card,Store A,7,Tuesday,2,302.38,Groceries,Regular,175.72
+2024-07-02 11:53:01.755563,Groceries,117.85,Mobile Payment,Store B,7,Tuesday,2,420.23,Groceries,Regular,126.66
+2024-07-02 11:53:01.755563,Miscellaneous,80.91,Cash,Store D,7,Tuesday,1,80.91,Miscellaneous,Regular,196.52
+2024-07-02 11:53:01.755563,Entertainment,199.46,Mobile Payment,Store B,7,Tuesday,1,199.46,Entertainment,Regular,31.42
+2024-07-03 11:53:01.755563,Utilities,37.26,Credit Card,Store D,7,Wednesday,1,417.93,Utilities,Regular,197.83
+2024-07-03 11:53:01.755563,Dining,180.51,Mobile Payment,Store D,7,Wednesday,1,180.51,Takeout,Regular,155.97
+2024-07-04 11:53:01.755563,Miscellaneous,187.25,Debit Card,Store B,7,Thursday,1,268.15999999999997,Miscellaneous,Regular,80.91
+2024-07-05 11:53:01.755563,Utilities,48.12,Debit Card,Store D,7,Friday,2,466.05,Utilities,Regular,37.26
+2024-07-05 11:53:01.755563,Miscellaneous,12.32,Mobile Payment,Store B,7,Friday,1,280.48,Miscellaneous,Regular,187.25
+2024-07-05 11:53:01.755563,Groceries,24.93,Mobile Payment,Store B,7,Friday,1,445.15999999999997,Groceries,Regular,117.85
+2024-07-05 11:53:01.755563,Entertainment,64.17,Cash,Store D,7,Friday,1,263.63,Entertainment,Regular,199.46
+2024-07-05 11:53:01.755563,Utilities,40.59,Debit Card,Store B,7,Friday,2,506.64,Utilities,Regular,48.12
+2024-07-06 11:53:01.755563,Entertainment,50.16,Credit Card,Store C,7,Saturday,1,313.79,Entertainment,Regular,64.17
+2024-07-07 11:53:01.755563,Miscellaneous,120.4,Credit Card,Store E,7,Sunday,2,400.88,Miscellaneous,Regular,12.32
+2024-07-07 11:53:01.755563,Utilities,176.54,Debit Card,Store B,7,Sunday,1,683.1800000000001,Utilities,Regular,40.59
+2024-07-07 11:53:01.755563,Miscellaneous,140.02,Credit Card,Store A,7,Sunday,2,540.9,Miscellaneous,Regular,120.4
+2024-07-08 11:53:01.755563,Entertainment,175.22,Cash,Store A,7,Monday,1,489.01,Entertainment,Regular,50.16
+2024-07-08 11:53:01.755563,Dining,100.83,Mobile Payment,Store B,7,Monday,2,281.34,Takeout,Regular,180.51
+2024-07-08 11:53:01.755563,Miscellaneous,188.1,Debit Card,Store E,7,Monday,1,729.0,Miscellaneous,Regular,140.02
+2024-07-08 11:53:01.755563,Dining,122.9,Credit Card,Store D,7,Monday,2,404.24,Takeout,Regular,100.83
+2024-07-09 11:53:01.755563,Miscellaneous,14.97,Debit Card,Store D,7,Tuesday,2,743.97,Miscellaneous,Regular,188.1
+2024-07-09 11:53:01.755563,Dining,151.94,Debit Card,Store D,7,Tuesday,1,556.1800000000001,Takeout,Regular,122.9
+2024-07-09 11:53:01.755563,Miscellaneous,21.78,Cash,Store D,7,Tuesday,2,765.75,Miscellaneous,Regular,14.97
+2024-07-10 11:53:01.755563,Miscellaneous,38.36,Debit Card,Store D,7,Wednesday,2,804.11,Miscellaneous,Regular,21.78
+2024-07-10 11:53:01.755563,Miscellaneous,191.01,Cash,Store B,7,Wednesday,2,995.12,Miscellaneous,Regular,38.36
+2024-07-10 11:53:01.755563,Utilities,9.08,Credit Card,Store C,7,Wednesday,1,692.26,Utilities,Regular,176.54
+2024-07-11 11:53:01.755563,Groceries,99.19,Debit Card,Store D,7,Thursday,1,544.35,Groceries,Regular,24.93
+2024-07-12 11:53:01.755563,Miscellaneous,115.45,Mobile Payment,Store A,7,Friday,1,1110.57,Miscellaneous,Regular,191.01
+2024-07-12 11:53:01.755563,Transportation,186.61,Debit Card,Store E,7,Friday,2,186.61,Transportation,Regular,69.63
+2024-07-12 11:53:01.755563,Groceries,52.02,Cash,Store D,7,Friday,1,596.37,Groceries,Regular,99.19
+2024-07-12 11:53:01.755563,Utilities,189.93,Cash,Store D,7,Friday,1,882.19,Utilities,Regular,9.08
+2024-07-12 11:53:01.755563,Transportation,72.69,Debit Card,Store E,7,Friday,2,259.3,Transportation,Regular,186.61
+2024-07-13 11:53:01.755563,Dining,169.36,Cash,Store B,7,Saturday,3,725.54,Takeout,Regular,151.94
+2024-07-13 11:53:01.755563,Dining,130.54,Cash,Store D,7,Saturday,3,856.08,Takeout,Regular,169.36
+2024-07-13 11:53:01.755563,Dining,143.75,Credit Card,Store C,7,Saturday,3,999.83,Takeout,Regular,130.54
+2024-07-13 11:53:01.755563,Groceries,88.32,Debit Card,Store B,7,Saturday,1,684.69,Groceries,Regular,52.02
+2024-07-13 11:53:01.755563,Miscellaneous,189.23,Credit Card,Store C,7,Saturday,1,1299.8,Miscellaneous,Regular,115.45
+2024-07-14 11:53:01.755563,Groceries,76.61,Cash,Store B,7,Sunday,2,761.3,Groceries,Regular,88.32
+2024-07-14 11:53:01.755563,Utilities,56.74,Debit Card,Store D,7,Sunday,1,938.9300000000001,Utilities,Regular,189.93
+2024-07-14 11:53:01.755563,Groceries,165.79,Mobile Payment,Store E,7,Sunday,2,927.0899999999999,Groceries,Regular,76.61
+2024-07-14 11:53:01.755563,Miscellaneous,129.03,Debit Card,Store D,7,Sunday,1,1428.83,Miscellaneous,Regular,189.23
+2024-07-15 11:53:01.755563,Miscellaneous,139.03,Debit Card,Store E,7,Monday,1,1567.8600000000001,Miscellaneous,Regular,129.03
+2024-07-15 11:53:01.755563,Transportation,89.95,Credit Card,Store B,7,Monday,1,349.25,Transportation,Regular,72.69
+2024-07-15 11:53:01.755563,Groceries,179.71,Credit Card,Store D,7,Monday,1,1106.8,Groceries,Regular,165.79
+2024-07-15 11:53:01.755563,Entertainment,16.77,Cash,Store D,7,Monday,2,505.78,Entertainment,Regular,175.22
+2024-07-15 11:53:01.755563,Entertainment,97.96,Credit Card,Store A,7,Monday,2,603.74,Entertainment,Regular,16.77
+2024-07-16 11:53:01.755563,Groceries,126.79,Mobile Payment,Store A,7,Tuesday,1,1233.59,Groceries,Regular,179.71
+2024-07-16 11:53:01.755563,Entertainment,117.53,Cash,Store E,7,Tuesday,1,721.27,Entertainment,Regular,97.96
+2024-07-16 11:53:01.755563,Dining,50.11,Credit Card,Store D,7,Tuesday,1,1049.94,Takeout,Regular,143.75
+2024-07-17 11:53:01.755563,Utilities,95.58,Cash,Store C,7,Wednesday,2,1034.51,Utilities,Regular,56.74
+2024-07-17 11:53:01.755563,Utilities,76.59,Mobile Payment,Store D,7,Wednesday,2,1111.1,Utilities,Regular,95.58
+2024-07-17 11:53:01.755563,Groceries,75.92,Credit Card,Store C,7,Wednesday,1,1309.51,Groceries,Regular,126.79
+2024-07-17 11:53:01.755563,Miscellaneous,129.33,Credit Card,Store E,7,Wednesday,1,1697.19,Miscellaneous,Regular,139.03
+2024-07-18 11:53:01.755563,Groceries,133.03,Mobile Payment,Store A,7,Thursday,1,1442.54,Groceries,Regular,75.92
+2024-07-18 11:53:01.755563,Dining,130.92,Debit Card,Store E,7,Thursday,2,1180.8600000000001,Takeout,Regular,50.11
+2024-07-18 11:53:01.755563,Utilities,198.22,Mobile Payment,Store D,7,Thursday,1,1309.32,Utilities,Regular,76.59
+2024-07-18 11:53:01.755563,Dining,154.63,Mobile Payment,Store B,7,Thursday,2,1335.49,Takeout,Regular,130.92
+2024-07-18 11:53:01.755563,Transportation,41.78,Debit Card,Store B,7,Thursday,1,391.03000000000003,Transportation,Regular,89.95
+2024-07-19 11:53:01.755563,Dining,192.49,Credit Card,Store D,7,Friday,1,1527.98,Takeout,Regular,154.63
+2024-07-19 11:53:01.755563,Entertainment,104.01,Debit Card,Store C,7,Friday,1,825.28,Entertainment,Regular,117.53
+2024-07-19 11:53:01.755563,Transportation,48.96,Cash,Store E,7,Friday,1,439.99,Transportation,Regular,41.78
+2024-07-19 11:53:01.755563,Groceries,190.67,Cash,Store D,7,Friday,1,1633.21,Groceries,Regular,133.03
+2024-07-20 11:53:01.755563,Groceries,154.96,Mobile Payment,Store C,7,Saturday,1,1788.17,Groceries,Regular,190.67
+2024-07-21 11:53:01.755563,Miscellaneous,32.08,Cash,Store D,7,Sunday,1,1729.27,Miscellaneous,Regular,129.33
+2024-07-21 11:53:01.755563,Entertainment,16.87,Mobile Payment,Store B,7,Sunday,1,842.15,Entertainment,Regular,104.01
+2024-07-22 11:53:01.755563,Entertainment,61.08,Mobile Payment,Store D,7,Monday,2,903.23,Entertainment,Regular,16.87
+2024-07-22 11:53:01.755563,Entertainment,116.11,Mobile Payment,Store E,7,Monday,2,1019.34,Entertainment,Regular,61.08
+2024-07-22 11:53:01.755563,Transportation,158.15,Debit Card,Store C,7,Monday,1,598.14,Transportation,Regular,48.96
+2024-07-23 11:53:01.755563,Miscellaneous,21.54,Mobile Payment,Store C,7,Tuesday,1,1750.81,Miscellaneous,Regular,32.08
+2024-07-23 11:53:01.755563,Utilities,62.36,Debit Card,Store B,7,Tuesday,1,1371.68,Utilities,Regular,198.22
+2024-07-24 11:53:01.755563,Groceries,105.88,Credit Card,Store D,7,Wednesday,1,1894.05,Groceries,Regular,154.96
+2024-07-24 11:53:01.755563,Miscellaneous,96.73,Debit Card,Store D,7,Wednesday,1,1847.54,Miscellaneous,Regular,21.54
+2024-07-24 11:53:01.755563,Entertainment,186.45,Debit Card,Store C,7,Wednesday,1,1205.79,Entertainment,Regular,116.11
+2024-07-25 11:53:01.755563,Utilities,94.09,Credit Card,Store D,7,Thursday,1,1465.77,Utilities,Regular,62.36
+2024-07-25 11:53:01.755563,Miscellaneous,186.52,Cash,Store E,7,Thursday,2,2034.06,Miscellaneous,Regular,96.73
+2024-07-25 11:53:01.755563,Miscellaneous,101.17,Debit Card,Store C,7,Thursday,2,2135.23,Miscellaneous,Regular,186.52
+2024-07-25 11:53:01.755563,Entertainment,92.42,Credit Card,Store D,7,Thursday,2,1298.21,Entertainment,Regular,186.45
+2024-07-25 11:53:01.755563,Entertainment,10.57,Cash,Store B,7,Thursday,2,1308.78,Entertainment,Regular,92.42
+2024-07-26 11:53:01.755563,Miscellaneous,120.72,Cash,Store B,7,Friday,1,2255.95,Miscellaneous,Regular,101.17
+2024-07-27 11:53:01.755563,Groceries,45.39,Cash,Store A,7,Saturday,1,1939.44,Groceries,Regular,105.88
+2024-07-27 11:53:01.755563,Entertainment,41.78,Mobile Payment,Store C,7,Saturday,1,1350.56,Entertainment,Regular,10.57
+2024-07-27 11:53:01.755563,Utilities,94.09,Mobile Payment,Store A,7,Saturday,2,1559.8600000000001,Utilities,Regular,94.09
+2024-07-27 11:53:01.755563,Utilities,63.96,Credit Card,Store C,7,Saturday,2,1623.82,Utilities,Regular,94.09
+2024-07-28 11:53:01.755563,Utilities,63.19,Debit Card,Store D,7,Sunday,2,1687.01,Utilities,Regular,63.96
+2024-07-28 11:53:01.755563,Groceries,61.88,Debit Card,Store E,7,Sunday,1,2001.32,Groceries,Regular,45.39
+2024-07-28 11:53:01.755563,Utilities,114.57,Cash,Store B,7,Sunday,2,1801.58,Utilities,Regular,63.19
+2024-07-28 11:53:01.755563,Miscellaneous,20.19,Cash,Store B,7,Sunday,1,2276.14,Miscellaneous,Regular,120.72
+2024-07-28 11:53:01.755563,Dining,171.17,Mobile Payment,Store D,7,Sunday,1,1699.15,Takeout,Regular,192.49
+2024-07-29 11:53:01.755563,Utilities,30.58,Debit Card,Store A,7,Monday,2,1832.16,Utilities,Regular,114.57
+2024-07-29 11:53:01.755563,Utilities,14.21,Credit Card,Store C,7,Monday,2,1846.3700000000001,Utilities,Regular,30.58
+2024-07-30 11:53:01.755563,Groceries,120.65,Debit Card,Store C,7,Tuesday,1,2121.97,Groceries,Regular,61.88
+2024-07-30 11:53:01.755563,Entertainment,172.14,Mobile Payment,Store E,7,Tuesday,1,1522.7,Entertainment,Regular,41.78
+2024-07-30 11:53:01.755563,Miscellaneous,160.3,Mobile Payment,Store C,7,Tuesday,1,2436.44,Miscellaneous,Regular,20.19
+2024-07-31 11:53:01.755563,Entertainment,86.84,Cash,Store A,7,Wednesday,1,1609.54,Entertainment,Regular,172.14
+2024-07-31 11:53:01.755563,Utilities,156.65,Debit Card,Store D,7,Wednesday,1,2003.02,Utilities,Regular,14.21
+2024-08-01 11:53:01.755563,Entertainment,50.05,Debit Card,Store B,8,Thursday,1,50.05,Entertainment,Regular,86.84
+2024-08-01 11:53:01.755563,Miscellaneous,114.6,Debit Card,Store C,8,Thursday,1,114.6,Miscellaneous,Regular,160.3
+2024-08-01 11:53:01.755563,Transportation,156.22,Mobile Payment,Store A,8,Thursday,1,156.22,Transportation,Regular,158.15
+2024-08-02 11:53:01.755563,Dining,189.01,Credit Card,Store C,8,Friday,2,189.01,Takeout,Regular,171.17
+2024-08-02 11:53:01.755563,Dining,79.54,Credit Card,Store E,8,Friday,2,268.55,Takeout,Regular,189.01
+2024-08-02 11:53:01.755563,Groceries,70.2,Credit Card,Store E,8,Friday,1,70.2,Groceries,Regular,120.65
+2024-08-03 11:53:01.755563,Entertainment,92.08,Debit Card,Store E,8,Saturday,1,142.13,Entertainment,Regular,50.05
+2024-08-03 11:53:01.755563,Transportation,132.88,Credit Card,Store E,8,Saturday,1,289.1,Transportation,Regular,156.22
+2024-08-04 11:53:01.755563,Miscellaneous,177.53,Debit Card,Store E,8,Sunday,1,292.13,Miscellaneous,Regular,114.6
+2024-08-04 11:53:01.755563,Utilities,46.16,Mobile Payment,Store B,8,Sunday,1,46.16,Utilities,Regular,156.65
+2024-08-04 11:53:01.755563,Entertainment,125.38,Mobile Payment,Store B,8,Sunday,2,267.51,Entertainment,Regular,92.08
+2024-08-04 11:53:01.755563,Entertainment,137.55,Credit Card,Store A,8,Sunday,2,405.06,Entertainment,Regular,125.38
+2024-08-05 11:53:01.755563,Dining,113.59,Credit Card,Store E,8,Monday,1,382.14,Takeout,Regular,79.54
+2024-08-05 11:53:01.755563,Groceries,63.06,Cash,Store E,8,Monday,1,133.26,Groceries,Regular,70.2
+2024-08-05 11:53:01.755563,Miscellaneous,21.22,Credit Card,Store C,8,Monday,1,313.35,Miscellaneous,Regular,177.53
+2024-08-06 11:53:01.755563,Entertainment,102.85,Cash,Store C,8,Tuesday,2,507.90999999999997,Entertainment,Regular,137.55
+2024-08-06 11:53:01.755563,Entertainment,19.23,Cash,Store A,8,Tuesday,2,527.14,Entertainment,Regular,102.85
+2024-08-06 11:53:01.755563,Groceries,122.68,Debit Card,Store E,8,Tuesday,1,255.94,Groceries,Regular,63.06
+2024-08-06 11:53:01.755563,Dining,86.37,Credit Card,Store B,8,Tuesday,1,468.51,Takeout,Regular,113.59
+2024-08-07 11:53:01.755563,Miscellaneous,53.48,Cash,Store B,8,Wednesday,1,366.83,Miscellaneous,Regular,21.22
+2024-08-07 11:53:01.755563,Entertainment,158.51,Debit Card,Store B,8,Wednesday,1,685.65,Entertainment,Regular,19.23
+2024-08-08 11:53:01.755563,Entertainment,15.68,Cash,Store E,8,Thursday,1,701.3299999999999,Entertainment,Regular,158.51
+2024-08-09 11:53:01.755563,Groceries,96.77,Cash,Store C,8,Friday,1,352.71000000000004,Groceries,Regular,122.68
+2024-08-09 11:53:01.755563,Utilities,136.02,Cash,Store E,8,Friday,1,182.18,Utilities,Regular,46.16
+2024-08-10 11:53:01.755563,Groceries,139.35,Cash,Store A,8,Saturday,1,492.06,Groceries,Regular,96.77
+2024-08-10 11:53:01.755563,Transportation,78.08,Mobile Payment,Store B,8,Saturday,1,367.18,Transportation,Regular,132.88
+2024-08-11 11:53:01.755563,Groceries,93.28,Mobile Payment,Store E,8,Sunday,1,585.34,Groceries,Regular,139.35
+2024-08-11 11:53:01.755563,Utilities,46.87,Debit Card,Store D,8,Sunday,1,229.05,Utilities,Regular,136.02
+2024-08-12 11:53:01.755563,Groceries,63.99,Mobile Payment,Store C,8,Monday,2,649.33,Groceries,Regular,93.28
+2024-08-12 11:53:01.755563,Transportation,168.16,Mobile Payment,Store E,8,Monday,2,535.3399999999999,Transportation,Regular,78.08
+2024-08-12 11:53:01.755563,Groceries,101.33,Mobile Payment,Store E,8,Monday,2,750.66,Groceries,Regular,63.99
+2024-08-12 11:53:01.755563,Utilities,192.95,Credit Card,Store C,8,Monday,1,422.0,Utilities,Regular,46.87
+2024-08-12 11:53:01.755563,Transportation,197.08,Debit Card,Store E,8,Monday,2,732.42,Transportation,Regular,168.16
+2024-08-13 11:53:01.755563,Groceries,11.98,Credit Card,Store D,8,Tuesday,2,762.64,Groceries,Regular,101.33
+2024-08-13 11:53:01.755563,Groceries,42.31,Debit Card,Store B,8,Tuesday,2,804.95,Groceries,Regular,11.98
+2024-08-14 11:53:01.755563,Utilities,42.8,Mobile Payment,Store D,8,Wednesday,1,464.8,Utilities,Regular,192.95
+2024-08-14 11:53:01.755563,Entertainment,46.01,Mobile Payment,Store D,8,Wednesday,1,747.3399999999999,Entertainment,Regular,15.68
+2024-08-15 11:53:01.755563,Entertainment,176.7,Cash,Store E,8,Thursday,1,924.04,Entertainment,Regular,46.01
+2024-08-16 11:53:01.755563,Miscellaneous,78.19,Credit Card,Store E,8,Friday,2,445.02,Miscellaneous,Regular,53.48
+2024-08-16 11:53:01.755563,Miscellaneous,123.12,Cash,Store A,8,Friday,2,568.14,Miscellaneous,Regular,78.19
+2024-08-17 11:53:01.755563,Utilities,62.66,Mobile Payment,Store B,8,Saturday,1,527.46,Utilities,Regular,42.8
+2024-08-17 11:53:01.755563,Entertainment,183.25,Mobile Payment,Store B,8,Saturday,1,1107.29,Entertainment,Regular,176.7
+2024-08-18 11:53:01.755563,Dining,37.84,Debit Card,Store B,8,Sunday,1,506.35,Takeout,Regular,86.37
+2024-08-18 11:53:01.755563,Entertainment,93.72,Credit Card,Store D,8,Sunday,1,1201.01,Entertainment,Regular,183.25
+2024-08-18 11:53:01.755563,Miscellaneous,131.64,Mobile Payment,Store C,8,Sunday,1,699.78,Miscellaneous,Regular,123.12
+2024-08-18 11:53:01.755563,Transportation,100.8,Debit Card,Store E,8,Sunday,1,833.22,Transportation,Regular,197.08
+2024-08-19 11:53:01.755563,Dining,77.78,Mobile Payment,Store A,8,Monday,1,584.13,Takeout,Regular,37.84
+2024-08-19 11:53:01.755563,Miscellaneous,159.75,Mobile Payment,Store C,8,Monday,1,859.53,Miscellaneous,Regular,131.64
+2024-08-19 11:53:01.755563,Entertainment,60.16,Cash,Store B,8,Monday,1,1261.17,Entertainment,Regular,93.72
+2024-08-19 11:53:01.755563,Utilities,92.19,Cash,Store B,8,Monday,1,619.65,Utilities,Regular,62.66
+2024-08-20 11:53:01.755563,Dining,59.28,Credit Card,Store A,8,Tuesday,3,643.41,Takeout,Regular,77.78
+2024-08-20 11:53:01.755563,Dining,14.84,Credit Card,Store C,8,Tuesday,3,658.25,Takeout,Regular,59.28
+2024-08-20 11:53:01.755563,Entertainment,108.62,Debit Card,Store E,8,Tuesday,2,1369.79,Entertainment,Regular,60.16
+2024-08-20 11:53:01.755563,Entertainment,142.86,Mobile Payment,Store B,8,Tuesday,2,1512.65,Entertainment,Regular,108.62
+2024-08-20 11:53:01.755563,Dining,120.52,Debit Card,Store B,8,Tuesday,3,778.77,Takeout,Regular,14.84
+2024-08-21 11:53:01.755563,Groceries,89.4,Mobile Payment,Store C,8,Wednesday,1,894.35,Groceries,Regular,42.31
+2024-08-22 11:53:01.755563,Miscellaneous,174.24,Credit Card,Store D,8,Thursday,1,1033.77,Miscellaneous,Regular,159.75
+2024-08-22 11:53:01.755563,Groceries,6.95,Credit Card,Store C,8,Thursday,1,901.3,Groceries,Regular,89.4
+2024-08-22 11:53:01.755563,Transportation,34.52,Debit Card,Store D,8,Thursday,1,867.74,Transportation,Regular,100.8
+2024-08-22 11:53:01.755563,Dining,69.46,Credit Card,Store E,8,Thursday,1,848.23,Takeout,Regular,120.52
+2024-08-23 11:53:01.755563,Groceries,130.01,Mobile Payment,Store B,8,Friday,1,1031.31,Groceries,Regular,6.95
+2024-08-23 11:53:01.755563,Dining,152.49,Debit Card,Store D,8,Friday,1,1000.72,Takeout,Regular,69.46
+2024-08-24 11:53:01.755563,Groceries,102.9,Credit Card,Store B,8,Saturday,2,1134.21,Groceries,Regular,130.01
+2024-08-24 11:53:01.755563,Groceries,150.85,Credit Card,Store E,8,Saturday,2,1285.06,Groceries,Regular,102.9
+2024-08-24 11:53:01.755563,Transportation,27.97,Credit Card,Store D,8,Saturday,1,895.71,Transportation,Regular,34.52
+2024-08-24 11:53:01.755563,Miscellaneous,83.76,Mobile Payment,Store A,8,Saturday,1,1117.53,Miscellaneous,Regular,174.24
+2024-08-24 11:53:01.755563,Utilities,158.0,Credit Card,Store B,8,Saturday,1,777.65,Utilities,Regular,92.19
+2024-08-25 11:53:01.755563,Groceries,43.43,Debit Card,Store A,8,Sunday,1,1328.49,Groceries,Regular,150.85
+2024-08-25 11:53:01.755563,Transportation,125.01,Cash,Store C,8,Sunday,1,1020.72,Transportation,Regular,27.97
+2024-08-25 11:53:01.755563,Dining,88.05,Debit Card,Store E,8,Sunday,2,1088.77,Takeout,Regular,152.49
+2024-08-25 11:53:01.755563,Dining,183.81,Cash,Store D,8,Sunday,2,1272.58,Takeout,Regular,88.05
+2024-08-25 11:53:01.755563,Utilities,148.12,Debit Card,Store A,8,Sunday,1,925.77,Utilities,Regular,158.0
+2024-08-26 11:53:01.755563,Miscellaneous,192.66,Cash,Store E,8,Monday,1,1310.19,Miscellaneous,Regular,83.76
+2024-08-26 11:53:01.755563,Groceries,85.22,Debit Card,Store D,8,Monday,1,1413.71,Groceries,Regular,43.43
+2024-08-26 11:53:01.755563,Entertainment,131.0,Credit Card,Store C,8,Monday,1,1643.65,Entertainment,Regular,142.86
+2024-08-27 11:53:01.755563,Groceries,85.01,Cash,Store E,8,Tuesday,1,1498.72,Groceries,Regular,85.22
+2024-08-27 11:53:01.755563,Entertainment,116.24,Credit Card,Store C,8,Tuesday,1,1759.8899999999999,Entertainment,Regular,131.0
+2024-08-27 11:53:01.755563,Transportation,192.29,Debit Card,Store D,8,Tuesday,1,1213.01,Transportation,Regular,125.01
+2024-08-28 11:53:01.755563,Entertainment,36.72,Debit Card,Store E,8,Wednesday,1,1796.61,Entertainment,Regular,116.24
+2024-08-28 11:53:01.755563,Utilities,45.47,Credit Card,Store C,8,Wednesday,2,971.24,Utilities,Regular,148.12
+2024-08-28 11:53:01.755563,Transportation,198.96,Credit Card,Store C,8,Wednesday,2,1411.97,Transportation,Regular,192.29
+2024-08-28 11:53:01.755563,Transportation,86.82,Mobile Payment,Store E,8,Wednesday,2,1498.79,Transportation,Regular,198.96
+2024-08-28 11:53:01.755563,Utilities,126.22,Debit Card,Store B,8,Wednesday,2,1097.46,Utilities,Regular,45.47
+2024-08-29 11:53:01.755563,Entertainment,59.74,Debit Card,Store B,8,Thursday,1,1856.35,Entertainment,Regular,36.72
+2024-08-29 11:53:01.755563,Groceries,34.47,Cash,Store A,8,Thursday,1,1533.19,Groceries,Regular,85.01
+2024-08-29 11:53:01.755563,Transportation,144.69,Cash,Store D,8,Thursday,1,1643.48,Transportation,Regular,86.82
+2024-08-30 11:53:01.755563,Groceries,107.42,Credit Card,Store B,8,Friday,2,1640.6100000000001,Groceries,Regular,34.47
+2024-08-30 11:53:01.755563,Dining,48.11,Cash,Store C,8,Friday,2,1320.69,Takeout,Regular,183.81
+2024-08-30 11:53:01.755563,Dining,82.35,Debit Card,Store A,8,Friday,2,1403.04,Takeout,Regular,48.11
+2024-08-30 11:53:01.755563,Entertainment,113.87,Cash,Store E,8,Friday,1,1970.22,Entertainment,Regular,59.74
+2024-08-30 11:53:01.755563,Groceries,7.65,Mobile Payment,Store A,8,Friday,2,1648.26,Groceries,Regular,107.42
+2024-08-31 11:53:01.755563,Utilities,36.13,Credit Card,Store E,8,Saturday,1,1133.59,Utilities,Regular,126.22
+2024-08-31 11:53:01.755563,Miscellaneous,11.22,Credit Card,Store C,8,Saturday,1,1321.41,Miscellaneous,Regular,192.66
+2024-09-01 11:53:01.755563,Groceries,9.24,Debit Card,Store A,9,Sunday,1,9.24,Groceries,Regular,7.65
+2024-09-01 11:53:01.755563,Utilities,113.84,Debit Card,Store C,9,Sunday,1,113.84,Utilities,Regular,36.13
+2024-09-01 11:53:01.755563,Miscellaneous,118.7,Credit Card,Store D,9,Sunday,1,118.7,Miscellaneous,Regular,11.22
+2024-09-02 11:53:01.755563,Dining,60.14,Mobile Payment,Store E,9,Monday,3,60.14,Takeout,Regular,82.35
+2024-09-02 11:53:01.755563,Dining,24.54,Debit Card,Store E,9,Monday,3,84.68,Takeout,Regular,60.14
+2024-09-02 11:53:01.755563,Dining,143.85,Credit Card,Store B,9,Monday,3,228.53,Takeout,Regular,24.54
+2024-09-03 11:53:01.755563,Miscellaneous,87.6,Mobile Payment,Store D,9,Tuesday,3,206.3,Miscellaneous,Regular,118.7
+2024-09-03 11:53:01.755563,Miscellaneous,166.97,Cash,Store A,9,Tuesday,3,373.27,Miscellaneous,Regular,87.6
+2024-09-03 11:53:01.755563,Transportation,29.43,Credit Card,Store B,9,Tuesday,1,29.43,Transportation,Regular,144.69
+2024-09-03 11:53:01.755563,Entertainment,20.44,Mobile Payment,Store D,9,Tuesday,1,20.44,Entertainment,Regular,113.87
+2024-09-03 11:53:01.755563,Miscellaneous,27.15,Mobile Payment,Store A,9,Tuesday,3,400.41999999999996,Miscellaneous,Regular,166.97
+2024-09-04 11:53:01.755563,Transportation,153.3,Cash,Store E,9,Wednesday,1,182.73000000000002,Transportation,Regular,29.43
+2024-09-04 11:53:01.755563,Groceries,93.4,Debit Card,Store E,9,Wednesday,1,102.64,Groceries,Regular,9.24
+2024-09-04 11:53:01.755563,Miscellaneous,169.53,Mobile Payment,Store D,9,Wednesday,1,569.95,Miscellaneous,Regular,27.15
+2024-09-04 11:53:01.755563,Dining,82.3,Mobile Payment,Store D,9,Wednesday,1,310.83,Takeout,Regular,143.85
+2024-09-04 11:53:01.755563,Utilities,131.93,Credit Card,Store A,9,Wednesday,1,245.77,Utilities,Regular,113.84
+2024-09-05 11:53:01.755563,Dining,143.07,Cash,Store E,9,Thursday,1,453.9,Takeout,Regular,82.3
+2024-09-05 11:53:01.755563,Groceries,52.14,Mobile Payment,Store B,9,Thursday,1,154.78,Groceries,Regular,93.4
+2024-09-06 11:53:01.755563,Dining,146.05,Cash,Store D,9,Friday,1,599.95,Takeout,Regular,143.07
+2024-09-06 11:53:01.755563,Groceries,31.57,Debit Card,Store B,9,Friday,1,186.35,Groceries,Regular,52.14
+2024-09-06 11:53:01.755563,Entertainment,109.23,Mobile Payment,Store E,9,Friday,2,129.67000000000002,Entertainment,Regular,20.44
+2024-09-06 11:53:01.755563,Entertainment,79.58,Mobile Payment,Store C,9,Friday,2,209.25,Entertainment,Regular,109.23
+2024-09-07 11:53:01.755563,Dining,131.3,Credit Card,Store C,9,Saturday,1,731.25,Takeout,Regular,146.05
+2024-09-07 11:53:01.755563,Entertainment,125.09,Debit Card,Store C,9,Saturday,2,334.34000000000003,Entertainment,Regular,79.58
+2024-09-07 11:53:01.755563,Entertainment,184.34,Mobile Payment,Store D,9,Saturday,2,518.6800000000001,Entertainment,Regular,125.09
+2024-09-07 11:53:01.755563,Miscellaneous,107.55,Debit Card,Store C,9,Saturday,1,677.5,Miscellaneous,Regular,169.53
+2024-09-07 11:53:01.755563,Transportation,95.45,Mobile Payment,Store D,9,Saturday,1,278.18,Transportation,Regular,153.3
+2024-09-08 11:53:01.755563,Groceries,24.33,Cash,Store D,9,Sunday,1,210.68,Groceries,Regular,31.57
+2024-09-08 11:53:01.755563,Dining,64.45,Debit Card,Store B,9,Sunday,2,795.7,Takeout,Regular,131.3
+2024-09-08 11:53:01.755563,Dining,56.73,Mobile Payment,Store A,9,Sunday,2,852.43,Takeout,Regular,64.45
+2024-09-08 11:53:01.755563,Utilities,108.43,Credit Card,Store C,9,Sunday,1,354.20000000000005,Utilities,Regular,131.93
+2024-09-09 11:53:01.755563,Entertainment,186.88,Credit Card,Store C,9,Monday,1,705.56,Entertainment,Regular,184.34
+2024-09-09 11:53:01.755563,Dining,7.96,Cash,Store A,9,Monday,1,860.39,Takeout,Regular,56.73
+2024-09-09 11:53:01.755563,Groceries,39.4,Debit Card,Store A,9,Monday,2,250.07999999999998,Groceries,Regular,24.33
+2024-09-09 11:53:01.755563,Groceries,188.33,Cash,Store B,9,Monday,2,438.41,Groceries,Regular,39.4
+2024-09-10 11:53:01.755563,Groceries,168.06,Mobile Payment,Store A,9,Tuesday,2,606.47,Groceries,Regular,188.33
+2024-09-10 11:53:01.755563,Groceries,30.07,Debit Card,Store C,9,Tuesday,2,636.5400000000001,Groceries,Regular,168.06
+2024-09-10 11:53:01.755563,Dining,113.4,Debit Card,Store C,9,Tuesday,1,973.79,Takeout,Regular,7.96
+2024-09-11 11:53:01.755563,Groceries,138.42,Credit Card,Store A,9,Wednesday,1,774.96,Groceries,Regular,30.07
+2024-09-11 11:53:01.755563,Transportation,145.93,Mobile Payment,Store E,9,Wednesday,2,424.11,Transportation,Regular,95.45
+2024-09-11 11:53:01.755563,Utilities,85.68,Credit Card,Store D,9,Wednesday,1,439.88,Utilities,Regular,108.43
+2024-09-11 11:53:01.755563,Miscellaneous,30.99,Mobile Payment,Store C,9,Wednesday,1,708.49,Miscellaneous,Regular,107.55
+2024-09-11 11:53:01.755563,Transportation,103.8,Debit Card,Store C,9,Wednesday,2,527.91,Transportation,Regular,145.93
+2024-09-12 11:53:01.755563,Dining,141.11,Credit Card,Store A,9,Thursday,1,1114.9,Takeout,Regular,113.4
+2024-09-12 11:53:01.755563,Miscellaneous,155.04,Cash,Store A,9,Thursday,1,863.53,Miscellaneous,Regular,30.99
+2024-09-13 11:53:01.755563,Miscellaneous,162.55,Credit Card,Store E,9,Friday,1,1026.08,Miscellaneous,Regular,155.04
+2024-09-13 11:53:01.755563,Groceries,21.28,Credit Card,Store C,9,Friday,1,796.24,Groceries,Regular,138.42
+2024-09-13 11:53:01.755563,Transportation,22.85,Cash,Store A,9,Friday,1,550.76,Transportation,Regular,103.8
+2024-09-14 11:53:01.755563,Entertainment,41.88,Cash,Store D,9,Saturday,1,747.44,Entertainment,Regular,186.88
+2024-09-14 11:53:01.755563,Dining,23.14,Debit Card,Store D,9,Saturday,1,1138.04,Takeout,Regular,141.11
+2024-09-14 11:53:01.755563,Groceries,108.17,Credit Card,Store A,9,Saturday,1,904.41,Groceries,Regular,21.28
+2024-09-15 11:53:01.755563,Transportation,74.32,Cash,Store C,9,Sunday,1,625.08,Transportation,Regular,22.85
+2024-09-15 11:53:01.755563,Dining,132.62,Debit Card,Store B,9,Sunday,1,1270.66,Takeout,Regular,23.14
+2024-09-15 11:53:01.755563,Miscellaneous,158.2,Cash,Store A,9,Sunday,1,1184.28,Miscellaneous,Regular,162.55
+2024-09-16 11:53:01.755563,Entertainment,62.37,Mobile Payment,Store C,9,Monday,1,809.81,Entertainment,Regular,41.88
+2024-09-16 11:53:01.755563,Miscellaneous,192.31,Debit Card,Store A,9,Monday,1,1376.59,Miscellaneous,Regular,158.2
+2024-09-17 11:53:01.755563,Entertainment,142.2,Credit Card,Store B,9,Tuesday,2,952.01,Entertainment,Regular,62.37
+2024-09-17 11:53:01.755563,Transportation,174.38,Credit Card,Store A,9,Tuesday,2,799.46,Transportation,Regular,74.32
+2024-09-17 11:53:01.755563,Transportation,161.0,Credit Card,Store C,9,Tuesday,2,960.46,Transportation,Regular,174.38
+2024-09-17 11:53:01.755563,Entertainment,37.39,Mobile Payment,Store D,9,Tuesday,2,989.4,Entertainment,Regular,142.2
+2024-09-17 11:53:01.755563,Groceries,140.84,Cash,Store E,9,Tuesday,1,1045.25,Groceries,Regular,108.17
+2024-09-18 11:53:01.755563,Miscellaneous,25.25,Credit Card,Store A,9,Wednesday,1,1401.84,Miscellaneous,Regular,192.31
+2024-09-18 11:53:01.755563,Groceries,121.59,Credit Card,Store A,9,Wednesday,1,1166.84,Groceries,Regular,140.84
+2024-09-19 11:53:01.755563,Entertainment,135.45,Debit Card,Store D,9,Thursday,1,1124.85,Entertainment,Regular,37.39
+2024-09-19 11:53:01.755563,Miscellaneous,132.36,Cash,Store C,9,Thursday,2,1534.2,Miscellaneous,Regular,25.25
+2024-09-19 11:53:01.755563,Transportation,126.42,Mobile Payment,Store E,9,Thursday,1,1086.88,Transportation,Regular,161.0
+2024-09-19 11:53:01.755563,Groceries,21.48,Debit Card,Store B,9,Thursday,1,1188.32,Groceries,Regular,121.59
+2024-09-19 11:53:01.755563,Miscellaneous,27.8,Debit Card,Store D,9,Thursday,2,1562.0,Miscellaneous,Regular,132.36
+2024-09-20 11:53:01.755563,Dining,155.96,Cash,Store C,9,Friday,1,1426.6200000000001,Takeout,Regular,132.62
+2024-09-20 11:53:01.755563,Utilities,52.64,Mobile Payment,Store D,9,Friday,1,492.52000000000004,Utilities,Regular,85.68
+2024-09-21 11:53:01.755563,Dining,132.15,Credit Card,Store B,9,Saturday,1,1558.77,Takeout,Regular,155.96
+2024-09-22 11:53:01.755563,Dining,154.67,Debit Card,Store D,9,Sunday,1,1713.44,Takeout,Regular,132.15
+2024-09-22 11:53:01.755563,Entertainment,30.23,Mobile Payment,Store A,9,Sunday,1,1155.08,Entertainment,Regular,135.45
+2024-09-23 11:53:01.755563,Entertainment,83.7,Mobile Payment,Store D,9,Monday,2,1238.78,Entertainment,Regular,30.23
+2024-09-23 11:53:01.755563,Transportation,105.95,Debit Card,Store B,9,Monday,1,1192.83,Transportation,Regular,126.42
+2024-09-23 11:53:01.755563,Dining,68.05,Credit Card,Store C,9,Monday,1,1781.49,Takeout,Regular,154.67
+2024-09-23 11:53:01.755563,Groceries,185.34,Cash,Store E,9,Monday,1,1373.66,Groceries,Regular,21.48
+2024-09-23 11:53:01.755563,Entertainment,69.75,Credit Card,Store E,9,Monday,2,1308.53,Entertainment,Regular,83.7
+2024-09-24 11:53:01.755563,Groceries,173.32,Credit Card,Store B,9,Tuesday,1,1546.98,Groceries,Regular,185.34
+2024-09-25 11:53:01.755563,Utilities,137.75,Debit Card,Store E,9,Wednesday,2,630.27,Utilities,Regular,52.64
+2024-09-25 11:53:01.755563,Groceries,89.47,Cash,Store A,9,Wednesday,1,1636.45,Groceries,Regular,173.32
+2024-09-25 11:53:01.755563,Utilities,39.15,Mobile Payment,Store C,9,Wednesday,2,669.4200000000001,Utilities,Regular,137.75
+2024-09-25 11:53:01.755563,Miscellaneous,27.13,Credit Card,Store A,9,Wednesday,1,1589.1299999999999,Miscellaneous,Regular,27.8
+2024-09-26 11:53:01.755563,Transportation,59.4,Debit Card,Store B,9,Thursday,1,1252.23,Transportation,Regular,105.95
+2024-09-27 11:53:01.755563,Miscellaneous,87.41,Mobile Payment,Store E,9,Friday,2,1676.54,Miscellaneous,Regular,27.13
+2024-09-27 11:53:01.755563,Miscellaneous,30.23,Debit Card,Store A,9,Friday,2,1706.77,Miscellaneous,Regular,87.41
+2024-09-27 11:53:01.755563,Entertainment,197.77,Debit Card,Store B,9,Friday,1,1506.3,Entertainment,Regular,69.75
+2024-09-28 11:53:01.755563,Miscellaneous,153.26,Debit Card,Store A,9,Saturday,1,1860.03,Miscellaneous,Regular,30.23
+2024-09-28 11:53:01.755563,Entertainment,140.67,Mobile Payment,Store A,9,Saturday,2,1646.97,Entertainment,Regular,197.77
+2024-09-28 11:53:01.755563,Entertainment,46.73,Cash,Store E,9,Saturday,2,1693.7,Entertainment,Regular,140.67
+2024-09-28 11:53:01.755563,Transportation,19.7,Cash,Store E,9,Saturday,1,1271.93,Transportation,Regular,59.4
+2024-09-28 11:53:01.755563,Utilities,139.89,Debit Card,Store E,9,Saturday,1,809.3100000000001,Utilities,Regular,39.15
+2024-09-29 11:53:01.755563,Entertainment,53.71,Mobile Payment,Store B,9,Sunday,1,1747.4099999999999,Entertainment,Regular,46.73
+2024-09-30 11:53:01.755563,Utilities,170.23,Mobile Payment,Store A,9,Monday,1,979.54,Utilities,Regular,139.89
+2024-10-01 11:53:01.755563,Utilities,39.83,Debit Card,Store D,10,Tuesday,2,39.83,Utilities,Regular,170.23
+2024-10-01 11:53:01.755563,Utilities,138.3,Credit Card,Store B,10,Tuesday,2,178.13,Utilities,Regular,39.83
+2024-10-01 11:53:01.755563,Entertainment,109.13,Mobile Payment,Store B,10,Tuesday,2,109.13,Entertainment,Regular,53.71
+2024-10-01 11:53:01.755563,Entertainment,30.36,Mobile Payment,Store D,10,Tuesday,2,139.49,Entertainment,Regular,109.13
+2024-10-02 11:53:01.755563,Dining,172.52,Credit Card,Store D,10,Wednesday,1,172.52,Takeout,Regular,68.05
+2024-10-02 11:53:01.755563,Transportation,56.69,Mobile Payment,Store B,10,Wednesday,1,56.69,Transportation,Regular,19.7
+2024-10-02 11:53:01.755563,Groceries,178.92,Credit Card,Store B,10,Wednesday,1,178.92,Groceries,Regular,89.47
+2024-10-03 11:53:01.755563,Transportation,34.74,Debit Card,Store C,10,Thursday,1,91.43,Transportation,Regular,56.69
+2024-10-03 11:53:01.755563,Miscellaneous,145.86,Mobile Payment,Store B,10,Thursday,2,145.86,Miscellaneous,Regular,153.26
+2024-10-03 11:53:01.755563,Miscellaneous,72.82,Credit Card,Store D,10,Thursday,2,218.68,Miscellaneous,Regular,145.86
+2024-10-04 11:53:01.755563,Groceries,170.85,Cash,Store C,10,Friday,2,349.77,Groceries,Regular,178.92
+2024-10-04 11:53:01.755563,Groceries,144.13,Mobile Payment,Store C,10,Friday,2,493.9,Groceries,Regular,170.85
+2024-10-04 11:53:01.755563,Dining,103.96,Debit Card,Store B,10,Friday,2,276.48,Takeout,Regular,172.52
+2024-10-04 11:53:01.755563,Transportation,192.34,Credit Card,Store C,10,Friday,1,283.77,Transportation,Regular,34.74
+2024-10-04 11:53:01.755563,Dining,43.46,Debit Card,Store B,10,Friday,2,319.94,Takeout,Regular,103.96
+2024-10-05 11:53:01.755563,Transportation,74.95,Mobile Payment,Store C,10,Saturday,1,358.72,Transportation,Regular,192.34
+2024-10-05 11:53:01.755563,Miscellaneous,177.68,Cash,Store E,10,Saturday,2,396.36,Miscellaneous,Regular,72.82
+2024-10-05 11:53:01.755563,Entertainment,44.87,Cash,Store B,10,Saturday,2,184.35999999999999,Entertainment,Regular,30.36
+2024-10-05 11:53:01.755563,Entertainment,50.69,Credit Card,Store E,10,Saturday,2,235.04999999999998,Entertainment,Regular,44.87
+2024-10-05 11:53:01.755563,Miscellaneous,13.65,Credit Card,Store C,10,Saturday,2,410.01,Miscellaneous,Regular,177.68
+2024-10-06 11:53:01.755563,Utilities,185.13,Debit Card,Store E,10,Sunday,1,363.26,Utilities,Regular,138.3
+2024-10-06 11:53:01.755563,Dining,115.0,Cash,Store C,10,Sunday,3,434.94,Takeout,Regular,43.46
+2024-10-06 11:53:01.755563,Dining,123.36,Debit Card,Store B,10,Sunday,3,558.3,Takeout,Regular,115.0
+2024-10-06 11:53:01.755563,Dining,24.37,Credit Card,Store C,10,Sunday,3,582.67,Takeout,Regular,123.36
+2024-10-06 11:53:01.755563,Miscellaneous,191.37,Credit Card,Store B,10,Sunday,1,601.38,Miscellaneous,Regular,13.65
+2024-10-07 11:53:01.755563,Groceries,44.67,Mobile Payment,Store A,10,Monday,1,538.5699999999999,Groceries,Regular,144.13
+2024-10-07 11:53:01.755563,Transportation,69.63,Cash,Store D,10,Monday,1,428.35,Transportation,Regular,74.95
+2024-10-07 11:53:01.755563,Dining,171.25,Cash,Store D,10,Monday,2,753.92,Takeout,Regular,24.37
+2024-10-07 11:53:01.755563,Dining,134.57,Mobile Payment,Store B,10,Monday,2,888.49,Takeout,Regular,171.25
+2024-10-08 11:53:01.755563,Entertainment,26.27,Credit Card,Store B,10,Tuesday,1,261.32,Entertainment,Regular,50.69
+2024-10-09 11:53:01.755563,Utilities,183.56,Credit Card,Store D,10,Wednesday,1,546.8199999999999,Utilities,Regular,185.13
+2024-10-10 11:53:01.755563,Groceries,48.13,Credit Card,Store E,10,Thursday,1,586.6999999999999,Groceries,Regular,44.67
+2024-10-11 11:53:01.755563,Dining,18.12,Credit Card,Store C,10,Friday,1,906.61,Takeout,Regular,134.57
+2024-10-12 11:53:01.755563,Miscellaneous,117.82,Mobile Payment,Store B,10,Saturday,1,719.2,Miscellaneous,Regular,191.37
+2024-10-12 11:53:01.755563,Utilities,53.96,Cash,Store B,10,Saturday,2,600.78,Utilities,Regular,183.56
+2024-10-12 11:53:01.755563,Utilities,84.08,Mobile Payment,Store B,10,Saturday,2,684.86,Utilities,Regular,53.96
+2024-10-13 11:53:01.755563,Dining,43.43,Cash,Store A,10,Sunday,1,950.04,Takeout,Regular,18.12
+2024-10-13 11:53:01.755563,Entertainment,172.93,Debit Card,Store B,10,Sunday,1,434.25,Entertainment,Regular,26.27
+2024-10-14 11:53:01.755563,Transportation,90.19,Credit Card,Store D,10,Monday,2,518.54,Transportation,Regular,69.63
+2024-10-14 11:53:01.755563,Transportation,68.56,Mobile Payment,Store E,10,Monday,2,587.1,Transportation,Regular,90.19
+2024-10-15 11:53:01.755563,Miscellaneous,136.9,Credit Card,Store E,10,Tuesday,2,856.1,Miscellaneous,Regular,117.82
+2024-10-15 11:53:01.755563,Miscellaneous,136.06,Debit Card,Store A,10,Tuesday,2,992.1600000000001,Miscellaneous,Regular,136.9
+2024-10-16 11:53:01.755563,Groceries,184.07,Cash,Store B,10,Wednesday,1,770.77,Groceries,Regular,48.13
+2024-10-16 11:53:01.755563,Entertainment,40.89,Cash,Store D,10,Wednesday,1,475.14,Entertainment,Regular,172.93
+2024-10-16 11:53:01.755563,Miscellaneous,129.52,Debit Card,Store A,10,Wednesday,1,1121.68,Miscellaneous,Regular,136.06
+2024-10-17 11:53:01.755563,Utilities,86.58,Mobile Payment,Store E,10,Thursday,2,771.4399999999999,Utilities,Regular,84.08
+2024-10-17 11:53:01.755563,Utilities,168.82,Mobile Payment,Store D,10,Thursday,2,940.26,Utilities,Regular,86.58
+2024-10-18 11:53:01.755563,Utilities,161.27,Cash,Store D,10,Friday,1,1101.53,Utilities,Regular,168.82
+2024-10-19 11:53:01.755563,Entertainment,40.03,Debit Card,Store B,10,Saturday,1,515.17,Entertainment,Regular,40.89
+2024-10-20 11:53:01.755563,Utilities,179.21,Mobile Payment,Store D,10,Sunday,1,1280.74,Utilities,Regular,161.27
+2024-10-20 11:53:01.755563,Miscellaneous,59.63,Credit Card,Store D,10,Sunday,1,1181.31,Miscellaneous,Regular,129.52
+2024-10-21 11:53:01.755563,Entertainment,152.73,Debit Card,Store D,10,Monday,1,667.9,Entertainment,Regular,40.03
+2024-10-22 11:53:01.755563,Groceries,101.07,Debit Card,Store D,10,Tuesday,2,871.8399999999999,Groceries,Regular,184.07
+2024-10-22 11:53:01.755563,Transportation,28.24,Cash,Store C,10,Tuesday,1,615.34,Transportation,Regular,68.56
+2024-10-22 11:53:01.755563,Groceries,25.56,Mobile Payment,Store B,10,Tuesday,2,897.4,Groceries,Regular,101.07
+2024-10-23 11:53:01.755563,Groceries,131.38,Mobile Payment,Store D,10,Wednesday,1,1028.78,Groceries,Regular,25.56
+2024-10-23 11:53:01.755563,Utilities,36.55,Cash,Store D,10,Wednesday,1,1317.29,Utilities,Regular,179.21
+2024-10-24 11:53:01.755563,Utilities,119.15,Cash,Store E,10,Thursday,1,1436.44,Utilities,Regular,36.55
+2024-10-24 11:53:01.755563,Dining,62.35,Credit Card,Store E,10,Thursday,1,1012.39,Takeout,Regular,43.43
+2024-10-24 11:53:01.755563,Transportation,39.65,Debit Card,Store D,10,Thursday,1,654.99,Transportation,Regular,28.24
+2024-10-25 11:53:01.755563,Entertainment,116.38,Debit Card,Store A,10,Friday,1,784.28,Entertainment,Regular,152.73
+2024-10-25 11:53:01.755563,Dining,144.11,Debit Card,Store B,10,Friday,3,1156.5,Takeout,Regular,62.35
+2024-10-25 11:53:01.755563,Dining,6.61,Credit Card,Store D,10,Friday,3,1163.11,Takeout,Regular,144.11
+2024-10-25 11:53:01.755563,Utilities,168.31,Debit Card,Store D,10,Friday,1,1604.75,Utilities,Regular,119.15
+2024-10-25 11:53:01.755563,Dining,198.38,Mobile Payment,Store A,10,Friday,3,1361.49,Takeout,Regular,6.61
+2024-10-26 11:53:01.755563,Groceries,72.69,Mobile Payment,Store B,10,Saturday,1,1101.47,Groceries,Regular,131.38
+2024-10-26 11:53:01.755563,Miscellaneous,23.85,Mobile Payment,Store D,10,Saturday,1,1205.16,Miscellaneous,Regular,59.63
+2024-10-26 11:53:01.755563,Utilities,197.05,Debit Card,Store E,10,Saturday,1,1801.8,Utilities,Regular,168.31
+2024-10-27 11:53:01.755563,Dining,133.08,Mobile Payment,Store D,10,Sunday,2,1494.57,Takeout,Regular,198.38
+2024-10-27 11:53:01.755563,Dining,98.23,Credit Card,Store C,10,Sunday,2,1592.8,Takeout,Regular,133.08
+2024-10-27 11:53:01.755563,Transportation,93.45,Credit Card,Store D,10,Sunday,1,748.44,Transportation,Regular,39.65
+2024-10-27 11:53:01.755563,Groceries,197.34,Credit Card,Store C,10,Sunday,1,1298.81,Groceries,Regular,72.69
+2024-10-27 11:53:01.755563,Entertainment,131.28,Cash,Store B,10,Sunday,1,915.56,Entertainment,Regular,116.38
+2024-10-28 11:53:01.755563,Dining,137.06,Cash,Store B,10,Monday,1,1729.8600000000001,Takeout,Regular,98.23
+2024-10-29 11:53:01.755563,Dining,135.67,Credit Card,Store D,10,Tuesday,1,1865.53,Takeout,Regular,137.06
+2024-10-29 11:53:01.755563,Entertainment,32.68,Debit Card,Store A,10,Tuesday,1,948.24,Entertainment,Regular,131.28
+2024-10-30 11:53:01.755563,Entertainment,148.57,Debit Card,Store A,10,Wednesday,1,1096.81,Entertainment,Regular,32.68
+2024-10-30 11:53:01.755563,Transportation,158.44,Debit Card,Store C,10,Wednesday,1,906.88,Transportation,Regular,93.45
+2024-10-30 11:53:01.755563,Utilities,137.3,Credit Card,Store D,10,Wednesday,1,1939.1,Utilities,Regular,197.05
+2024-10-30 11:53:01.755563,Miscellaneous,182.36,Mobile Payment,Store E,10,Wednesday,1,1387.52,Miscellaneous,Regular,23.85
+2024-10-31 11:53:01.755563,Miscellaneous,180.99,Mobile Payment,Store B,10,Thursday,1,1568.51,Miscellaneous,Regular,182.36
+2024-10-31 11:53:01.755563,Utilities,36.34,Mobile Payment,Store A,10,Thursday,1,1975.44,Utilities,Regular,137.3
+2024-11-01 11:53:01.755563,Transportation,40.14,Debit Card,Store B,11,Friday,2,188.54,Transportation,Regular,158.44
+2024-11-01 11:53:01.755563,Transportation,169.85,Debit Card,Store C,11,Friday,2,358.39,Transportation,Regular,40.14
+2024-11-01 11:53:01.755563,Dining,48.99,Credit Card,Store E,11,Friday,1,1465.95,Takeout,Regular,135.67
+2024-11-01 11:53:01.755563,Entertainment,90.48,Mobile Payment,Store C,11,Friday,1,1708.91,Entertainment,Regular,148.57
+2024-11-02 11:53:01.755563,Dining,149.53,Credit Card,Store D,11,Saturday,1,1615.48,Takeout,Regular,48.99
+2024-11-03 11:53:01.755563,Groceries,171.76,Debit Card,Store C,11,Sunday,1,1269.3,Groceries,Regular,197.34
+2024-11-04 11:53:01.755563,Groceries,47.13,Mobile Payment,Store E,11,Monday,1,1316.43,Groceries,Regular,171.76
+2024-11-05 11:53:01.755563,Utilities,175.55,Debit Card,Store B,11,Tuesday,1,898.9100000000001,Utilities,Regular,36.34
+2024-11-05 11:53:01.755563,Miscellaneous,97.65,Credit Card,Store D,11,Tuesday,1,768.8100000000001,Miscellaneous,Regular,180.99
+2024-11-06 11:53:01.755563,Entertainment,29.44,Debit Card,Store C,11,Wednesday,2,1738.35,Entertainment,Regular,90.48
+2024-11-06 11:53:01.755563,Dining,7.98,Debit Card,Store D,11,Wednesday,1,1623.46,Takeout,Regular,149.53
+2024-11-06 11:53:01.755563,Entertainment,58.02,Credit Card,Store B,11,Wednesday,2,1796.37,Entertainment,Regular,29.44
+2024-11-07 11:53:01.755563,Entertainment,60.55,Cash,Store B,11,Thursday,1,1856.92,Entertainment,Regular,58.02
+2024-11-07 11:53:01.755563,Dining,30.6,Credit Card,Store A,11,Thursday,1,1654.06,Takeout,Regular,7.98
+2024-11-07 11:53:01.755563,Miscellaneous,94.5,Cash,Store B,11,Thursday,1,863.3100000000001,Miscellaneous,Regular,97.65
+2024-11-07 11:53:01.755563,Groceries,158.99,Cash,Store C,11,Thursday,1,1475.42,Groceries,Regular,47.13
+2024-11-08 11:53:01.755563,Transportation,105.75,Mobile Payment,Store E,11,Friday,1,464.14,Transportation,Regular,169.85
+2024-11-08 11:53:01.755563,Groceries,94.15,Debit Card,Store B,11,Friday,1,1569.57,Groceries,Regular,158.99
+2024-11-08 11:53:01.755563,Miscellaneous,118.5,Credit Card,Store B,11,Friday,1,981.8100000000001,Miscellaneous,Regular,94.5
+2024-11-09 11:53:01.755563,Transportation,53.51,Mobile Payment,Store D,11,Saturday,1,517.65,Transportation,Regular,105.75
+2024-11-09 11:53:01.755563,Groceries,53.41,Debit Card,Store D,11,Saturday,1,1622.98,Groceries,Regular,94.15
+2024-11-09 11:53:01.755563,Dining,172.22,Debit Card,Store B,11,Saturday,1,1826.28,Takeout,Regular,30.6
+2024-11-10 11:53:01.755563,Transportation,25.1,Cash,Store A,11,Sunday,2,542.75,Transportation,Regular,53.51
+2024-11-10 11:53:01.755563,Transportation,151.2,Credit Card,Store D,11,Sunday,2,693.95,Transportation,Regular,25.1
+2024-11-10 11:53:01.755563,Entertainment,14.32,Debit Card,Store B,11,Sunday,1,1871.24,Entertainment,Regular,60.55
+2024-11-10 11:53:01.755563,Groceries,150.48,Credit Card,Store A,11,Sunday,1,1773.46,Groceries,Regular,53.41
+2024-11-10 11:53:01.755563,Dining,111.6,Credit Card,Store C,11,Sunday,1,1937.8799999999999,Takeout,Regular,172.22
+2024-11-11 11:53:01.755563,Dining,133.77,Credit Card,Store C,11,Monday,1,2071.65,Takeout,Regular,111.6
+2024-11-11 11:53:01.755563,Utilities,9.23,Credit Card,Store A,11,Monday,1,908.14,Utilities,Regular,175.55
+2024-11-11 11:53:01.755563,Miscellaneous,20.81,Mobile Payment,Store E,11,Monday,1,1002.62,Miscellaneous,Regular,118.5
+2024-11-12 11:53:01.755563,Miscellaneous,188.08,Cash,Store B,11,Tuesday,1,1190.7,Miscellaneous,Regular,20.81
+2024-11-12 11:53:01.755563,Transportation,176.04,Mobile Payment,Store C,11,Tuesday,1,869.99,Transportation,Regular,151.2
+2024-11-12 11:53:01.755563,Dining,53.41,Credit Card,Store C,11,Tuesday,1,2125.06,Takeout,Regular,133.77
+2024-11-12 11:53:01.755563,Entertainment,15.46,Credit Card,Store A,11,Tuesday,1,1886.7,Entertainment,Regular,14.32
+2024-11-12 11:53:01.755563,Utilities,140.53,Credit Card,Store A,11,Tuesday,1,1048.67,Utilities,Regular,9.23
