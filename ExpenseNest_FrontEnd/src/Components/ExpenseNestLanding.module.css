@@ -1,0 +1,37 @@
+.wrapper {
+  background-color: #e6f3ff;
+  min-height: 100vh;
+}
+
+.header {
+  color: #0a2f5e;
+  text-align: center;
+}
+
+.subheader {
+  color: #2c7a7b;
+  font-size: 1.5rem;
+}
+
+.text-content {
+  color: #2d3748;
+}
+
+.custom-button {
+  background-color: #ff7f6b;
+  border-color: #ff7f6b;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.chart-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.image-section {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

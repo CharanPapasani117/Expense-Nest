@@ -10,13 +10,22 @@ const LoginForm = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false); // To track successful registration
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    // Validate password match during registration
+    if (!oldUser && password !== confirmPassword) {
+      setMessage("Passwords do not match. Please try again.");
+      setLoading(false);
+      return;
+    }
 
     const formData = { firstName, lastName, phoneNumber, email, password };
     const loginData = { email, password };
@@ -32,13 +41,20 @@ const LoginForm = () => {
 
       if (response.status === 200) {
         const token = await response.text();
-        setMessage(oldUser ? "Login successful!" : "Registration successful!");
+        setMessage(oldUser ? "Login successful!" : "Registration successful! Please Verify your Email to login");
         localStorage.setItem('authToken', `Bearer ${token}`);
-        if (oldUser) navigate('/dashboard');
+        if (oldUser) {
+          localStorage.setItem("email",email);
+          localStorage.setItem("Isalert","false");
+          navigate('/dashboard');
+        } else {
+          setSuccess(true); // Mark success for registration // Clear message after 5 seconds
+        }
       } else if (response.status === 401) {
         setMessage("Login failed: Invalid credentials. Please try again.");
       } else if (response.status === 403) {
-        setMessage("Login failed: Please verify your email");
+        const errorMessage = await response.text();
+        setMessage(oldUser ? errorMessage : "Registration successful!");
       } else if (response.status === 409) {
         const errorMessage = await response.text();
         setMessage(`Registration failed: ${errorMessage}`);
@@ -61,6 +77,8 @@ const LoginForm = () => {
     setPhoneNumber('');
     setEmail('');
     setPassword('');
+    setConfirmPassword('');
+    setSuccess(false); // Reset success state when switching
   };
 
   const styles = {
@@ -136,11 +154,11 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit} style={styles.form}>
         <h1 style={styles.formHeader}>{oldUser ? "Login" : "Register"}</h1>
         {message && (
-          <p style={{ ...styles.message, color: message.includes('failed') ? 'red' : 'green' }}>
+          <p style={{ ...styles.message, color: message.includes('failed') || message.includes('Passwords') ? 'red' : 'green' }}>
             {message}
           </p>
         )}
-        {!oldUser && (
+        {!success && !oldUser && (
           <>
             <div style={styles.inputBox}>
               <input
@@ -177,39 +195,60 @@ const LoginForm = () => {
             </div>
           </>
         )}
-        <div style={styles.inputBox}>
-          <input
-            style={styles.input}
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <IoMdMail style={styles.icon} />
-        </div>
-        <div style={styles.inputBox}>
-          <input
-            style={styles.input}
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <FaLock style={styles.icon} />
-        </div>
-        <button style={styles.button} type="submit" disabled={loading}>
-          {loading ? "Loading..." : oldUser ? "Login" : "Register"}
-        </button>
-        <div style={styles.registerLink}>
-          <p>
-            {oldUser ? "Don't have an account?" : "Already have an account?"}{" "}
-            <span style={{ cursor: 'pointer', color: '#0a2f5e', fontWeight: 'bold' }} onClick={usageChanged}>
-              {oldUser ? "Register" : "Login"}
-            </span>
-          </p>
-        </div>
+        {!success && (
+          <>
+            <div style={styles.inputBox}>
+              <input
+                style={styles.input}
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <IoMdMail style={styles.icon} />
+            </div>
+            <div style={styles.inputBox}>
+              <input
+                style={styles.input}
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <FaLock style={styles.icon} />
+            </div>
+          </>
+        )}
+        {!success && !oldUser && (
+          <div style={styles.inputBox}>
+            <input
+              style={styles.input}
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            <FaLock style={styles.icon} />
+          </div>
+        )}
+        {!success && (
+          <button style={styles.button} type="submit" disabled={loading}>
+            {loading ? "Loading..." : oldUser ? "Login" : "Register"}
+          </button>
+        )}
+        {!success && (
+          <div style={styles.registerLink}>
+            <p>
+              {oldUser ? "Don't have an account?" : "Already have an account?"}{" "}
+              <span style={{ cursor: 'pointer', color: '#0a2f5e', fontWeight: 'bold' }} onClick={usageChanged}>
+                {oldUser ? "Register" : "Login"}
+              </span>
+            </p>
+          </div>
+        )}
       </form>
     </div>
   );

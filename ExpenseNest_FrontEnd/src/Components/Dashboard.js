@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Button, Container, Row, Col } from 'react-bootstrap';
 import image from './Assets/ss.png';
 import image2 from './Assets/pic-features-1@2x.webp';
-import './Dashboard.css';
+// import './Dashboard.css';
 import { FaDollarSign } from 'react-icons/fa'; 
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
@@ -42,8 +42,7 @@ const ExpenseNestLanding = () => {
         <Container className="d-flex justify-content-between align-items-center">
           <Navbar.Brand as={Link} to="/login" className="d-flex align-items-center">
             <span className="main-button">
-              <h2>Expense Nest</h2>
-              <FaDollarSign className="icon" />
+              <h2>Expense Nest $</h2>
             </span>
           </Navbar.Brand>
          
@@ -54,7 +53,7 @@ const ExpenseNestLanding = () => {
       <Container className="py-5">
         <Row className="align-items-center">
           <Col md={6}>
-            <h1 className="display-4 fw-bold mb-3" style={{ color: '#0A2F5E' }}>Know where your money goes</h1>
+            <h1 className="display-4 fw-bold mb-3" style={{ color: '#0A2F5E' }}>Do you Know where your money goes?</h1>
             <h2 className="display-8 fw-bold mb-2" style={{ color: '#2C7A7B' }}>TO STOP FINANCIAL ANXIETY</h2>
             <p className="lead mb-4" style={{ color: '#2D3748' }}>
               Expense Nest is your trusted companion in achieving financial clarity. With user-friendly tools and insightful analytics, you can easily track your spending habits, set and meet financial goals, and plan for a secure future. Take control of your finances and say goodbye to the stress of unexpected expenses.

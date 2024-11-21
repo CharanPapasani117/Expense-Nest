@@ -191,6 +191,7 @@ const fetchSlotsForAvailability = (availabilityId) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log("updating:",name,value);
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -213,7 +214,7 @@ const fetchSlotsForAvailability = (availabilityId) => {
 //progress tracking bar (1,2,3,4,5)
   const ProgressBar = React.memo(() => (
     <div className="progress-bar">
-      {[1, 2, 3, 4, 5].map((num) => (
+      {[1, 2, 3,4, 5].map((num) => (
         <div key={num} className="progress-step">
           <button
             className={`step-button ${step >= num ? 'active' : ''}`}
@@ -329,7 +330,7 @@ const fetchSlotsForAvailability = (availabilityId) => {
               <h2>Personal Information</h2>
             </div>
             <div className="two-columns">
-              <FormInput label="First Name" name="firstName" value={formData.firstName} />
+              <FormInput label="First Name" name="firstName"  value={formData.firstName} type="text" />
               <FormInput label="Last Name" name="lastName" value={formData.lastName} />
             </div>
             <FormInput label="Email" type="text" name="email" value={formData.email} />
@@ -515,7 +516,7 @@ const fetchSlotsForAvailability = (availabilityId) => {
       <div style={{ marginLeft: '80px', width: 'calc(100% - 80px)' }}>
         <div className="wizard-container">
           <div className="wizard-content">
-            {step <= 5 && <ProgressBar />}
+            {/* {step <= 5 && <ProgressBar />} */}
             <form onSubmit={(e) => e.preventDefault()}>
               {renderStep()}
               <div className="button-group">

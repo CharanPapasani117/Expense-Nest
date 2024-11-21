@@ -20,4 +20,12 @@ public class EmailService {
 
         mailSender.send(message);
     }
+
+    public void sendVerificationEmail(String toEmail, String subject, String message) {
+        SimpleMailMessage mailMessage = new SimpleMailMessage();
+        mailMessage.setTo(toEmail);
+        mailMessage.setSubject(subject);
+        mailMessage.setText(message);
+        mailSender.send(mailMessage);
+    }
 }

@@ -13,7 +13,7 @@
 }
 
 .wizard-content {
-  width: 100%;
+  width: 90%;
   max-width: 1200px; 
   min-width: 900px;
   background-color: #FFFFFF;
@@ -44,6 +44,7 @@
 .progress-step {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex: 1;
 }
 

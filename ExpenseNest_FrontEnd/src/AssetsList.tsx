@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Asset } from './types.ts';
+import { Asset } from './types';
 import { color } from 'chart.js/helpers';
 import { useNavigate } from 'react-router-dom';
 
@@ -156,11 +156,11 @@ const AssetsList = ({assets:asset}) => {
                 ))}
             </div> */}
 
-    <div className="container">
+    <div className="container ml-5">
       {/* <h1>Asset List</h1> */}
       <div className="row">
         {assets.map((asset) => (
-          <div key={asset.id} className="col-sm-12 col-md-6 col-lg-6 mb-4">
+          <div key={asset.id} className="col-sm-12 col-md-6 col-lg-6 mb-4 ">
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title" style={{color: "black"}}>{asset.assetName}</h5>

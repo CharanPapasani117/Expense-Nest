@@ -10,7 +10,7 @@ const CreateAsset = () => {
         assetValue: 0,
         assetDescription: ""
     });
-    const [amount, setAmount] = React.useState("1000");
+    // const [amount, setAmount] = React.useState("1000");
     const [error,setError] = React.useState('');
 
     // const handleChange = (e) => {
@@ -26,8 +26,8 @@ const CreateAsset = () => {
     
     const handleChange = (e) => {
         const value = e.target.value;
-        if(value <= 1000) {
-            setError('Value must be greater than 1000');
+        if(value <= 999) {
+            setError('Value must be greater than 999');
         }
         else {
             setError('');
@@ -91,7 +91,7 @@ const CreateAsset = () => {
                         type="number" 
                         placeholder="0.00" 
                         className="form-control" 
-                        min='10001'
+                        min='1000'
                         onChange={(e) => {
                             handleChange(e);
                         }}
@@ -106,7 +106,7 @@ const CreateAsset = () => {
             <label>Asset Description:&nbsp;</label><br></br>
             <textarea placeholder="Asset Description" className="form-control"
             onChange={(e) => asset.assetDescription = e.target.value} required/><br></br>
-            <button className="btn button1" type="submit" >Add Asset</button>
+            <button className="btn-primary button1" type="submit" >Add Asset</button>
         </form>
     );
 }

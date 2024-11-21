@@ -1,18 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsFillGridFill, BsCashStack, BsPiggyBank, BsFileText, BsLightbulb, BsCalculator, BsCalendar, BsBoxArrowRight, BsHouseDoor } from 'react-icons/bs'; // Import the desired icon
+import { BsFillGridFill, BsCashStack, BsPiggyBank, BsFileText, BsLightbulb, BsCalculator, BsCalendar, BsBoxArrowRight, BsPerson } from 'react-icons/bs'; // Import the desired icon
 
 const Sidebar = ({ isMobile, isOpen, onToggle }) => {
   const menuItems = [
     { name: 'Dashboard', path: '/dashboard', icon: <BsFillGridFill /> },
     { name: 'Expense', path: '/expense', icon: <BsCashStack/>},
     { name: 'Income', path: '/income', icon: <BsCashStack /> },
+    { name: 'Budgeting', path: '/budgeting', icon: <BsCashStack /> },
     { name: 'Assets', path: '/asset', icon: <BsPiggyBank /> },
     { name: 'Debts', path: '/debtTracker', icon: <BsFileText /> },
-    { name: 'Suggestions', path: '/suggestions', icon: <BsLightbulb /> },
-    { name: 'Budget', path: '/budget', icon: <BsCashStack /> },
-    { name: 'Calculator', path: '/financialCal', icon: <BsCalculator /> },
     { name: 'Advising', path: '/schedulingAppt', icon: <BsCalendar /> },
+    { name: 'Calculator', path: '/financialCal', icon: <BsCalculator /> },
+    { name: 'Suggestions', path: '/suggestions', icon: <BsLightbulb /> },
     { name: 'Prediction', path: '/prediction', icon: <BsCalculator /> },
   ];
 
@@ -93,7 +93,7 @@ const Sidebar = ({ isMobile, isOpen, onToggle }) => {
         }}
       >
         <NavLink 
-          to="/"
+          to="/profile"
           className="nav-link d-flex align-items-center" 
           style={{ 
             color: 'white',
@@ -125,8 +125,8 @@ const Sidebar = ({ isMobile, isOpen, onToggle }) => {
             }
           }}
         >
-          <BsBoxArrowRight />
-          <span>Logout</span>
+          <BsPerson/>
+          <span>Profile</span>
         </NavLink>
       </div>
     </div>
