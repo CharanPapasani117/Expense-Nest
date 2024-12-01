@@ -41,15 +41,10 @@ const ExpenseChart = ({ expenses = [] }) => {
     return acc;
   }, {});
 
-  const memberTotals = {};
 
   filteredExpenses.forEach(expense => {
     const category = predefinedCategories.includes(expense.category) ? expense.category : "Miscellaneous";
     categoryTotals[category] += parseFloat(expense.amount) || 0;
-
-    if (expense.member) {
-      memberTotals[expense.member] = (memberTotals[expense.member] || 0) + (parseFloat(expense.amount) || 0);
-    }
   });
 
   const categoryData = predefinedCategories
@@ -58,10 +53,6 @@ const ExpenseChart = ({ expenses = [] }) => {
       name: category,
       value: categoryTotals[category]
     }));
-
-  const memberData = Object.entries(memberTotals)
-    .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value);
 
   const COLORS = ['#4169E1', '#9370DB', '#20B2AA', '#FF7F50', '#3CB371', '#FFD700', '#FA8072', '#87CEEB'];
 
@@ -156,28 +147,6 @@ const ExpenseChart = ({ expenses = [] }) => {
                   dataKey="value"
                 >
                   {categoryData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip content={<CustomTooltip />} />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </Col>
-          <Col md={6}>
-            <h5 className="text-center mb-4" style={{color: '#1A2B4A', fontWeight: 'bold'}}>Expenses by Family Member</h5>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={memberData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="value"
-                >
-                  {memberData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

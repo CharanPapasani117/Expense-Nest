@@ -23,6 +23,7 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
 
   return (
     <Form onSubmit={handleSubmit}>
+      {/* Income Title */}
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Income Title</Form.Label>
         <Form.Control
@@ -35,6 +36,8 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           style={inputStyle}
         />
       </Form.Group>
+      
+      {/* Amount */}
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Amount</Form.Label>
         <Form.Control
@@ -47,17 +50,21 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           style={inputStyle}
         />
       </Form.Group>
+      
+      {/* Date */}
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Date</Form.Label>
         <Form.Control
           type="date"
           name="date"
-          value={income.date}
+          value={income.date || ''}
           onChange={handleInputChange}
           required
           style={inputStyle}
         />
       </Form.Group>
+      
+      {/* Category */}
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Category</Form.Label>
         <Form.Control
@@ -74,28 +81,8 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           ))}
         </Form.Control>
       </Form.Group>
-      {/* <Form.Group className="mb-3">
-        <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Family Member</Form.Label>
-        <Form.Control
-          as="select"
-          name="member"
-          value={income.member}
-          onChange={handleInputChange}
-          required
-          style={inputStyle}
-        >
-          <option value="">Select Member</option>
-          <option value="Yash">Yash</option>
-          <option value="Mallika">Mallika</option>
-          <option value="Karthik">Karthik</option>
-          <option value="Charan">Charan</option>
-          <option value="Varun">Varun</option>
-          <option value="Pravalika">Pravalika</option>
-          <option value="Praneeth">Praneeth</option>
-          <option value="Family">Family</option>
-        </Form.Control>
-      </Form.Group> */}
       
+      {/* Description */}
       <Form.Group className="mb-3">
         <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Description</Form.Label>
         <Form.Control
@@ -108,6 +95,69 @@ const IncomeForm = ({ income, handleInputChange, handleSubmit, isEditing }) => {
           style={inputStyle}
         />
       </Form.Group>
+      
+      {/* Recurring Payment Checkbox */}
+      <Form.Group className="mb-3">
+        <Form.Check
+          type="checkbox"
+          label="Recurring Payment"
+          name="isRecurring"
+          checked={income.isRecurring || false}
+          onChange={handleInputChange}
+        />
+      </Form.Group>
+      
+      {/* Recurring Payment Options */}
+      {income.isRecurring && (
+        <>
+          {/* Frequency */}
+          <Form.Group className="mb-3">
+            <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Frequency</Form.Label>
+            <Form.Control
+              as="select"
+              name="frequency"
+              value={income.frequency || ''}
+              onChange={handleInputChange}
+              required
+              style={inputStyle}
+            >
+              <option value="" disabled>Select Frequency</option>
+              <option value="Daily">Daily</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Yearly">Yearly</option>
+            </Form.Control>
+          </Form.Group>
+          
+          {/* Start Date */}
+          <Form.Group className="mb-3">
+            <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>Start Date</Form.Label>
+            <Form.Control
+              type="date"
+              name="startDate"
+              value={income.startDate || ''}
+              onChange={handleInputChange}
+              required
+              style={inputStyle}
+            />
+          </Form.Group>
+          
+          {/* End Date */}
+          <Form.Group className="mb-3">
+            <Form.Label style={{color: '#1A2B4A', fontWeight: 'bold'}}>End Date</Form.Label>
+            <Form.Control
+              type="date"
+              name="endDate"
+              value={income.endDate || ''}
+              onChange={handleInputChange}
+              required
+              style={inputStyle}
+            />
+          </Form.Group>
+        </>
+      )}
+      
+      {/* Submit Button */}
       <Button 
         variant="primary" 
         type="submit" 

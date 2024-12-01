@@ -5,94 +5,9 @@ import IncomeList from './IncomeList';
 import IncomeChart from './IncomeChart';
 import { Modal, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { FaBars, FaPlusCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
 import Sidebar from '../Sidebar';
 
 const API_URL = 'http://localhost:8080/api/incomes';
-
-// const Sidebar = ({ isMobile, isOpen, onToggle }) => (
-//   <div className="sidebar" style={{
-//     width: '120px',
-//     height: '100vh', 
-//     position: 'fixed', 
-//     left: 0, 
-//     top: 0, 
-//     bottom: 0, 
-//     backgroundColor: '#1A2B4A',
-//     backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
-//     zIndex: 1000,
-//     boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
-//     display: 'flex',
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     paddingTop: '2rem',
-//     transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
-//     transition: 'transform 0.3s ease-in-out'
-//   }}>
-//     <Button
-//       variant="link"
-//       onClick={onToggle}
-//       style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
-//     >
-//       <FaBars />
-//     </Button>
-//     <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
-//       {[
-//         { name: 'Income', path: '/income' },
-//         { name: 'Expenses', path: '/expense' },
-//         { name: 'Assets', path: '/asset' },
-//         { name: 'Debts', path: '/debtTracker' },
-//         { name: 'Goals', path: '/goals' },
-//         { name: 'Budget', path: '/budget' },
-//         { name: 'Calculator', path: '/financialCal' },
-//         { name: 'Advising', path: '/schedulingAppt' },
-//       ].map((item) => (
-//         <NavLink 
-//           key={item.name}
-//           to={item.path}
-//           className="nav-link mb-4" 
-//           style={{ 
-//             color: 'white',
-//             opacity: 0.75,
-//             transition: 'opacity 0.2s',
-//             padding: '8px',
-//             borderRadius: '8px',
-//             textAlign: 'center',
-//             width: '100%',
-//             fontSize: '0.9rem',
-//             textDecoration: 'none'
-//           }}
-//         >
-//           {item.name}
-//         </NavLink>
-//       ))}
-//     </nav>
-//     <div style={{ 
-//       marginBottom: '1.5rem',
-//       width: '100%',
-//       display: 'flex',
-//       justifyContent: 'center'
-//     }}>
-//       <a 
-//         className="nav-link" 
-//         href="#" 
-//         style={{ 
-//           color: 'white',
-//           opacity: 0.75,
-//           transition: 'opacity 0.2s',
-//           padding: '8px',
-//           borderRadius: '8px',
-//           textAlign: 'center',
-//           width: '100%',
-//           fontSize: '0.9rem',
-//           textDecoration: 'none'
-//         }}
-//       >
-//         Logout
-//       </a>
-//     </div>
-//   </div>
-// );
 
 const IncomeDashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -106,6 +21,10 @@ const IncomeDashboard = () => {
     date: '',
     category: '',
     description: '',
+    isRecurring: false,
+    frequency: '',
+    startDate: '',
+    endDate: '',
   });
 
   useEffect(() => {
@@ -117,38 +36,46 @@ const IncomeDashboard = () => {
   }, []);
 
   useEffect(() => {
-    // Fetch incomes from backend
-    axios.get(API_URL)
-      .then(response => setIncomes(response.data))
-      .catch(error => console.error("Error fetching incomes:", error));
+    const fetchIncomes = () => {
+      axios.get(API_URL)
+        .then(response => setIncomes(response.data))
+        .catch(error => console.error("Error fetching incomes:", error));
+    };
+  
+    fetchIncomes(); // Initial fetch
+  
+    // Periodic fetch every hour
+    const intervalId = setInterval(fetchIncomes, 60 * 60 * 1000); // 1 hour interval
+  
+    return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, []);
 
+
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
     if (editingIncome) {
-      setEditingIncome({ ...editingIncome, [name]: value });
+      setEditingIncome({ ...editingIncome, [name]: fieldValue });
     } else {
-      setNewIncome({ ...newIncome, [name]: value });
+      setNewIncome({ ...newIncome, [name]: fieldValue });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editingIncome) {
-      // Update existing income
       axios.put(`${API_URL}/${editingIncome.id}`, editingIncome)
         .then(response => {
-          setIncomes(incomes.map(inc => inc.id === response.data.id ? response.data : inc));
+          setIncomes(incomes.map(exp => exp.id === response.data.id ? response.data : exp));
           setEditingIncome(null);
         })
         .catch(error => console.error("Error updating income:", error));
     } else if (newIncome.title && newIncome.amount && newIncome.date && newIncome.category && newIncome.description) {
-      // Add new income
       axios.post(API_URL, newIncome)
         .then(response => setIncomes([...incomes, response.data]))
         .catch(error => console.error("Error adding income:", error));
     }
-    setNewIncome({ title: '', amount: '', date: '', category: '', description: '' });
+    setNewIncome({ title: '', amount: '', date: '', category: '', description: '', isRecurring: false });
     setShowModal(false);
   };
 
@@ -166,19 +93,13 @@ const IncomeDashboard = () => {
 
   const handleAddNewIncome = () => {
     setEditingIncome(null);
-    setNewIncome({ title: '', amount: '', date: '', category: '', description: '' });
+    setNewIncome({ title: '', amount: '', date: '', category: '', description: '', isRecurring: false });
     setShowModal(true);
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh',minWidth:'1550px', maxWidth: '1800px', backgroundColor: '#F0F8FF' }}>
-      {/* <Sidebar 
-        isMobile={isMobile} 
-        isOpen={sidebarOpen} 
-        onToggle={() => setSidebarOpen(!sidebarOpen)} 
-      /> */}
+    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#F0F8FF' }}>
       <Sidebar></Sidebar>
-      
       <div style={{ 
         flex: 1,
         marginLeft: isMobile ? 0 : '120px',
@@ -192,14 +113,14 @@ const IncomeDashboard = () => {
               <Button
                 variant="link"
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                style={{ color: '#1A2B4A', padding: 0, marginRight: '1rem' }}
+                style={{ color: '#ff6a56', padding: 0, marginRight: '1rem' }}
               >
                 <FaBars size={24} />
               </Button>
             </Col>
             <Col>
               <h2 style={{ color: '#1A2B4A', fontSize: isMobile ? '1.2rem' : '1.4rem', fontWeight: 'bold', margin: 0 }}>
-                Income Dashboard
+                Incomes
               </h2>
             </Col>
             <Col xs="auto">
@@ -219,7 +140,6 @@ const IncomeDashboard = () => {
               </Button>
             </Col>
           </Row>
-
           <Row className="g-3">
             <Col xs={12} md={7} lg={8}>
               <Card className="h-100" style={{
@@ -251,7 +171,6 @@ const IncomeDashboard = () => {
           </Row>
         </Container>
       </div>
-
       <Modal show={showModal} onHide={() => setShowModal(false)} centered size={isMobile ? "sm" : "md"}>
         <Modal.Header closeButton style={{ backgroundColor: '#F0F8FF', border: 'none' }}>
           <Modal.Title style={{ color: '#1A2B4A', fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.1rem' }}>

@@ -6,82 +6,8 @@ import ExpenseChart from './Expensechart';
 import { Modal, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { FaBars, FaPlusCircle } from 'react-icons/fa';
 import Sidebar from '../Sidebar';
-const API_URL = 'http://localhost:8080/api/expenses';
 
-// const Sidebar = ({ isMobile, isOpen, onToggle }) => (
-//   <div className="sidebar" style={{
-//     width: '120px',
-//     height: '100vh', 
-//     position: 'fixed', 
-//     left: 0, 
-//     top: 0, 
-//     bottom: 0, 
-//     backgroundColor: '#1A2B4A',
-//     backgroundImage: 'linear-gradient(180deg, #1A2B4A 0%, #4A8895 100%)',
-//     zIndex: 1000,
-//     boxShadow: '2px 0 4px rgba(0,0,0,0.1)',
-//     display: 'flex',
-//     flexDirection: 'column',
-//     alignItems: 'center',
-//     paddingTop: '2rem',
-//     transform: isMobile ? (isOpen ? 'translateX(0)' : 'translateX(-100%)') : 'translateX(0)',
-//     transition: 'transform 0.3s ease-in-out'
-//   }}>
-//     <Button
-//       variant="link"
-//       onClick={onToggle}
-//       style={{ color: 'white', position: 'absolute', top: '1rem', left: '1rem' }}
-//     >
-//       <FaBars />
-//     </Button>
-//     <nav className="nav flex-column align-items-center mt-5" style={{ flex: 1, width: '100%' }}>
-//       {['Income', 'Expenses', 'Assets', 'Debts', 'Goals', 'Budget', 'Calculator', 'Advising'].map((item, index) => (
-//         <a 
-//           key={index}
-//           className="nav-link mb-4" 
-//           href="#" 
-//           style={{ 
-//             color: 'white',
-//             opacity: 0.75,
-//             transition: 'opacity 0.2s',
-//             padding: '8px',
-//             borderRadius: '8px',
-//             textAlign: 'center',
-//             width: '100%',
-//             fontSize: '0.9rem',
-//             textDecoration: 'none'
-//           }}
-//         >
-//           {item}
-//         </a>
-//       ))}
-//     </nav>
-//     <div style={{ 
-//       marginBottom: '1.5rem',
-//       width: '100%',
-//       display: 'flex',
-//       justifyContent: 'center'
-//     }}>
-//       <a 
-//         className="nav-link" 
-//         href="#" 
-//         style={{ 
-//           color: 'white',
-//           opacity: 0.75,
-//           transition: 'opacity 0.2s',
-//           padding: '8px',
-//           borderRadius: '8px',
-//           textAlign: 'center',
-//           width: '100%',
-//           fontSize: '0.9rem',
-//           textDecoration: 'none'
-//         }}
-//       >
-//         Logout
-//       </a>
-//     </div>
-//   </div>
-// );
+const API_URL = 'http://localhost:8080/api/expenses';
 
 const ExpenseDashboard = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -96,6 +22,10 @@ const ExpenseDashboard = () => {
     category: '',
     member: '',
     description: '',
+    isRecurring: false,
+    frequency: '',
+    startDate: '',
+    endDate: '',
   });
 
   useEffect(() => {
@@ -107,25 +37,34 @@ const ExpenseDashboard = () => {
   }, []);
 
   useEffect(() => {
-    // Fetch expenses from backend
-    axios.get(API_URL)
-      .then(response => setExpenses(response.data))
-      .catch(error => console.error("Error fetching expenses:", error));
+    const fetchExpenses = () => {
+      axios.get(API_URL)
+        .then(response => setExpenses(response.data))
+        .catch(error => console.error("Error fetching expenses:", error));
+    };
+  
+    fetchExpenses(); // Initial fetch
+  
+    // Periodic fetch every hour
+    const intervalId = setInterval(fetchExpenses, 60 * 60 * 1000); // 1 hour interval
+  
+    return () => clearInterval(intervalId); // Cleanup interval on unmount
   }, []);
 
+
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
     if (editingExpense) {
-      setEditingExpense({ ...editingExpense, [name]: value });
+      setEditingExpense({ ...editingExpense, [name]: fieldValue });
     } else {
-      setNewExpense({ ...newExpense, [name]: value });
+      setNewExpense({ ...newExpense, [name]: fieldValue });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editingExpense) {
-      // Update existing expense
       axios.put(`${API_URL}/${editingExpense.id}`, editingExpense)
         .then(response => {
           setExpenses(expenses.map(exp => exp.id === response.data.id ? response.data : exp));
@@ -133,12 +72,11 @@ const ExpenseDashboard = () => {
         })
         .catch(error => console.error("Error updating expense:", error));
     } else if (newExpense.title && newExpense.amount && newExpense.date && newExpense.category && newExpense.member) {
-      // Add new expense
       axios.post(API_URL, newExpense)
         .then(response => setExpenses([...expenses, response.data]))
         .catch(error => console.error("Error adding expense:", error));
     }
-    setNewExpense({ title: '', amount: '', date: '', category: '', member: '', description: '' });
+    setNewExpense({ title: '', amount: '', date: '', category: '', member: '', description: '', isRecurring: false });
     setShowModal(false);
   };
 
@@ -156,18 +94,14 @@ const ExpenseDashboard = () => {
 
   const handleAddNewExpense = () => {
     setEditingExpense(null);
-    setNewExpense({ title: '', amount: '', date: '', category: '', member: '', description: '' });
+    setNewExpense({ title: '', amount: '', date: '', category: '', member: '', description: '', isRecurring: false });
     setShowModal(true);
   };
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#F0F8FF' }}>
-      {/* <Sidebar 
-        isMobile={isMobile} 
-        isOpen={sidebarOpen} 
-        onToggle={() => setSidebarOpen(!sidebarOpen)} 
-      /> */}
-      <Sidebar />
+      <Sidebar>
+      </Sidebar>
       <div style={{ 
         flex: 1,
         marginLeft: isMobile ? 0 : '120px',
@@ -208,7 +142,6 @@ const ExpenseDashboard = () => {
               </Button>
             </Col>
           </Row>
-
           <Row className="g-3">
             <Col xs={12} md={7} lg={8}>
               <Card className="h-100" style={{
@@ -240,7 +173,6 @@ const ExpenseDashboard = () => {
           </Row>
         </Container>
       </div>
-
       <Modal show={showModal} onHide={() => setShowModal(false)} centered size={isMobile ? "sm" : "md"}>
         <Modal.Header closeButton style={{ backgroundColor: '#F0F8FF', border: 'none' }}>
           <Modal.Title style={{ color: '#1A2B4A', fontWeight: 'bold', fontSize: isMobile ? '1rem' : '1.1rem' }}>

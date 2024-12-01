@@ -16,7 +16,14 @@ const getCategoryIcon = (category) => {
     default: return <FaTag className="me-2" />;
   }
 };
-
+/**
+ * Component to display a list of expenses.
+ * Handles both one-time and recurring expenses.
+ *
+ * @param {Array} expenses - List of expense objects.
+ * @param {Function} handleDelete - Function to delete an expense.
+ * @param {Function} handleEdit - Function to edit an expense.
+ */
 const ExpenseList = ({ expenses, handleDelete, handleEdit }) => {
   return (
     <ListGroup style={{ height: '65vh', overflowY: 'auto' }}>
@@ -32,27 +39,33 @@ const ExpenseList = ({ expenses, handleDelete, handleEdit }) => {
           }}
         >
           <div className="ms-2 me-auto w-100">
+            {/* Display Title and Amount */}
             <div className="d-flex justify-content-between align-items-center w-100">
-              <div className="fw-bold d-flex align-items-center" style={{color: '#1A2B4A', fontSize: '0.9rem'}}>
-                {getCategoryIcon(expense.category)}
-                <span>{expense.title}</span>
-              </div>
-              <div className="ms-3" style={{color: '#FF7F6E', fontWeight: 'bold', fontSize: '0.9rem'}}>
-                ${expense.amount.toFixed(2)}
-              </div>
+              <span className="fw-bold" style={{ color: '#1A2B4A' }}>{expense.title}</span>
+              <span style={{ color: '#FF7F6E', fontWeight: 'bold' }}>${expense.amount.toFixed(2)}</span>
             </div>
-            <div className="text-muted mt-1" style={{fontSize: '0.8rem'}}>
-              <small>
-                {expense.date} • {expense.category} • 
-                <FaUser className="ms-2 me-1" />{expense.member}
-              </small>
-            </div>
+
+            {/* Display Recurring Information */}
+            {expense.isRecurring ? (
+              <div className="text-muted mt-1" style={{ fontSize: '0.8rem' }}>
+                <small>
+                  Recurring: {expense.frequency} | From: {expense.startDate} to {expense.endDate}
+                </small>
+              </div>
+            ) : (
+              <div className="text-muted mt-1" style={{ fontSize: '0.8rem' }}>
+                <small>{expense.date}</small>
+              </div>
+            )}
+
+            {/* Description (if available) */}
             {expense.description && (
-              <div className="mt-1 text-muted" style={{fontSize: '0.8rem'}}>
-                <FaInfoCircle className="me-1" />
+              <div className="mt-1 text-muted" style={{ fontSize: '0.8rem' }}>
                 <small>{expense.description}</small>
               </div>
             )}
+
+            {/* Action Buttons */}
             <div className="mt-2">
               <Button 
                 variant="outline-primary"
@@ -91,3 +104,4 @@ const ExpenseList = ({ expenses, handleDelete, handleEdit }) => {
 };
 
 export default ExpenseList;
+

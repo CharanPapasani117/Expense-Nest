@@ -1,38 +1,42 @@
 package com.expensenest.controller;
 
-import com.expensenest.service.IncomeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.expensenest.model.Income;
+import com.expensenest.service.IncomeService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/incomes")
-@CrossOrigin(origins = "http://localhost:3000")  // Adjust the origin as per your frontend's URL
+@CrossOrigin(origins = "http://localhost:3000")
 public class IncomeController {
 
     @Autowired
     private IncomeService incomeService;
-
-    @GetMapping
-    public List<Income> getAllIncomes() {
-        return incomeService.getAllIncomes();
+    @PostMapping
+    public ResponseEntity<Income> addIncome(@RequestBody Income income) {
+        Income savedIncome = incomeService.saveIncome(income);
+        return ResponseEntity.ok(savedIncome);
     }
 
-    @PostMapping
-    public Income addIncome(@RequestBody Income income) {
-        return incomeService.addIncome(income);
+    
+    @GetMapping
+    public ResponseEntity<List<Income>> getIncomes() {
+        return ResponseEntity.ok(incomeService.getAllIncomes());
     }
 
     @PutMapping("/{id}")
-    public Income updateIncome(@PathVariable Long id, @RequestBody Income incomeDetails) {
-        return incomeService.updateIncome(id, incomeDetails);
+    public ResponseEntity<Income> updateIncome(@PathVariable Long id, @RequestBody Income updatedIncome) {
+        return incomeService.updateIncome(id, updatedIncome)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
-
     @DeleteMapping("/{id}")
-    public void deleteIncome(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteIncome(@PathVariable Long id) {
         incomeService.deleteIncome(id);
+        return ResponseEntity.noContent().build();
     }
 }
