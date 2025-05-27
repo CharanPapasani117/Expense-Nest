@@ -1,4 +1,4 @@
-THis is the Project to record and view all your family Epenses with montly charts on how you are spending on different categories and also types of income etc..
+This is the Project to record and view all your family Epenses with montly charts on how you are spending on different categories and also types of income etc..
 Below are the instructions to run the project.
 
 For AI Part (Suggestions, Predictions):
